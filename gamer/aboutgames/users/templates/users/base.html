@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Всё о играх</title>
+    <link rel="shortcut icon" href="{% static 'images/gamepad.png' %}" type="image/x-icon"/>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<div class="menu">
+    <a href="#"><img src="{% static 'images/gamepad.png' %}"> </a>
+    <div><a href="#">Главная</a></div>
+    <div><a href="#">Новинки(превью игр)</a></div>
+    <div><a href="#">Обзоры(помощь в прохождении)</a></div>
+    <div><a href="#">Зарегистрироваться</a></div>
+    <div><a href="#">Войти</a></div>
+
+</div>
+
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
