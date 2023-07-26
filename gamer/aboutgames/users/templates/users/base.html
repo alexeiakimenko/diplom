@@ -10,12 +10,18 @@
 <body>
 
 <div class="menu">
-    <a href="#"><img src="{% static 'images/gamepad.png' %}"> </a>
-    <div><a href="#">Главная</a></div>
+    <a href="{% url 'index' %}"><img src="{% static 'images/gamepad.png' %}"> </a>
+    <div><a href="{% url 'index' %}">Главная</a></div>
     <div><a href="#">Новинки(превью игр)</a></div>
     <div><a href="#">Обзоры(помощь в прохождении)</a></div>
-    <div><a href="#">Зарегистрироваться</a></div>
+    {% if request.user.is_authenticated %}
+
+    <div><a href="#">Выйти</a></div>
+
+    {% else %}
+    <div><a href="{% url 'register' %}">Зарегистрироваться</a></div>
     <div><a href="#">Войти</a></div>
+    {% endif %}
 
 </div>
 
