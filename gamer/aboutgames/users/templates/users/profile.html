@@ -1,0 +1,13 @@
+{% extends 'users/base.html'%}
+
+{% block content %}
+<div class="box">
+    <h3>Ваш профиль:</h3>
+    {% if profile.avatar %}
+    <img class="profile-size" src="{{profile.avatar.url}}"/>
+    {% endif%}
+    <p>Ник пользователя: <b>{{profile.username}}</b></p>
+    <p>Имя: <b>{{profile.name}}</b></p>
+    <p>Адрес электронной почты: <b>{{profile.email}}</b></p>
+</div>
+{% endblock %}

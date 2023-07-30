@@ -1,0 +1,17 @@
+{% extends 'users/base.html'%}
+{% block content %}
+<div  class="box">
+<h1 class="colortext">Вход:</h1>
+
+<form action="{% url 'login' %}" method="post" class="register">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button class="btm">Войти</button>
+
+
+</form>
+</div>
+
+{% endblock %}

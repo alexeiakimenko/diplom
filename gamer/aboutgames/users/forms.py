@@ -1,11 +1,32 @@
-from django.db import models
 from django.contrib.auth.forms import UserCreationForm
+from .models import Profile
+from django.forms import ModelForm
 from django.contrib.auth.models import User
 
 
+class FullForm(ModelForm):
+    class Meta:
+        model = Profile
+        fields = [
+            'avatar',
+            'favorite_game',
+            'favorite_genre',
+            'birthday',
+
+        ]
+        labels = {
+            'avatar': 'Ваше фото или аватар',
+            'favorite_game': 'Любимая игра',
+            'favorite_genre': 'Любимый игровой жанр',
+            'birthday': 'Дата рождения',
+
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+
 class ProfileForm(UserCreationForm):
-
-
     class Meta:
         model = User
         fields = [
@@ -17,3 +38,5 @@ class ProfileForm(UserCreationForm):
 
         ]
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

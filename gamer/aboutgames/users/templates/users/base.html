@@ -15,12 +15,12 @@
     <div><a href="#">Новинки(превью игр)</a></div>
     <div><a href="#">Обзоры(помощь в прохождении)</a></div>
     {% if request.user.is_authenticated %}
-
-    <div><a href="#">Выйти</a></div>
+    <div><a href="{% url 'profile' %}">Ваш профиль</a></div>
+    <div><a href="{% url 'logout' %}">Выйти</a></div>
 
     {% else %}
     <div><a href="{% url 'register' %}">Зарегистрироваться</a></div>
-    <div><a href="#">Войти</a></div>
+    <div><a href="{% url 'login' %}">Войти</a></div>
     {% endif %}
 
 </div>
