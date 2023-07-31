@@ -9,5 +9,16 @@
     <p>Ник пользователя: <b>{{profile.username}}</b></p>
     <p>Имя: <b>{{profile.name}}</b></p>
     <p>Адрес электронной почты: <b>{{profile.email}}</b></p>
+    {% if profile.favorite_game %}
+    <p>Любимая игра: <b>{{profile.favorite_game}}</b></p>
+    {% endif%}
+    {% if profile.favorite_genre %}
+    <p>Любимый жанр игр: <b>{{profile.favorite_genre}}</b></p>
+    {% endif%}
+    {% if profile.birthday %}
+    <p>День рождения: <b>{{profile.birthday}}</b></p>
+    {% endif%}
+
 </div>
+<div class="margin"><a class="change" href="#">Изменить профиль</a></div>
 {% endblock %}

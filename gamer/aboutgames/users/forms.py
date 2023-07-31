@@ -8,6 +8,9 @@ class FullForm(ModelForm):
     class Meta:
         model = Profile
         fields = [
+            'username',
+            'name',
+            'email',
             'avatar',
             'favorite_game',
             'favorite_genre',
@@ -26,7 +29,7 @@ class FullForm(ModelForm):
         super().__init__(*args, **kwargs)
 
 
-class ProfileForm(UserCreationForm):
+class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = [

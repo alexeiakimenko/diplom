@@ -1,5 +1,5 @@
 from django.contrib import messages
-from .forms import ProfileForm, FullForm
+from .forms import UserRegisterForm, FullForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
@@ -15,7 +15,7 @@ def index(request):
 
 def register(request):
     if request.method == "POST":
-        user_form = ProfileForm(request.POST)
+        user_form = UserRegisterForm(request.POST)
 
         if user_form.is_valid():
             user = user_form.save(commit=False)
@@ -34,7 +34,7 @@ def register(request):
         else:
             messages.error(request, 'Ошибка регистрации')
     else:
-        user_form = ProfileForm()
+        user_form = UserRegisterForm()
 
         context = {'form': user_form}
         return render(request, 'users/register.html', context)
