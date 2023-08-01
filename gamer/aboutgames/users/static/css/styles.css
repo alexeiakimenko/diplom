@@ -19,6 +19,9 @@ body {
 .menu div{
     color:white
 }
+a {
+    text-decoration: none;
+}
 .menu div a {
     text-decoration: none;
     color:white
@@ -76,4 +79,14 @@ button{
 }
 .margin{
     margin-top: 10px;
+}
+.message{
+    text-align: center;
+    margin:0 auto;
+    color:green;
+    
+    border-radius: 6px;
+    box-shadow:inset 0 0 6px 2px green;
+    width: 450px;
+    background: white;
 }

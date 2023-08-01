@@ -1,0 +1,18 @@
+{% extends 'users/base.html'%}
+
+{% block content %}
+
+  <form action="{% url 'full-form' %}" method="post" class="register" enctype="multipart/form-data">
+        {% csrf_token %}
+      <div class="box">
+        {% for field in form %}
+        <label>{{ field.label }}</label>
+        {{ field }}
+
+        {% endfor %}
+        </div>
+
+        <button class="btm">Внести данные</button>
+    </form>
+
+{% endblock %}

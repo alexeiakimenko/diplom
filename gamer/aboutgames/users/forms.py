@@ -22,6 +22,9 @@ class FullForm(ModelForm):
             'favorite_game': 'Любимая игра',
             'favorite_genre': 'Любимый игровой жанр',
             'birthday': 'Дата рождения',
+            'username': 'Имя пользователя',
+            'name': 'Имя',
+            'email': 'Адрес электронной почты',
 
         }
 

@@ -9,6 +9,17 @@
 </head>
 <body>
 
+{% if messages %}
+{% for message in messages %}
+<a href="{% url 'index' %}">
+    <div class="message">
+
+        {{message}}
+
+    </div>
+</a>
+{%endfor%}
+{%endif%}
 <div class="menu">
     <a href="{% url 'index' %}"><img src="{% static 'images/gamepad.png' %}"> </a>
     <div><a href="{% url 'index' %}">Главная</a></div>
@@ -28,5 +39,6 @@
 
 {% block content %}
 {% endblock %}
+<script>{% static 'js/button.js' %}</script>
 </body>
 </html>
