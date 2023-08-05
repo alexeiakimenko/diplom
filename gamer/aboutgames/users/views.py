@@ -28,9 +28,11 @@ def register(request):
                 user_id=user.id
             )
 
-            messages.success(request, "Вы зарегистрированы! ")
+            
             login(request, user)
-            return render(request, 'users/full-form.html', {'form': FullForm(instance=request.user.profile)})
+            return render(request, 'users/full-form.html',
+                          {'form': FullForm(instance=request.user.profile),
+                           'message': 'Регистрация прошла успешно!Вы можете добавить данные,по желанию.'})
         else:
             messages.error(request, 'Ошибка регистрации')
     else:
@@ -55,7 +57,7 @@ def login_user(request):
             return render(request, 'users/login.html', {'form': AuthenticationForm()})
         else:
             login(request, user)
-            messages.info(request,'Вы успешно вошли в свой профиль')
+            messages.info(request, 'Вы успешно вошли в свой профиль')
             return redirect('index')
 
 
@@ -77,6 +79,5 @@ def full_form(request):
             messages.success(request, "Профиль успешно внесён! ")
             return redirect('profile')
 
-
-    context = {'form': form}
+    context = {'form': form, 'message': 'Изменение данных'}
     return render(request, 'users/full-form.html', context)

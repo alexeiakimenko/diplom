@@ -1,18 +1,22 @@
 {% extends 'users/base.html'%}
 
 {% block content %}
+<div class="box">
+    <h3>{{ message }}</h3>
+</div>
 
-  <form action="{% url 'full-form' %}" method="post" class="register" enctype="multipart/form-data">
-        {% csrf_token %}
-      <div class="box">
+
+<form action="{% url 'full-form' %}" method="post" class="register" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="box">
         {% for field in form %}
         <label>{{ field.label }}</label>
         {{ field }}
 
         {% endfor %}
-        </div>
+    </div>
 
-        <button class="btm">Внести данные</button>
-    </form>
+    <button class="btm">Внести данные</button>
+</form>
 
 {% endblock %}
