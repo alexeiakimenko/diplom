@@ -21,7 +21,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('users.urls'))
+    path('', include('users.urls')),
+    path('new_games/', include('new_games.urls')),
 ]
 
 if settings.DEBUG:

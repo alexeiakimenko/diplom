@@ -2,11 +2,9 @@ from django.contrib import messages
 from .forms import UserRegisterForm, FullForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.models import User
 from django.contrib.auth import logout, login, authenticate
 from .models import Profile
 from django.contrib.auth.decorators import login_required
-from django.db import IntegrityError
 
 
 def index(request):
@@ -28,7 +26,6 @@ def register(request):
                 user_id=user.id
             )
 
-            
             login(request, user)
             return render(request, 'users/full-form.html',
                           {'form': FullForm(instance=request.user.profile),
@@ -61,6 +58,7 @@ def login_user(request):
             return redirect('index')
 
 
+@login_required(login_url='register')
 def profile(request):
     prof = request.user.profile
     context = {
