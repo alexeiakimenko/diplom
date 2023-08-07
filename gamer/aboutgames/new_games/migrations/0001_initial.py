@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=250)),
                 ('description', models.TextField()),
-                ('image', models.ImageField(default='new_game_image/background.jpg', upload_to='new_game_image/%Y/%m/%d')),
+                ('image', models.ImageField(default='new_game_image/default.jpg', upload_to='new_game_image/%Y/%m/%d')),
                 ('video', models.URLField()),
             ],
         ),

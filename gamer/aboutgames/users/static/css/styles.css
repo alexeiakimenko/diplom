@@ -93,3 +93,20 @@ button{
 .box h3{
     color:darkblue
 }
+.red{
+    color:red
+}
+.boxnewgame{
+    background-color: lightyellow;
+    margin: 10px 100px;
+    padding-bottom: 10px;
+    height: auto;
+    width: 33%;
+    border: 2px solid darkblue
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
