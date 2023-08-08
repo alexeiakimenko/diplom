@@ -110,3 +110,13 @@ button{
     justify-content: space-between;
     margin-bottom: 60px;
 }
+.box_single{
+    background-color: lightyellow;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    border: 2px solid darkred
+}
+.box_single h1{
+    color:darkcyan
+}

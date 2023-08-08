@@ -1,0 +1,14 @@
+{% extends 'users/base.html'%}
+{% block content %}
+<div class="box_single">
+    <h1>{{ new_game.title }}</h1>
+    <img width="372px" height="210px" src="{{ new_game.image.url }}">
+    <p>{{ new_game.description|linebreaks}}</p>
+    <div>
+        <video src="{{ new_game.video.url }}" controls></video>
+    </div>
+    <a href="{% url 'new-games' %}"><button class="btm">Назад</button></a>
+</div>
+
+
+{% endblock %}

@@ -1,15 +1,16 @@
 {% extends 'users/base.html'%}
-{% load static %}
+
 {% block content %}
 <h3>Список новинок:</h3>
 <div class="container">
-{% for new_game in new_games %}
+    {% for new_game in new_games %}
 
     <div class="boxnewgame">
-    <a href="#"><h2 class="red">{{ new_game.title }}</h2></a>
-    <a href="#"><img width="372px"  height="210px" src="{{ new_game.image.url }}"></a>
+        <a href="{% url 'single-new-game' new_game.id %}"><h2 class="red">{{ new_game.title }}</h2></a>
+        <a href="{% url 'single-new-game' new_game.id %}"><img width="372px" height="210px"
+                                                               src="{{ new_game.image.url }}"></a>
     </div>
-{% endfor %}
+    {% endfor %}
 </div>
 
 
