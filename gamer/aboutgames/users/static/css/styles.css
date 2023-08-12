@@ -119,4 +119,16 @@ button{
 }
 .box_single h1{
     color:darkcyan
+
+}
+.center{
+    text-align: center;
+    color: darkcyan
+}
+.green{
+    color: darkgreen
+}
+.ngg{
+    text-decoration-line:underline;
+    color:#003366
 }

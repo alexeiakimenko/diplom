@@ -1,7 +1,7 @@
 {% extends 'users/base.html'%}
 
 {% block content %}
-<h3>Список новинок:</h3>
+<h3>Список новинок по жанру <span class="green">{{ genre }}</span> :</h3>
 <div class="container">
     {% for new_game in new_games %}
 
@@ -9,7 +9,7 @@
         <a href="{% url 'single-new-game' new_game.id %}"><h2 class="red">{{ new_game.title }}</h2></a>
         <a href="{% url 'single-new-game' new_game.id %}"><img width="372px" height="210px"
                                                                src="{{ new_game.image.url }}"></a>
-        <h5>Жанр:<a class="ngg" href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h5>
+        <h5>Жанр:{{ new_game.genre }}</h5>
     </div>
     {% endfor %}
 </div>

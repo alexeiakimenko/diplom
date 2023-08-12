@@ -1,13 +1,17 @@
 {% extends 'users/base.html'%}
+{% load static %}
 {% block content %}
 <div class="box_single">
     <h1>{{ new_game.title }}</h1>
+    <h3>Жанр:<a class="ngg" href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h3>
     <img width="372px" height="210px" src="{{ new_game.image.url }}">
-    <p>{{ new_game.description|linebreaks}}</p>
+    <p>{{ new_game.description|safe}}</p>
     <div>
         <video src="{{ new_game.video.url }}" controls></video>
     </div>
-    <a href="{% url 'new-games' %}"><button class="btm">Назад</button></a>
+    <a href="{% url 'new-games' %}">
+        <button class="btm">Назад</button>
+    </a>
 </div>
 
 
