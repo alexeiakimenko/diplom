@@ -114,7 +114,7 @@ button{
     background-color: lightyellow;
     margin: 0 auto;
     height: auto;
-    width: 100%;
+    max-width: 100%;
     border: 2px solid darkred
 }
 .box_single h1{
@@ -123,12 +123,49 @@ button{
 }
 .center{
     text-align: center;
-    color: darkcyan
+    color: darkcyan;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
 }
 .green{
     color: darkgreen
 }
-.ngg{
+.tag{
     text-decoration-line:underline;
     color:#003366
+}
+.text{
+    text-align: left;
+
+}
+.box_comment{
+    background-color: skyblue;
+    text-align: left;
+    
+    height: auto;
+    max-width: 100%;
+    border: 2px solid #121212
+}
+.comment{
+    border:2px coral solid;
+    max-width: fit-content;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    background: white;
+}
+.name{
+    color:#003366;
+    font-style:italic;
+    font-size: 18px;
+    font-weight: bold;
+}
+.text_comment{
+    font-size: 20px;
+    font-weight: bold;
+}
+.date{
+    color:#121212;
+    font-style: oblique;
 }

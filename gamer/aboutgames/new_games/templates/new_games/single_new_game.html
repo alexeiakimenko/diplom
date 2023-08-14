@@ -3,12 +3,27 @@
 {% block content %}
 <div class="box_single">
     <h1>{{ new_game.title }}</h1>
-    <h3>Жанр:<a class="ngg" href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h3>
+    <h3>Жанр:<a class="tag" href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h3>
+    <h5>Дата создания:{{ new_game.create }}</h5>
     <img width="372px" height="210px" src="{{ new_game.image.url }}">
-    <p>{{ new_game.description|safe}}</p>
+    <div class="text">{{ new_game.description|safe }}</div>
     <div>
-        <video src="{{ new_game.video.url }}" controls></video>
+        <video width="98%" src="{{ new_game.video.url }}" controls></video>
     </div>
+<div class="box_comment">
+    {% for c in comments %}
+    <div class="comment">
+        <div class="name">{{ c.name }}</div>
+        <div class="text_comment">{{ c.comment }}</div>
+        <div class="date">Дата:{{ c.comment_created }}</div>
+    </div>
+
+    {% endfor %}
+
+</div>
+    <a href="{% url 'comment_new_games' new_game.id %}">
+        <button class="btm">Коментировать</button>
+    </a>
     <a href="{% url 'new-games' %}">
         <button class="btm">Назад</button>
     </a>

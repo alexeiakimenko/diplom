@@ -9,6 +9,7 @@
         <a href="{% url 'single-new-game' new_game.id %}"><h2 class="red">{{ new_game.title }}</h2></a>
         <a href="{% url 'single-new-game' new_game.id %}"><img width="372px" height="210px"
                                                                src="{{ new_game.image.url }}"></a>
+          <h5>Дата создания:{{ new_game.create }}</h5>
         <h5>Жанр:{{ new_game.genre }}</h5>
     </div>
     {% endfor %}
