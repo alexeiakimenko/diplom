@@ -27,12 +27,14 @@ def new_games_genre(request, pk):
         'new_games': new_game,
         'genre': genre
     }
-    return render(request, 'new_games/new_games_genre.html', )
+    return render(request, 'new_games/new_games_genre.html', context)
 
 
 def comment_new_games(request, pk):
+    global avatar
     if request.user.is_authenticated:
         name = request.user.profile.name
+        avatar = request.user.profile.avatar
     else:
         name = 'Гость'
     game_commented = NewGame.objects.get(id=pk)
@@ -40,6 +42,7 @@ def comment_new_games(request, pk):
         comment = request.POST['comment']
         Comments.objects.create(
             name=name,
+            avatar=avatar,
             comment=comment,
             game_commented=game_commented
 
@@ -47,5 +50,6 @@ def comment_new_games(request, pk):
         return render(request, 'new_games/single_new_game.html',
                       {'new_game': game_commented, 'comments': Comments.objects.filter(game_commented=game_commented)})
 
-    context = {'name': name,}
+    context = {'name': name,
+               'avatar': avatar}
     return render(request, 'new_games/comment_new_games.html', context)

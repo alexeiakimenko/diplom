@@ -3,13 +3,15 @@
 {% block content %}
 
 <div class="box">
+    {% if avatar %}
+    <img src="{{ avatar.url }}" class="profile-size">
+    {% endif %}
     <h1 class="colortext">{{ name }} запишите свой комментарий:</h1>
 
-    <form action="" method="post" class="register">
+    <form action="" method="post" class="register" >
         {% csrf_token %}
+
         <input type="text" name="comment">
-
-
         <button class="btm">Отправить</button>
     </form>
 </div>

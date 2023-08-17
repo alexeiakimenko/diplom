@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class NewGame(models.Model):
     title = models.CharField(max_length=250, blank=False, null=False, verbose_name='Название игры')
     description = models.TextField(verbose_name='Описание игры')
@@ -23,6 +22,7 @@ class NewGame(models.Model):
 
 class Comments(models.Model):
     name = models.CharField(max_length=250, verbose_name='Комментатор')
+    avatar = models.ImageField(blank=True, null=True)
     comment = models.TextField(verbose_name='Комментарий')
     comment_created = models.DateTimeField(auto_now_add=True, blank=True, null=True, verbose_name='Дата комментария')
     game_commented = models.ForeignKey('NewGame', on_delete=models.PROTECT, verbose_name='Комментируемая игра')
@@ -33,4 +33,4 @@ class Comments(models.Model):
     class Meta:
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
-        ordering = ['-comment_created']
+        ordering = ['comment_created']

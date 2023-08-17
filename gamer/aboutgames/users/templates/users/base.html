@@ -24,7 +24,7 @@
     <a href="{% url 'index' %}"><img src="{% static 'images/gamepad.png' %}"> </a>
     <div><a href="{% url 'index' %}">Главная</a></div>
     <div><a href="{% url 'new-games' %}">Новинки(превью игр)</a></div>
-    <div><a href="#">Обзоры(помощь в прохождении)</a></div>
+    <div><a href="{% url 'help_games' %}">Обзоры(помощь в прохождении)</a></div>
     {% if request.user.is_authenticated %}
     <div><a href="{% url 'profile' %}">Ваш профиль</a></div>
     <div><a href="{% url 'logout' %}">Выйти</a></div>

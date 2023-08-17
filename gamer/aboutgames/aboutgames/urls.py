@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('users.urls')),
     path('new_games/', include('new_games.urls')),
+    path('help_games/', include('help_games.urls')),
+
 ]
 
 if settings.DEBUG:
