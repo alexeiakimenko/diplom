@@ -35,8 +35,12 @@ def comment_new_games(request, pk):
     if request.user.is_authenticated:
         name = request.user.profile.name
         avatar = request.user.profile.avatar
+        favourite_game = request.user.profile.favorite_game
+        favourite_genre = request.user.profile.favorite_genre
     else:
         name = 'Гость'
+        favourite_game = 'Нет данных'
+        favourite_genre = 'Нет данных'
     game_commented = NewGame.objects.get(id=pk)
     if request.method == 'POST':
         comment = request.POST['comment']
@@ -44,12 +48,17 @@ def comment_new_games(request, pk):
             name=name,
             avatar=avatar,
             comment=comment,
-            game_commented=game_commented
+            game_commented=game_commented,
+            favourite_game=favourite_game,
+            favourite_genre=favourite_genre,
 
         )
         return render(request, 'new_games/single_new_game.html',
                       {'new_game': game_commented, 'comments': Comments.objects.filter(game_commented=game_commented)})
 
     context = {'name': name,
-               'avatar': avatar}
+               'avatar': avatar,
+               'favourite_game': favourite_game,
+               'favourite_genre': favourite_genre,
+               }
     return render(request, 'new_games/comment_new_games.html', context)

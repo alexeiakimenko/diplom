@@ -3,7 +3,7 @@
 {% block content %}
 <div class="box_single">
     <h1>{{ new_game.title }}</h1>
-    <h3>Жанр:<a class="tag"  href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h3>
+    <h3>Жанр:<a class="tag" href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h3>
     <h5>Дата создания:{{ new_game.create }}</h5>
     <img width="372px" height="210px" src="{{ new_game.image.url }}">
     <div class="text">{{ new_game.description|safe }}</div>
@@ -22,10 +22,13 @@
             </p>
 
             {% endif %}
-            <p class="name">{{ c.name }}
+            <p class="name">
+                <a data-title="любимая игра:{{ c.favourite_game }},любимый игровой жанр:{{ c.favourite_genre }}"
+                   href="#">
+                    {{ c.name }}</a>
 
             </p>
-            <p class="text_comment">{{ c.comment }}</p>
+            <p class=" text_comment">{{ c.comment }}</p>
             <div class="date">Дата:{{ c.comment_created }}</div>
         </div>
 
@@ -33,7 +36,7 @@
 
 
     </div>
-   
+
     <a href="{% url 'new-games' %}">
         <button class="btm">Назад</button>
     </a>
@@ -42,6 +45,10 @@
 <script>
     down=document.getElementById('down');
     down.scrollTop=down.scrollHeight;
+
+
+
+
 
 
 

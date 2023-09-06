@@ -26,6 +26,8 @@ class Comments(models.Model):
     comment = models.TextField(verbose_name='Комментарий')
     comment_created = models.DateTimeField(auto_now_add=True, blank=True, null=True, verbose_name='Дата комментария')
     game_commented = models.ForeignKey('NewGame', on_delete=models.PROTECT, verbose_name='Комментируемая игра')
+    favourite_game = models.CharField(max_length=250, blank=True, null=True, verbose_name='Любимая игра')
+    favourite_genre = models.CharField(max_length=250, blank=True, null=True, verbose_name='Любимый жанр игр')
 
     def __str__(self):
         return self.name
