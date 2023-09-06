@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import *
 from users.models import *
-from django.contrib import messages
 
 
 def new_games(request):
@@ -71,9 +70,5 @@ def comment_new_games(request, pk):
 
 
 def profile_view(request, name):
-    if name != 'Гость':
-        profile_view = Profile.objects.get(name=name)
-        return render(request, 'users/profile_view.html', {'profile_view': profile_view})
-    else:
-        messages.error(request, 'У гостя нет профиля!')
-        return redirect('index')
+    profile_view = Profile.objects.get(name=name)
+    return render(request, 'users/profile_view.html', {'profile_view': profile_view})
