@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <link rel="shortcut icon" href="{% static 'images/gamepad.png' %}" type="image/x-icon"/>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="box">
+    <h3>Профиль:{{ profile_view.username }}</h3>
+    {% if profile_view.avatar %}
+    <img class="profile-size" src="{{profile_view.avatar.url}}"/>
+    {% endif%}
+    <p>Ник пользователя: <b>{{profile_view.username}}</b></p>
+    <p>Имя: <b>{{profile_view.name}}</b></p>
+    <p>Адрес электронной почты: <b>{{profile_view.email}}</b></p>
+    {% if profile_view.favorite_game %}
+    <p>Любимая игра: <b>{{profile_view.favorite_game}}</b></p>
+    {% endif%}
+    {% if profile_view.favorite_genre %}
+    <p>Любимый жанр игр: <b>{{profile_view.favorite_genre}}</b></p>
+    {% endif%}
+    {% if profile_view.birthday %}
+    <p>День рождения: <b>{{profile_view.birthday}}</b></p>
+    {% endif%}
+
+</div>
+
+
+</body>
+</html>

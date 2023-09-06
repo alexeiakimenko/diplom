@@ -23,8 +23,8 @@
 
             {% endif %}
             <p class="name">
-                <a data-title="любимая игра:{{ c.favourite_game }},любимый игровой жанр:{{ c.favourite_genre }}"
-                   href="#">
+                <a data-title="Любимая игра:'{{ c.favourite_game }}',Любимый игровой жанр:'{{ c.favourite_genre }}'"
+                   href="{% url 'profile_view' c.name %}" target="_blank">
                     {{ c.name }}</a>
 
             </p>

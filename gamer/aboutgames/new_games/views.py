@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
+from users.models import *
+from django.contrib import messages
 
 
 def new_games(request):
@@ -32,6 +34,7 @@ def new_games_genre(request, pk):
 
 def comment_new_games(request, pk):
     global avatar
+
     if request.user.is_authenticated:
         name = request.user.profile.name
         avatar = request.user.profile.avatar
@@ -43,6 +46,8 @@ def comment_new_games(request, pk):
         favourite_genre = 'Нет данных'
     game_commented = NewGame.objects.get(id=pk)
     if request.method == 'POST':
+        game_id = pk
+        print(game_id)
         comment = request.POST['comment']
         Comments.objects.create(
             name=name,
@@ -54,11 +59,21 @@ def comment_new_games(request, pk):
 
         )
         return render(request, 'new_games/single_new_game.html',
-                      {'new_game': game_commented, 'comments': Comments.objects.filter(game_commented=game_commented)})
-
+                      {'new_game': game_commented,
+                       'comments': Comments.objects.filter(game_commented=game_commented)})
+    game_id = pk
     context = {'name': name,
                'avatar': avatar,
                'favourite_game': favourite_game,
                'favourite_genre': favourite_genre,
                }
     return render(request, 'new_games/comment_new_games.html', context)
+
+
+def profile_view(request, name):
+    if name != 'Гость':
+        profile_view = Profile.objects.get(name=name)
+        return render(request, 'users/profile_view.html', {'profile_view': profile_view})
+    else:
+        messages.error(request, 'У гостя нет профиля!')
+        return redirect('index')

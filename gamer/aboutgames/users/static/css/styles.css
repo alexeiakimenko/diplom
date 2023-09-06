@@ -193,10 +193,10 @@ button{
     position: relative;
     display: flex;
     max-width: fit-content;
-    margin: 0 auto;
+    margin: -10 auto;
     border: 2px solid black;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 15px;
     z-index: 99999;
     background: green;
     color:white;
