@@ -9,7 +9,7 @@
         <a href="#"><img width="372px" height="210px" src="{{ game.game_image.url }}"></a>
 
         <h5>Дата выхода игры: {{ game.release_date}}</h5>
-        <h5>Жанр:<a class="ngg" href="#">{{ game.genre }}</a></h5>
+        <h5>Жанр:<a data-title="сортировка по жанру {{ game.genre }}" class="ngg" href="#">{{ game.genre }}</a></h5>
         <h6>Дата написания статьи:{{ game.created }}</h6>
     </div>
     {% endfor %}
