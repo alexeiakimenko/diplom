@@ -16,8 +16,10 @@ def register(request):
         user_form = UserRegisterForm(request.POST)
 
         if user_form.is_valid():
+
             user = user_form.save(commit=False)
             user.username = user.username.lower()
+
             user.save()
             Profile.objects.create(
                 username=user.username,
@@ -31,12 +33,14 @@ def register(request):
                           {'form': FullForm(instance=request.user.profile),
                            'message': 'Регистрация прошла успешно!Вы можете добавить данные,по желанию.'})
         else:
-            messages.error(request, 'Ошибка регистрации')
+            messages.error(request, 'Ошибка регистрации!Внимательно читайте инструкцию для полей ввода.')
+            return redirect('index')
+
     else:
         user_form = UserRegisterForm()
 
-        context = {'form': user_form}
-        return render(request, 'users/register.html', context)
+    context = {'form': user_form}
+    return render(request, 'users/register.html', context)
 
 
 def logout_user(request):
@@ -51,6 +55,7 @@ def login_user(request):
     else:
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
+            messages.error(request, 'Неверный логин или пароль!')
             return render(request, 'users/login.html', {'form': AuthenticationForm()})
         else:
             login(request, user)

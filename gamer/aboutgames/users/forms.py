@@ -22,7 +22,7 @@ class FullForm(ModelForm):
             'favorite_game': 'Любимая игра',
             'favorite_genre': 'Любимый игровой жанр',
             'birthday': 'Дата рождения',
-            'username': 'Имя пользователя',
+            'username': 'Ник пользователя',
             'name': 'Имя',
             'email': 'Адрес электронной почты',
 
@@ -43,6 +43,9 @@ class UserRegisterForm(UserCreationForm):
             'password2',
 
         ]
+        labels = {
+            'username': 'Ник пользователя'
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

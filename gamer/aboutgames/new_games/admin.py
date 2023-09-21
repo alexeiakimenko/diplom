@@ -14,4 +14,4 @@ class CommentsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(NewGame, NewGameAdmin)
-admin.site.register(Comments,CommentsAdmin)
+admin.site.register(Comments, CommentsAdmin)
