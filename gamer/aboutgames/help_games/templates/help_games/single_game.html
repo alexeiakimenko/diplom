@@ -1,0 +1,60 @@
+{% extends 'users/base.html'%}
+{% block content %}
+<div class="box_single">
+    <h1>{{ game.title }}</h1>
+    <h3>Жанр:<a class="tag" href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a></h3>
+    <h5>Дата выхода игры:{{game.release_date}}</h5>
+    <h6>Дата написания статьи:{{game.created}}</h6>
+    <img width="372px" height="210px" src="{{ game.game_image.url }}">
+    <div class="text">{{ game.description|safe }}</div>
+    <div class="box_hint">
+        <h3 class="center">ПОДСКАЗКИ:</h3>
+        {% for hint in hints %}
+        <div class="comment"><a class="hint_video" href="{% url 'hint_game' hint.hint_title %}">
+            {{ hint.hint_title }}</a></div>
+        {% endfor %}
+    </div>
+    <div class="box_video">
+        <h3 class="center">Видео обзоры:</h3>
+        {% for video in videos %}
+        <div class="comment"><a class="hint_video" href="{% url 'video_view_game' video.video_title %}">
+            {{ video.video_title }}</a></div>
+        {% endfor %}
+    </div>
+</div>
+<a href="{% url 'comment_games' game.id %}">
+    <button class="btm">Коментировать</button>
+</a>
+<div class="box_comment" id="down">
+    {% for c in comment %}
+    <div class="comment">
+        {% if c.avatar != '' %}
+        <p>
+            <img src="{{ c.avatar.url}}" class="img_avatar">
+        </p>
+
+        {% endif %}
+        <p class="name">
+            <a data-title="Любимая игра:'{{ c.favourite_game }}',Любимый игровой жанр:'{{ c.favourite_genre }}'"
+               href="{% url 'profile_view' c.name %}" target="_blank">
+                {{ c.name }}</a>
+
+        </p>
+        <p class=" text_comment">{{ c.comment }}</p>
+        <div class="date">Дата:{{ c.comment_created }}</div>
+    </div>
+
+    {% endfor %}
+
+
+</div>
+
+<a href="{% url 'help_games' %}">
+    <button class="btm">Назад</button>
+</a>
+
+<script>
+    down=document.getElementById('down');
+    down.scrollTop=down.scrollHeight;
+</script>
+{% endblock %}

@@ -6,7 +6,7 @@
     {% if avatar %}
     <img src="{{ avatar.url }}" class="profile-size">
     {% endif %}
-    <h1 class="colortext">{{ name }} запишите свой комментарий:</h1>
+    <h1 class="center">{{ name }} запишите свой комментарий:</h1>
 
     <form action="" method="post" class="register" >
         {% csrf_token %}

@@ -1,0 +1,13 @@
+{% extends 'users/base.html'%}
+{% block content %}
+<div class="box_single">
+    <h2 class="center">{{hint.hint_title}}</h2>
+    <p>
+        {{hint.hint_description|safe}}
+    </p>
+
+</div>
+<a href="{% url 'single_game' hint.hint_game_id %}">
+    <button class="btm">Назад</button>
+</a>
+{%endblock%}

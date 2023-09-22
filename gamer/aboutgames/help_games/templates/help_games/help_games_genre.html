@@ -1,0 +1,19 @@
+{% extends 'users/base.html'%}
+
+{% block content %}
+<h3>Список игр по жанру <span class="green">{{ genre }}</span> :</h3>
+<div class="container">
+    {% for help_game in help_games %}
+
+    <div class="boxnewgame">
+        <a href="{% url 'single_game' help_game.id %}"><h2 class="red">{{ help_game.title }}</h2></a>
+        <a href="{% url 'single_game' help_game.id %}"><img width="372px" height="210px"
+                                                            src="{{ help_game.game_image.url }}"></a>
+        <h5>Дата выхода:{{ help_game.release_date }}</h5>
+        <h5>Жанр:{{ help_game.genre }}</h5>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

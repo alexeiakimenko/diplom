@@ -8,7 +8,7 @@
     <img width="372px" height="210px" src="{{ new_game.image.url }}">
     <div class="text">{{ new_game.description|safe }}</div>
     <div>
-        <video width="98%" src="{{ new_game.video.url }}" controls></video>
+        <video width="70%" src="{{ new_game.video.url }}" controls></video>
     </div>
     <a href="{% url 'comment_new_games' new_game.id %}">
         <button class="btm">Коментировать</button>
@@ -16,7 +16,7 @@
     <div class="box_comment" id="down">
         {% for c in comments %}
         <div class="comment">
-            {% if c.avatar %}
+            {% if c.avatar != '' %}
             <p>
                 <img src="{{ c.avatar.url}}" class="img_avatar">
             </p>
@@ -45,16 +45,5 @@
 <script>
     down=document.getElementById('down');
     down.scrollTop=down.scrollHeight;
-
-
-
-
-
-
-
-
-
-
-
 </script>
 {% endblock %}

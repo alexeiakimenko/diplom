@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('users.urls')),
     path('new_games/', include('new_games.urls')),
     path('help_games/', include('help_games.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 
 ]
 

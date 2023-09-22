@@ -216,3 +216,29 @@ button{
     box-sizing: border-box;
 }
 
+.box_hint{
+    background-color: skyblue;
+    text-align: left;
+    overflow:auto;
+    scroll-behavior: smooth;
+
+    height: 150px;
+    max-width: 100%;
+    border: 2px solid #121212;
+    display:list-item;
+}
+.box_video{
+    background-color: skyblue;
+    text-align: left;
+    overflow:auto;
+    scroll-behavior: smooth;
+
+    height: 150px;
+    max-width: 100%;
+    border: 2px solid #121212;
+    display:list-item;
+}
+.hint_video{
+    text-decoration: none;
+    color:#7c4123;
+}

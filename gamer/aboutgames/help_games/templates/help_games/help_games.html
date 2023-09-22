@@ -5,11 +5,12 @@
     {% for game in games %}
 
     <div class="boxnewgame">
-        <a href="#"><h2 class="red">{{ game.title }}</h2></a>
-        <a href="#"><img width="372px" height="210px" src="{{ game.game_image.url }}"></a>
+        <a href="{% url 'single_game' game.id %}"><h2 class="red">{{ game.title }}</h2></a>
+        <a href="{% url 'single_game' game.id %}"><img width="372px" height="210px" src="{{ game.game_image.url }}"></a>
 
         <h5>Дата выхода игры: {{ game.release_date}}</h5>
-        <h5>Жанр:<a data-title="сортировка по жанру {{ game.genre }}" class="ngg" href="#">{{ game.genre }}</a></h5>
+        <h5>Жанр:<a data-title="сортировка по жанру {{ game.genre }}" class="ngg"
+                    href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a></h5>
         <h6>Дата написания статьи:{{ game.created }}</h6>
     </div>
     {% endfor %}

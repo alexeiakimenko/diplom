@@ -32,8 +32,6 @@ def new_games_genre(request, pk):
 
 
 def comment_new_games(request, pk):
-    global avatar
-
     if request.user.is_authenticated:
         name = request.user.profile.name
         avatar = request.user.profile.avatar
@@ -41,6 +39,7 @@ def comment_new_games(request, pk):
         favourite_genre = request.user.profile.favorite_genre
     else:
         name = 'Гость'
+        avatar = ''
         favourite_game = 'Нет данных'
         favourite_genre = 'Нет данных'
     game_commented = NewGame.objects.get(id=pk)
