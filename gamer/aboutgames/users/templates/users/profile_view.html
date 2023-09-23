@@ -6,6 +6,13 @@
     <title>Профиль</title>
     <link rel="shortcut icon" href="{% static 'images/gamepad.png' %}" type="image/x-icon"/>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+        background:url("{{profile_view.avatar.url}}");
+        background-size:cover;
+        }
+
+    </style>
 </head>
 <body>
 <div class="box">

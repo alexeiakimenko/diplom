@@ -1,7 +1,7 @@
 {% extends 'users/base.html'%}
 {% block content %}
 <div class="box">
-    <h1 class="colortext">Регистрация:</h1>
+    <h1 class="color_register">Регистрация:</h1>
 
     <form action="{% url 'register' %}" method="post" class="register">
         {% csrf_token %}
