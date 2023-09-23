@@ -242,3 +242,35 @@ button{
     text-decoration: none;
     color:#7c4123;
 }
+.box_search{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-between ;
+    box-sizing: border-box;
+    height: 40px;
+    max-width: fit-content;
+   
+}
+
+.search_input{
+    font-size: 16px;
+    padding: 10px;
+    color:#271be3;
+    width: 800px;
+
+    
+
+}
+.search_input::placeholder{
+    color: #271be3;
+}
+.search_input2{
+    width:150px;
+    background:#003366;
+    border-radius: 10px;
+    color:#fff;
+    float:right;
+    
+    margin-top: 0px;
+    
+}

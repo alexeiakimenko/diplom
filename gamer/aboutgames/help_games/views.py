@@ -1,14 +1,29 @@
 from django.shortcuts import render
 from .models import *
 from users.models import *
+from transliterate import translit, detect_language
+from django.db.models import Q
 
 
 def help_games(request):
-    game = Game.objects.all()
-    context = {
-        'games': game
-    }
-    return render(request, 'help_games/help_games.html', context)
+    if request.method == 'POST':
+        search = request.POST['search']
+        search1 = translit(search, 'ru')
+        if detect_language(search) == 'ru':
+            search2 = translit(search, reversed=True)
+            game = Game.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
+        else:
+            game = Game.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
+        context = {
+            'games': game
+        }
+        return render(request, 'help_games/help_games.html', context)
+    else:
+        game = Game.objects.all()
+        context = {
+            'games': game
+        }
+        return render(request, 'help_games/help_games.html', context)
 
 
 def single_game(request, pk):

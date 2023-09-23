@@ -1,6 +1,7 @@
 {% extends 'users/base.html'%}
 
 {% block content %}
+{% include 'help_games/search.html' %}
 <h1 class="green">Список новинок:</h1>
 <div class="container">
     {% for new_game in new_games %}
