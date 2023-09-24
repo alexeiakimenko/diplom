@@ -5,7 +5,7 @@
 <div class="container">
     {% for help_game in help_games %}
 
-    <div class="boxnewgame">
+    <div class="box_game">
         <a href="{% url 'single_game' help_game.id %}"><h2 class="red">{{ help_game.title }}</h2></a>
         <a href="{% url 'single_game' help_game.id %}"><img width="372px" height="210px"
                                                             src="{{ help_game.game_image.url }}"></a>
@@ -14,6 +14,8 @@
     </div>
     {% endfor %}
 </div>
-
+<a href="{% url 'help_games' %}">
+    <button class="btm">Назад</button>
+</a>
 
 {% endblock %}

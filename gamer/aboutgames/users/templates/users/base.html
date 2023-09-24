@@ -7,6 +7,15 @@
     <link rel="shortcut icon" href="{% static 'images/gamepad.png' %}" type="image/x-icon"/>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
+{%if profile.avatar%}
+<style>
+    body {
+     background:url("{{profile.avatar.url}}");
+     background-size:cover;
+     }
+</style>
+{%endif%}
+
 <body>
 
 {% if messages %}
