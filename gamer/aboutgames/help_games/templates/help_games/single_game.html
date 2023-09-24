@@ -7,17 +7,17 @@
     <h6>Дата написания статьи:{{game.created}}</h6>
     <img width="372px" height="210px" src="{{ game.game_image.url }}">
     <div class="text">{{ game.description|safe }}</div>
-    <div class="box_hint">
-        <h3 class="center">ПОДСКАЗКИ:</h3>
+    <h3 class="left">ПОДСКАЗКИ:</h3>
+    <div class="box_hint" id="hint">
         {% for hint in hints %}
-        <div class="comment"><a class="hint_video" href="{% url 'hint_game' hint.hint_title %}">
+        <div class="hint_video"><a  href="{% url 'hint_game' hint.hint_title %}">
             {{ hint.hint_title }}</a></div>
         {% endfor %}
     </div>
-    <div class="box_video">
-        <h3 class="center">Видео обзоры:</h3>
+    <h3 class="left">Видео обзоры:</h3>
+    <div class="box_video" id="video">
         {% for video in videos %}
-        <div class="comment"><a class="hint_video" href="{% url 'video_view_game' video.video_title %}">
+        <div class="hint_video"><a href="{% url 'video_view_game' video.video_title %}">
             {{ video.video_title }}</a></div>
         {% endfor %}
     </div>
@@ -55,6 +55,14 @@
 
 <script>
     down=document.getElementById('down');
+    down.scrollTop=down.scrollHeight;
+</script>
+<script>
+    down=document.getElementById('hint');
+    down.scrollTop=down.scrollHeight;
+</script>
+<script>
+    down=document.getElementById('video');
     down.scrollTop=down.scrollHeight;
 </script>
 {% endblock %}

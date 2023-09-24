@@ -217,7 +217,7 @@ button{
 }
 
 .box_hint{
-    background-color: skyblue;
+    background-color: #8afb25;
     text-align: left;
     overflow:auto;
     scroll-behavior: smooth;
@@ -228,7 +228,7 @@ button{
     display:list-item;
 }
 .box_video{
-    background-color: skyblue;
+    background-color:#29c25c;
     text-align: left;
     overflow:auto;
     scroll-behavior: smooth;
@@ -238,10 +238,7 @@ button{
     border: 2px solid #121212;
     display:list-item;
 }
-.hint_video{
-    text-decoration: none;
-    color:#7c4123;
-}
+
 .box_search{
     display: flex;
     flex-wrap: nowrap;
@@ -277,3 +274,31 @@ button{
 .color_register{
     color:#271be3;
 }
+.left{
+    text-align: left;
+    color:#231bc4;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+}
+.hint_video{
+    border:2px coral solid;
+    max-width: fit-content;
+    max-height: fit-content;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    background: white;
+    box-sizing: border-box;
+    
+}
+.hint_video a:link{
+    color:#7c4123
+}
+.hint_video a:visited{
+    color:#29c25c;
+}
+.hint_video a:hover{
+    color:red;
+}
+
