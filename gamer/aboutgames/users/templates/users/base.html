@@ -15,7 +15,22 @@
      }
 </style>
 {%endif%}
-
+{%if game.game_image%}
+<style>
+    body{
+    background:url("{{ game.game_image.url }}");
+     background-size:cover;
+    }
+</style>
+{%endif%}
+{%if new_game.image%}
+<style>
+    body{
+    background:url("{{ new_game.image.url }}");
+     background-size:cover;
+    }
+</style>
+{%endif%}
 <body>
 
 {% if messages %}

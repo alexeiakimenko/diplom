@@ -55,8 +55,10 @@ def hint_game(request, title):
 
 def video_view_game(request, title):
     video = VideoView.objects.get(video_title=title)
+    game = Game.objects.get(id=video.video_game_id)
     context = {
         'video': video,
+        'game': game,
     }
     return render(request, 'help_games/video_view_game.html', context)
 
@@ -89,11 +91,12 @@ def comment_games(request, pk):
         return render(request, 'help_games/single_game.html',
                       {'game': game_commented, 'hints': hints, 'videos': videos,
                        'comment': GameComment.objects.filter(comment_game=game_commented)})
-
+    game = Game.objects.get(id=pk)
     context = {'name': name,
                'avatar': avatar,
                'favourite_game': favourite_game,
                'favourite_genre': favourite_genre,
+               'game':game,
                }
 
     return render(request, 'help_games/comment_games.html', context)

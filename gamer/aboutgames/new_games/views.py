@@ -77,10 +77,12 @@ def comment_new_games(request, pk):
                       {'new_game': game_commented,
                        'comments': Comments.objects.filter(game_commented=game_commented)})
     game_id = pk
+    game = NewGame.objects.get(id=pk)
     context = {'name': name,
                'avatar': avatar,
                'favourite_game': favourite_game,
                'favourite_genre': favourite_genre,
+               'new_game': game,
                }
     return render(request, 'new_games/comment_new_games.html', context)
 
