@@ -3,29 +3,32 @@ from .models import *
 from users.models import *
 from transliterate import translit, detect_language
 from django.db.models import Q
+from .utils import page_list
 
 
 def new_games(request):
-    new_game = []
-    if request.method == 'POST':
-        search = request.POST['search']
-        search1 = translit(search, 'ru')
-        if detect_language(search) == 'ru':
-            search2 = translit(search, reversed=True)
-            new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
-        else:
-            new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
+    # if request.method == 'POST':
+    #     search = request.POST['search']
+    #     search1 = translit(search, 'ru')
+    #     if detect_language(search) == 'ru':
+    #         search2 = translit(search, reversed=True)
+    #         new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
+    #     else:
+    #         new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
+    #
+    #     context = {
+    #         'new_games': new_game
+    #     }
 
-        context = {
-            'games': new_game
-        }
-        return render(request, 'new_games/new_games.html', context)
-    else:
-        new_game = NewGame.objects.all()
-        context = {
-            'new_games': new_game
-        }
-        return render(request, 'new_games/new_games.html', context)
+    #     return render(request, 'new_games/new_games.html', context)
+    # else:
+    new_game = NewGame.objects.all()
+    new_game_list = page_list(request, new_game)
+    new_game = new_game_list[0].page(new_game_list[1])
+    context = {
+        'new_games': new_game
+    }
+    return render(request, 'new_games/new_games.html', context)
 
 
 def single_new_game(request, pk):
@@ -41,6 +44,9 @@ def single_new_game(request, pk):
 def new_games_genre(request, pk):
     genre = pk
     new_game = NewGame.objects.filter(genre=pk)
+    new_game_list = page_list(request, new_game)
+    new_game = new_game_list[0].page(new_game_list[1])
+
     context = {
         'new_games': new_game,
         'genre': genre
@@ -90,3 +96,22 @@ def comment_new_games(request, pk):
 def profile_view(request, name):
     profile_view = Profile.objects.get(name=name)
     return render(request, 'users/profile_view.html', {'profile_view': profile_view})
+
+
+def search_new_game(request):
+    if request.method == 'POST':
+        search = request.POST['search']
+        search1 = translit(search, 'ru')
+        if detect_language(search) == 'ru':
+            search2 = translit(search, reversed=True)
+            new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
+        else:
+            new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
+
+        context = {
+            'new_games': new_game
+        }
+
+        return render(request, 'new_games/search_new_game.html', context)
+    else:
+        return render(request,'new_games/search_new_game.html')

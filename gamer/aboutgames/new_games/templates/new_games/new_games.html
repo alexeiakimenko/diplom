@@ -1,7 +1,8 @@
 {% extends 'users/base.html'%}
 
 {% block content %}
-{% include 'help_games/search.html' %}
+
+<div><a class="search_input2" href="{%url 'search_new_game' %}">Поиск по названию игры</a></div>
 <h1 class="green">Список новинок:</h1>
 <div class="container">
     {% for new_game in new_games %}
@@ -17,6 +18,6 @@
     </div>
     {% endfor %}
 </div>
-
+{% include 'new_games/pagination.html' with page=new_games  %}
 
 {% endblock %}

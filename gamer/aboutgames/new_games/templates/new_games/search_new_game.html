@@ -1,22 +1,29 @@
 {% extends 'users/base.html'%}
 
 {% block content %}
-<h3>Список новинок по жанру <span class="green">{{ genre }}</span> :</h3>
+{% include 'help_games/search.html'%}
+{% if new_games %}
+
+<h1 class="btm">Результаты поиска:</h1>
+{%endif%}
 <div class="container">
+
     {% for new_game in new_games %}
 
     <div class="box_game">
         <a href="{% url 'single-new-game' new_game.id %}"><h2 class="red">{{ new_game.title }}</h2></a>
         <a href="{% url 'single-new-game' new_game.id %}"><img width="372px" height="210px"
                                                                src="{{ new_game.image.url }}"></a>
-          <h5>Дата создания:{{ new_game.create }}</h5>
-        <h5>Жанр:{{ new_game.genre }}</h5>
+
+        <h5>Жанр:<a class="ngg" data-title="сортировка по жанру {{ new_game.genre }}"
+                    href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h5>
+        <h6>Дата написания статьи:{{ new_game.create }}</h6>
     </div>
     {% endfor %}
 </div>
-{% include 'new_games/pagination.html' with page=new_games  %}
+{% if new_games %}
 <a href="{% url 'new-games' %}">
     <button class="btm">Назад</button>
 </a>
-
-{% endblock %}
+{%endif%}
+{%endblock%}
