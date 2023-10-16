@@ -6,11 +6,15 @@ from django.db.models import Q
 from .utils import page_list
 
 search = ''
+page = 1
 
 
 def new_games(request):
+    global page
+    if request.GET.get('page'):
+        page = int(request.GET.get('page'))
     new_game = NewGame.objects.all()
-    new_game_list = page_list(request, new_game)
+    new_game_list = page_list(request, new_game, page)
     new_game = new_game_list[0].page(new_game_list[1])
     context = {
         'new_games': new_game
@@ -29,9 +33,10 @@ def single_new_game(request, pk):
 
 
 def new_games_genre(request, pk):
+    page=1
     genre = pk
     new_game = NewGame.objects.filter(genre=pk)
-    new_game_list = page_list(request, new_game)
+    new_game_list = page_list(request, new_game, page)
     new_game = new_game_list[0].page(new_game_list[1])
 
     context = {
@@ -87,6 +92,7 @@ def profile_view(request, name):
 
 def search_new_game(request):
     global search
+    page=1
     if 'search' in request.GET:
         search = request.GET.get('search')
 
@@ -96,7 +102,7 @@ def search_new_game(request):
         new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
     else:
         new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
-    new_game_list = page_list(request, new_game)
+    new_game_list = page_list(request, new_game, page)
     new_game = new_game_list[0].page(new_game_list[1])
     context = {
         'new_games': new_game

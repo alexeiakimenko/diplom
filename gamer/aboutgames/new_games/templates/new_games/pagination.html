@@ -1,13 +1,20 @@
 <div class="pagination">
-    <span>
+    <span class="pag">
+        {% if not page.has_previous%}
+        <span class="otstup"></span>
+        {%endif%}
+
         {% if page.has_previous %}
-        <a  class="pag" href="?page={{page.previous_page_number}}">Предыдущая</a>
+        <a class="pag" href="?page=1">***В начало</a>
+        <a  class="pag" href="?page={{page.previous_page_number}}">***&lt&lt&ltПредыдущая</a>
         {% endif %}
     <span>
         стр. {{ page.number }} из {{page.paginator.num_pages}}
     </span>
         {% if page.has_next %}
-        <a class="pag" href="?page={{page.next_page_number}}">Следующая</a>
+        <a class="pag" href="?page={{page.next_page_number}}">Следующая&gt&gt&gt***</a>
+        <a class="pag" href="?page={{page.paginator.num_pages}}">В конец***</a>
         {% endif %}
+
     </span>
 </div>

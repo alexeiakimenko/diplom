@@ -310,12 +310,13 @@ button{
     
 }
 .pagination{
+    display:flex;
     border-radius: 6px;
     box-shadow:inset 0 0 6px 2px #003366;
     background: #c9fde1;
     color:#be5123;
     font-weight: bold;
-    max-width: fit-content;
+    max-width: 725px;
     margin: 0 auto;
 }
 .pag{
@@ -329,4 +330,7 @@ button{
     margin-left: 590px;
     margin-top: -40px;
     
+}
+.otstup{
+    padding-left: 325px;
 }

@@ -6,11 +6,15 @@ from transliterate import translit, detect_language
 from django.db.models import Q
 
 search = ''
+page = 1
 
 
 def help_games(request):
+    global page
+    if request.GET.get('page'):
+        page = int(request.GET.get('page'))
     game = Game.objects.all()
-    game_list = page_list(request, game)
+    game_list = page_list(request, game, page)
     game = game_list[0].page(game_list[1])
     context = {
         'games': game
@@ -97,9 +101,10 @@ def comment_games(request, pk):
 
 
 def help_games_genre(request, title):
+    page = 1
     genre = title
     help_game = Game.objects.filter(genre=title)
-    game_list = page_list(request, help_game)
+    game_list = page_list(request, help_game, page)
     game = game_list[0].page(game_list[1])
     context = {
         'help_games': game,
@@ -110,6 +115,7 @@ def help_games_genre(request, title):
 
 def search_game(request):
     global search
+    page = 1
     if 'search' in request.GET:
         search = request.GET.get('search')
 
@@ -119,7 +125,7 @@ def search_game(request):
         game = Game.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
     else:
         game = Game.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
-    game_list = page_list(request, game)
+    game_list = page_list(request, game, page)
     game = game_list[0].page(game_list[1])
     context = {
         'games': game
