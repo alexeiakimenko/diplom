@@ -2,9 +2,12 @@
 
 {% block content %}
 {% include 'help_games/search.html'%}
+<a href="{% url 'new-games' %}">
+    <button class="btm_search">Назад</button>
+</a>
 {% if new_games %}
 
-<h1 class="btm">Результаты поиска:</h1>
+<h1 class="search">Результаты поиска:</h1>
 {%endif%}
 <div class="container">
 
@@ -21,9 +24,7 @@
     </div>
     {% endfor %}
 </div>
-{% if new_games %}
-<a href="{% url 'new-games' %}">
-    <button class="btm">Назад</button>
-</a>
-{%endif%}
+{% include 'new_games/pagination.html' with page=new_games  %}
+
+
 {%endblock%}

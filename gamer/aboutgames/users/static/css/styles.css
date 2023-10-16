@@ -55,6 +55,7 @@ input{
     background: #edf290;
     color:#271be3;
     font-weight: bold;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 button{
@@ -302,3 +303,30 @@ button{
     color:red;
 }
 
+.search{
+    background: #19305d;
+    color:#35a941;
+    font-weight: bold;
+    
+}
+.pagination{
+    border-radius: 6px;
+    box-shadow:inset 0 0 6px 2px #003366;
+    background: #c9fde1;
+    color:#be5123;
+    font-weight: bold;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+.pag{
+    color: #be5123;
+}
+.btm_search{
+    background: white;
+    color:blue;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 590px;
+    margin-top: -40px;
+    
+}

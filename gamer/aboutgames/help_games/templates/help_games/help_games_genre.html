@@ -14,6 +14,7 @@
     </div>
     {% endfor %}
 </div>
+{% include 'new_games/pagination.html' with page=help_games  %}
 <a href="{% url 'help_games' %}">
     <button class="btm">Назад</button>
 </a>

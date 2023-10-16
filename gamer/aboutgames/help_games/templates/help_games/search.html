@@ -1,10 +1,11 @@
 <div class="box_search">
-    <form  method="post">
-        {% csrf_token%}
+    <form method="get">
 
-       <div> <input class="search_input" type="search"
-               placeholder="поиск по названию игр(достаточно ввести несколько символов)" name="search">
-        <button class="search_input2">Поиск</button>
+
+        <div><input class="search_input" type="search"
+                    placeholder="поиск по названию игр(достаточно ввести несколько символов)" value="{{search}}"
+                    name="search">
+            <button class="search_input2">Поиск</button>
         </div>
 
     </form>

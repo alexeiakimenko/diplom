@@ -5,23 +5,10 @@ from transliterate import translit, detect_language
 from django.db.models import Q
 from .utils import page_list
 
+search = ''
+
 
 def new_games(request):
-    # if request.method == 'POST':
-    #     search = request.POST['search']
-    #     search1 = translit(search, 'ru')
-    #     if detect_language(search) == 'ru':
-    #         search2 = translit(search, reversed=True)
-    #         new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
-    #     else:
-    #         new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
-    #
-    #     context = {
-    #         'new_games': new_game
-    #     }
-
-    #     return render(request, 'new_games/new_games.html', context)
-    # else:
     new_game = NewGame.objects.all()
     new_game_list = page_list(request, new_game)
     new_game = new_game_list[0].page(new_game_list[1])
@@ -99,19 +86,20 @@ def profile_view(request, name):
 
 
 def search_new_game(request):
-    if request.method == 'POST':
-        search = request.POST['search']
-        search1 = translit(search, 'ru')
-        if detect_language(search) == 'ru':
-            search2 = translit(search, reversed=True)
-            new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
-        else:
-            new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
+    global search
+    if 'search' in request.GET:
+        search = request.GET.get('search')
 
-        context = {
-            'new_games': new_game
-        }
-
-        return render(request, 'new_games/search_new_game.html', context)
+    search1 = translit(search, 'ru')
+    if detect_language(search) == 'ru':
+        search2 = translit(search, reversed=True)
+        new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
     else:
-        return render(request,'new_games/search_new_game.html')
+        new_game = NewGame.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
+    new_game_list = page_list(request, new_game)
+    new_game = new_game_list[0].page(new_game_list[1])
+    context = {
+        'new_games': new_game
+    }
+
+    return render(request, 'new_games/search_new_game.html', context)

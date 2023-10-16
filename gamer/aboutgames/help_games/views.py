@@ -1,29 +1,21 @@
 from django.shortcuts import render
 from .models import *
 from users.models import *
+from new_games.utils import page_list
 from transliterate import translit, detect_language
 from django.db.models import Q
 
+search = ''
+
 
 def help_games(request):
-    if request.method == 'POST':
-        search = request.POST['search']
-        search1 = translit(search, 'ru')
-        if detect_language(search) == 'ru':
-            search2 = translit(search, reversed=True)
-            game = Game.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
-        else:
-            game = Game.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
-        context = {
-            'games': game
-        }
-        return render(request, 'help_games/help_games.html', context)
-    else:
-        game = Game.objects.all()
-        context = {
-            'games': game
-        }
-        return render(request, 'help_games/help_games.html', context)
+    game = Game.objects.all()
+    game_list = page_list(request, game)
+    game = game_list[0].page(game_list[1])
+    context = {
+        'games': game
+    }
+    return render(request, 'help_games/help_games.html', context)
 
 
 def single_game(request, pk):
@@ -47,8 +39,10 @@ def profile_view(request, name):
 
 def hint_game(request, title):
     hint = Hint.objects.get(hint_title=title)
+    game = Game.objects.get(id=hint.hint_game_id)
     context = {
         'hint': hint,
+        'game': game,
     }
     return render(request, 'help_games/hint_game.html', context)
 
@@ -96,7 +90,7 @@ def comment_games(request, pk):
                'avatar': avatar,
                'favourite_game': favourite_game,
                'favourite_genre': favourite_genre,
-               'game':game,
+               'game': game,
                }
 
     return render(request, 'help_games/comment_games.html', context)
@@ -105,8 +99,30 @@ def comment_games(request, pk):
 def help_games_genre(request, title):
     genre = title
     help_game = Game.objects.filter(genre=title)
+    game_list = page_list(request, help_game)
+    game = game_list[0].page(game_list[1])
     context = {
-        'help_games': help_game,
+        'help_games': game,
         'genre': genre
     }
     return render(request, 'help_games/help_games_genre.html', context)
+
+
+def search_game(request):
+    global search
+    if 'search' in request.GET:
+        search = request.GET.get('search')
+
+    search1 = translit(search, 'ru')
+    if detect_language(search) == 'ru':
+        search2 = translit(search, reversed=True)
+        game = Game.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search2))
+    else:
+        game = Game.objects.distinct().filter(Q(title__icontains=search1) | Q(title__icontains=search))
+    game_list = page_list(request, game)
+    game = game_list[0].page(game_list[1])
+    context = {
+        'games': game
+    }
+
+    return render(request, 'help_games/search_game.html', context)

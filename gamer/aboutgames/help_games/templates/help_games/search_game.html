@@ -1,0 +1,33 @@
+{% extends 'users/base.html'%}
+
+{% block content %}
+{% include 'help_games/search.html'%}
+
+<a href="{% url 'help_games' %}">
+    <button class="btm_search">Назад</button>
+</a>
+
+
+{% if games %}
+
+<h3 class="search">Результаты поиска:</h3>
+{%endif%}
+<div class="container">
+
+    {% for game in games %}
+
+    <div class="box_game">
+        <a href="{% url 'single_game' game.id %}"><h2 class="red">{{ game.title }}</h2></a>
+        <a href="{% url 'single_game' game.id %}"><img width="372px" height="210px"
+                                                               src="{{ game.game_image.url }}"></a>
+        <h5>Дата выхода игры: {{game.release_date}}</h5>
+        <h5>Жанр:<a class="ngg" data-title="сортировка по жанру {{ game.genre }}"
+                    href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a></h5>
+        <h6>Дата написания статьи:{{ game.created }}</h6>
+    </div>
+    {% endfor %}
+</div>
+{% include 'new_games/pagination.html' with page=games  %}
+
+
+{%endblock%}
