@@ -1,7 +1,7 @@
 from django.contrib import admin
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
-from .models import Game, Hint, VideoView, GameComment
+from .models import Game, Hint, VideoView, GameComment, VoteUser
 
 
 class HintAdminForm(forms.ModelForm):
@@ -9,13 +9,14 @@ class HintAdminForm(forms.ModelForm):
 
     class Meta:
         model = Hint
+        model = Game
         fields = '__all__'
 
 
 class GameAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'genre', 'release_date')
+    list_display = ('id', 'title', 'genre', 'release_date', 'rating_site', 'rating')
     list_display_links = ('title',)
-
+    readonly_fields = ('rating_site',)
     search_fields = ('title',)
 
 
@@ -34,7 +35,12 @@ class VideoViewAdmin(admin.ModelAdmin):
     list_filter = ('video_game',)
 
 
+class VoteUserAdmin(admin.ModelAdmin):
+    list_display = ('user_evaluation', 'game_evaluation', 'evaluation')
+
+
 admin.site.register(Game, GameAdmin)
 admin.site.register(Hint, HintAdmin)
 admin.site.register(VideoView, VideoViewAdmin)
 admin.site.register(GameComment)
+admin.site.register(VoteUser, VoteUserAdmin)

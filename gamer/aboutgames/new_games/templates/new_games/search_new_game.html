@@ -21,6 +21,8 @@
         <h5>Жанр:<a class="ngg" data-title="сортировка по жанру {{ new_game.genre }}"
                     href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h5>
         <h6>Дата написания статьи:{{ new_game.create }}</h6>
+         <div class="red">Рейтинг от экспертов на Metarankings.ru: <span class="rating">{{new_game.rating}}</span></div>
+        <div class="red">Рейтинг нашего сайта: <span class="rating">{{new_game.rating_site}}</span></div>
     </div>
     {% endfor %}
 </div>

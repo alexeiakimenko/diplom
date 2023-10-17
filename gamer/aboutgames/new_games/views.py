@@ -3,7 +3,7 @@ from .models import *
 from users.models import *
 from transliterate import translit, detect_language
 from django.db.models import Q
-from .utils import page_list
+from .utils import page_list, calculate_rating
 
 search = ''
 page = 1
@@ -25,15 +25,34 @@ def new_games(request):
 def single_new_game(request, pk):
     new_game = NewGame.objects.get(id=pk)
     comments = Comments.objects.filter(game_commented=pk)
+    try:
+        user_eval = NewVoteUser.objects.filter(user_evaluation=request.user.profile)
+        flag = 1
+        for e in user_eval:
+            if int(e.game_evaluation_id) == int(pk):
+                ev = e.evaluation
+                flag = 0
+            print('flag=', flag, '---', 'pk=', pk, '---', 'game=', e.game_evaluation_id)
+        if flag == 0:
+            user_eval = request.user.profile
+        else:
+            user_eval = None
+            ev = None
+    except:
+        user_eval = None
+        ev = None
+
     context = {
         'new_game': new_game,
-        'comments': comments
+        'comments': comments,
+        'user_eval': user_eval,
+        'ev': ev,
     }
     return render(request, 'new_games/single_new_game.html', context)
 
 
 def new_games_genre(request, pk):
-    page=1
+    page = 1
     genre = pk
     new_game = NewGame.objects.filter(genre=pk)
     new_game_list = page_list(request, new_game, page)
@@ -92,7 +111,7 @@ def profile_view(request, name):
 
 def search_new_game(request):
     global search
-    page=1
+    page = 1
     if 'search' in request.GET:
         search = request.GET.get('search')
 
@@ -109,3 +128,35 @@ def search_new_game(request):
     }
 
     return render(request, 'new_games/search_new_game.html', context)
+
+
+def new_game_evaluation(request, pk):
+    new_game = NewGame.objects.get(id=pk)
+    if request.method == 'POST':
+        NewVoteUser.objects.create(
+            evaluation=request.POST['eval'],
+            user_evaluation=request.user.profile,
+            game_evaluation_id=new_game.id
+        )
+        new_game_evaluation = NewVoteUser.objects.filter(game_evaluation_id=pk)
+        s = 0
+        l = 0
+        for e in new_game_evaluation:
+            s += e.evaluation
+            l += 1
+        rating = calculate_rating(s, l)
+        new_game.rating_site = rating
+        new_game.save()
+
+        comments = Comments.objects.filter(game_commented=pk)
+        context = {
+            'new_game': new_game,
+            'comments': comments,
+            'ev': request.POST['eval'],
+            'user_eval': request.user.profile
+        }
+        return render(request, 'new_games/single_new_game.html', context)
+    context = {
+        'new_game': new_game
+    }
+    return render(request, 'new_games/new_game_evaluation.html', context)

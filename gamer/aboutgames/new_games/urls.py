@@ -8,4 +8,5 @@ urlpatterns = [
     path('comment_new_games/<str:pk>/', views.comment_new_games, name='comment_new_games'),
     path('profile_view/<str:name>', views.profile_view, name="profile_view"),
     path('search_new_game/', views.search_new_game, name="search_new_game"),
+    path('new_game_evaluation/<str:pk>/', views.new_game_evaluation, name="new_game_evaluation"),
 ]

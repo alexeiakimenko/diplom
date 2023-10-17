@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from users.models import *
-from new_games.utils import page_list
+from new_games.utils import page_list, calculate_rating
 from transliterate import translit, detect_language
 from django.db.models import Q
 
@@ -27,11 +27,30 @@ def single_game(request, pk):
     hints = Hint.objects.filter(hint_game=pk)
     videos = VideoView.objects.filter(video_game=pk)
     comment = GameComment.objects.filter(comment_game=pk)
+    try:
+        user_eval = VoteUser.objects.filter(user_evaluation=request.user.profile.id)
+        flag = 1
+        for e in user_eval:
+            if int(e.game_evaluation_id) == int(pk):
+                ev = e.evaluation
+                flag = 0
+
+        if flag == 0:
+            user_eval = request.user.profile
+        else:
+            user_eval = None
+            ev = None
+    except:
+        user_eval = None
+        ev = None
+
     context = {
         'game': game,
         'hints': hints,
         'videos': videos,
         'comment': comment,
+        'user_eval': user_eval,
+        'ev': ev
     }
     return render(request, 'help_games/single_game.html', context)
 
@@ -132,3 +151,35 @@ def search_game(request):
     }
 
     return render(request, 'help_games/search_game.html', context)
+
+
+def game_evaluation(request, pk):
+    game = Game.objects.get(id=pk)
+    game_commented = GameComment.objects.filter(comment_game=pk)
+    hints = Hint.objects.filter(hint_game=pk)
+    videos = VideoView.objects.filter(video_game=pk)
+    if request.method == 'POST':
+        VoteUser.objects.create(
+            evaluation=request.POST['eval'],
+            user_evaluation=request.user.profile,
+            game_evaluation_id=game.id
+        )
+        game_evaluation = VoteUser.objects.filter(game_evaluation_id=pk)
+        s = 0
+        l = 0
+        for e in game_evaluation:
+            s += e.evaluation
+            l += 1
+        rating = calculate_rating(s, l)
+        game.rating_site = rating
+        game.save()
+        context = {
+            'game': game,
+            'comment': game_commented,
+            'hints': hints,
+            'videos': videos,
+            'ev': request.POST['eval'],
+            'user_eval': request.user.profile
+        }
+        return render(request, 'help_games/single_game.html', context)
+    return render(request, 'help_games/game_evaluation.html', {'game': game})

@@ -1,4 +1,6 @@
 from django.db import models
+from users.models import Profile
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class NewGame(models.Model):
@@ -10,6 +12,8 @@ class NewGame(models.Model):
                               verbose_name='Картинка')
     video = models.FileField(upload_to='preview/%Y/%m/%d', blank=True, default='preview/default.mp4',
                              verbose_name='Трейлер')
+    rating = models.FloatField(default=0, verbose_name='Рейтинг от экспертов на Metarankings.ru')
+    rating_site = models.FloatField(default=0, verbose_name='Рейтинг нашего сайта')
 
     def __str__(self):
         return self.title
@@ -17,7 +21,7 @@ class NewGame(models.Model):
     class Meta:
         verbose_name = 'Анонс игры'
         verbose_name_plural = 'Анонс игр'
-        ordering = ['title']
+        ordering = ['-rating_site', '-rating', 'title']
 
 
 class Comments(models.Model):
@@ -36,3 +40,14 @@ class Comments(models.Model):
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
         ordering = ['comment_created']
+
+
+class NewVoteUser(models.Model):
+    evaluation = models.IntegerField(blank=True, null=True, validators=[MaxValueValidator(5), MinValueValidator(1)],
+                                     verbose_name='Оценка игры пользователем')
+    game_evaluation = models.ForeignKey('NewGame', on_delete=models.CASCADE, verbose_name='Для какой игры оценка')
+    user_evaluation = models.ForeignKey(Profile, on_delete=models.CASCADE, verbose_name='Кто оценивает игру')
+
+    class Meta:
+        verbose_name = 'Оценку игры'
+        verbose_name_plural = 'Оценка игры'

@@ -13,6 +13,8 @@
         <h5>Жанр:<a data-title="сортировка по жанру {{ game.genre }}" class="ngg"
                     href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a></h5>
         <h6>Дата написания статьи:{{game.created }}</h6>
+        <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{game.rating}}</span></div>
+        <div class="red">Рейтинг нашего сайта: <span class="rating">{{game.rating_site}}</span></div>
     </div>
     {% endfor %}
 </div>

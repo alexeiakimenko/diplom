@@ -318,6 +318,7 @@ button{
     font-weight: bold;
     max-width: 725px;
     margin: 0 auto;
+    margin-top: -50px;
 }
 .pag{
     color: #be5123;
@@ -333,4 +334,16 @@ button{
 }
 .otstup{
     padding-left: 325px;
+}
+.rating{
+    color: #231bc4;
+    font-weight: bold;
+}
+.eval{
+    color:#35a941;
+    font-weight:bold ;
+    font-size: 20px;
+}
+.eval::placeholder{
+    color:darkred;
 }

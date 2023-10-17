@@ -5,12 +5,15 @@
     <h3>Жанр:<a class="tag" href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a></h3>
     <h5>Дата выхода игры:{{game.release_date}}</h5>
     <h6>Дата написания статьи:{{game.created}}</h6>
+    <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{game.rating}}</span></div>
+    <div class="red">Рейтинг нашего сайта: <span class="rating">{{game.rating_site}}</span></div>
+    <div class="red">Ваша оценка: <span class="rating">{{ev}}</span></div>
     <img width="372px" height="210px" src="{{ game.game_image.url }}">
     <div class="text">{{ game.description|safe }}</div>
     <h3 class="left">ПОДСКАЗКИ:</h3>
     <div class="box_hint">
         {% for hint in hints %}
-        <div class="hint_video"><a  href="{% url 'hint_game' hint.hint_title %}">
+        <div class="hint_video"><a href="{% url 'hint_game' hint.hint_title %}">
             {{ hint.hint_title }}</a></div>
         {% endfor %}
     </div>
@@ -46,9 +49,12 @@
 
     {% endfor %}
 
-
 </div>
-
+{% if request.user.is_authenticated and request.user.profile != user_eval %}
+<a href="{% url 'game_evaluation' game.id %}">
+    <button class="btm">Оценить игру</button>
+</a>
+{%endif%}
 <a href="{% url 'help_games' %}">
     <button class="btm">Назад</button>
 </a>

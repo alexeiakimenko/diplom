@@ -5,6 +5,9 @@
     <h1>{{ new_game.title }}</h1>
     <h3>Жанр:<a class="tag" href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h3>
     <h5>Дата создания:{{ new_game.create }}</h5>
+    <div class="red">Рейтинг от экспертов на Metarankings.ru: <span class="rating">{{new_game.rating}}</span></div>
+    <div class="red">Рейтинг нашего сайта: <span class="rating">{{new_game.rating_site}}</span></div>
+    <div class="red">Ваша оценка: <span class="rating">{{ev}}</span></div>
     <img width="372px" height="210px" src="{{ new_game.image.url }}">
     <div class="text">{{ new_game.description|safe }}</div>
     <div>
@@ -33,17 +36,19 @@
         </div>
 
         {% endfor %}
-
-
     </div>
-
+    {% if request.user.is_authenticated and request.user.profile != user_eval %}
+    <a href="{% url 'new_game_evaluation' new_game.id %}">
+        <button class="btm">Оценить игру</button>
+    </a>
+    {%endif%}
     <a href="{% url 'new-games' %}">
         <button class="btm">Назад</button>
     </a>
-</div>
 
-<script>
-    down=document.getElementById('down');
-    down.scrollTop=down.scrollHeight;
-</script>
-{% endblock %}
+
+    <script>
+        down=document.getElementById('down');
+        down.scrollTop=down.scrollHeight;
+    </script>
+    {% endblock %}

@@ -1,6 +1,7 @@
 {% extends 'users/base.html'%}
 
 {% block content %}
+<div><a class="search_input2" href="{%url 'search_game' %}">Поиск по названию игры</a></div>
 <h3>Список игр по жанру <span class="green">{{ genre }}</span> :</h3>
 <div class="container">
     {% for help_game in help_games %}
@@ -11,6 +12,8 @@
                                                             src="{{ help_game.game_image.url }}"></a>
         <h5>Дата выхода:{{ help_game.release_date }}</h5>
         <h5>Жанр:{{ help_game.genre }}</h5>
+         <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{game.rating}}</span></div>
+         <div class="red">Рейтинг нашего сайта: <span class="rating">{{game.rating_site}}</span></div>
     </div>
     {% endfor %}
 </div>

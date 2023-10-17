@@ -1,0 +1,18 @@
+{% extends 'users/base.html'%}
+
+{% block content %}
+
+<div class="box">
+    {% if request.user.profile.avatar %}
+    <img src="{{ request.user.profile.avatar.url }}" class="profile-size">
+    {% endif %}
+    <h1 class="center">{{ request.user.profile }} оцените игру {{game.title}}:</h1>
+
+    <form method="post" class="register" >
+        {% csrf_token %}
+
+        <input class="eval" type="number" min="1" max="5" name="eval" placeholder="Оцените игру от 1 до 5.Оценку потом изменить нельзя!!!">
+        <button class="btm">Отправить</button>
+    </form>
+</div>
+{% endblock %}

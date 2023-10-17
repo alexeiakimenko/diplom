@@ -1,4 +1,6 @@
 from django.db import models
+from users.models import Profile
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Game(models.Model):
@@ -8,6 +10,8 @@ class Game(models.Model):
     description = models.TextField(verbose_name='Содержание')
     game_image = models.ImageField(upload_to='game_image/%Y/%m/%d/', blank=True, null=True, verbose_name='Обложка')
     created = models.DateField(verbose_name='Дата написания статьи')
+    rating = models.FloatField(default=0, verbose_name='Рейтинг игроков от Metarankings.ru')
+    rating_site = models.FloatField(default=0, verbose_name='Рейтинг нашего сайта')
 
     def __str__(self):
         return self.title
@@ -15,7 +19,7 @@ class Game(models.Model):
     class Meta:
         verbose_name = 'игру'
         verbose_name_plural = 'Игры'
-        ordering = ['title']
+        ordering = ['-rating_site', '-rating', 'title']
 
 
 class Hint(models.Model):
@@ -62,3 +66,14 @@ class GameComment(models.Model):
         verbose_name = 'комментарий к игре'
         verbose_name_plural = 'Комментарии к игре'
         ordering = ['-comment_created']
+
+
+class VoteUser(models.Model):
+    evaluation = models.IntegerField(blank=True, null=True, validators=[MaxValueValidator(5), MinValueValidator(5)],
+                                     verbose_name='Оценка игры пользователем')
+    game_evaluation = models.ForeignKey('Game', on_delete=models.CASCADE, verbose_name='Для какой игры оценка')
+    user_evaluation = models.ForeignKey(Profile, on_delete=models.CASCADE, verbose_name='Кто оценивает игру')
+
+    class Meta:
+        verbose_name = 'Оценку игры'
+        verbose_name_plural = 'Оценка игры'
