@@ -94,7 +94,13 @@ def comment_games(request, pk):
     game_commented = Game.objects.get(id=pk)
     hints = Hint.objects.filter(hint_game=pk)
     videos = VideoView.objects.filter(video_game=pk)
+    ev2 = None
     if request.method == 'POST':
+        ev = VoteUser.objects.filter(user_evaluation_id=request.user.profile.id)
+        for e in ev:
+            if e.game_evaluation_id == int(pk):
+                ev2 = e.evaluation
+
         comment = request.POST['comment']
         GameComment.objects.create(
             name=name,
@@ -107,7 +113,8 @@ def comment_games(request, pk):
         )
         return render(request, 'help_games/single_game.html',
                       {'game': game_commented, 'hints': hints, 'videos': videos,
-                       'comment': GameComment.objects.filter(comment_game=game_commented)})
+                       'comment': GameComment.objects.filter(comment_game=game_commented), 'ev': ev2,
+                       'user_eval': request.user.profile})
     game = Game.objects.get(id=pk)
     context = {'name': name,
                'avatar': avatar,

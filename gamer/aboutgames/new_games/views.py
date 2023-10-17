@@ -32,7 +32,6 @@ def single_new_game(request, pk):
             if int(e.game_evaluation_id) == int(pk):
                 ev = e.evaluation
                 flag = 0
-            print('flag=', flag, '---', 'pk=', pk, '---', 'game=', e.game_evaluation_id)
         if flag == 0:
             user_eval = request.user.profile
         else:
@@ -90,9 +89,14 @@ def comment_new_games(request, pk):
             favourite_genre=favourite_genre,
 
         )
+        user_eval = NewVoteUser.objects.filter(user_evaluation=request.user.profile)
+        for e in user_eval:
+            if int(e.game_evaluation_id) == int(pk):
+                ev = e.evaluation
         return render(request, 'new_games/single_new_game.html',
                       {'new_game': game_commented,
-                       'comments': Comments.objects.filter(game_commented=game_commented)})
+                       'comments': Comments.objects.filter(game_commented=game_commented), 'ev': ev,
+                       'user_eval':request.user.profile})
     game_id = pk
     game = NewGame.objects.get(id=pk)
     context = {'name': name,
