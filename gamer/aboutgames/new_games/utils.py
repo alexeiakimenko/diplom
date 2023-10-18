@@ -7,6 +7,6 @@ def page_list(request, object_list, page):
     return paginator, page_number
 
 
-def calculate_rating(summa, sum_len):
-    rating = round(float(summa / sum_len), 2)
+def calculate_rating(sum_evaluations, length_evaluations):
+    rating = round(float(sum_evaluations / length_evaluations), 2)
     return rating

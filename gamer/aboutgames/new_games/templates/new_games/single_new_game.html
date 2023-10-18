@@ -37,7 +37,7 @@
 
         {% endfor %}
     </div>
-    {% if request.user.is_authenticated and request.user.profile != user_eval %}
+    {% if request.user.is_authenticated and ev == 'Вашей оценки нет' %}
     <a href="{% url 'new_game_evaluation' new_game.id %}">
         <button class="btm">Оценить игру</button>
     </a>

@@ -12,8 +12,8 @@
                                                             src="{{ help_game.game_image.url }}"></a>
         <h5>Дата выхода:{{ help_game.release_date }}</h5>
         <h5>Жанр:{{ help_game.genre }}</h5>
-         <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{game.rating}}</span></div>
-         <div class="red">Рейтинг нашего сайта: <span class="rating">{{game.rating_site}}</span></div>
+         <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{help_game.rating}}</span></div>
+         <div class="red">Рейтинг нашего сайта: <span class="rating">{{help_game.rating_site}}</span></div>
     </div>
     {% endfor %}
 </div>

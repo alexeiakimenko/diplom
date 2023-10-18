@@ -50,7 +50,7 @@
     {% endfor %}
 
 </div>
-{% if request.user.is_authenticated and request.user.profile != user_eval %}
+{% if request.user.is_authenticated and ev == 'Вашей оценки нет' %}
 <a href="{% url 'game_evaluation' game.id %}">
     <button class="btm">Оценить игру</button>
 </a>
@@ -58,7 +58,9 @@
 <a href="{% url 'help_games' %}">
     <button class="btm">Назад</button>
 </a>
-
+<a href="{% url 'other_evaluations' game.id %}" target="_blank">
+    <button class="btm">Оценки других пользователей</button>
+</a>
 <script>
     down=document.getElementById('down');
     down.scrollTop=down.scrollHeight;

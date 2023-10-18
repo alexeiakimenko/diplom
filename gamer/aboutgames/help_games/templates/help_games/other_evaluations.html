@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <link rel="shortcut icon" href="{% static 'images/gamepad.png' %}" type="image/x-icon"/>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+        background:url("{{profile.avatar.url}}");
+        background-repeat:repeat;
+        }
+
+    </style>
+</head>
+<body>
+<h1 class="red">Оценки игроков:</h1>
+<div class="center">
+    {% for eval in evaluations %}
+    <h3 class="eval_other">{{eval.user_evaluation}} поставил - {{eval.evaluation}}</h3>
+
+    {%endfor%}
+</div>
+
+</body>
+</html>

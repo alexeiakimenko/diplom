@@ -26,20 +26,13 @@ def single_new_game(request, pk):
     new_game = NewGame.objects.get(id=pk)
     comments = Comments.objects.filter(game_commented=pk)
     try:
-        user_eval = NewVoteUser.objects.filter(user_evaluation=request.user.profile)
-        flag = 1
-        for e in user_eval:
-            if int(e.game_evaluation_id) == int(pk):
-                ev = e.evaluation
-                flag = 0
-        if flag == 0:
-            user_eval = request.user.profile
-        else:
-            user_eval = None
-            ev = None
+        user_eval = NewVoteUser.objects.distinct().filter(game_evaluation_id=int(pk),
+                                                          user_evaluation_id=request.user.profile.id).values(
+            'evaluation')
+        ev = user_eval[0]['evaluation']
+
     except:
-        user_eval = None
-        ev = None
+        ev = 'Вашей оценки нет'
 
     context = {
         'new_game': new_game,
@@ -89,14 +82,18 @@ def comment_new_games(request, pk):
             favourite_genre=favourite_genre,
 
         )
-        user_eval = NewVoteUser.objects.filter(user_evaluation=request.user.profile)
-        for e in user_eval:
-            if int(e.game_evaluation_id) == int(pk):
-                ev = e.evaluation
+        try:
+            user_eval = NewVoteUser.objects.distinct().filter(game_evaluation_id=int(pk),
+                                                              user_evaluation_id=request.user.profile.id).values(
+                'evaluation')
+            ev = user_eval[0]['evaluation']
+
+        except:
+            ev = 'Вашей оценки нет'
         return render(request, 'new_games/single_new_game.html',
                       {'new_game': game_commented,
                        'comments': Comments.objects.filter(game_commented=game_commented), 'ev': ev,
-                       'user_eval':request.user.profile})
+                       'user_eval': request.user.profile})
     game_id = pk
     game = NewGame.objects.get(id=pk)
     context = {'name': name,
@@ -142,13 +139,14 @@ def new_game_evaluation(request, pk):
             user_evaluation=request.user.profile,
             game_evaluation_id=new_game.id
         )
-        new_game_evaluation = NewVoteUser.objects.filter(game_evaluation_id=pk)
-        s = 0
-        l = 0
-        for e in new_game_evaluation:
-            s += e.evaluation
-            l += 1
-        rating = calculate_rating(s, l)
+        game_evaluations = NewVoteUser.objects.filter(game_evaluation_id=pk).values('evaluation')
+        evaluations = []
+        for i in range(len(game_evaluations)):
+            evaluations.append(game_evaluations[i]['evaluation'])
+        length_evaluations = len(evaluations)
+        sum_evaluations = sum(evaluations)
+
+        rating = calculate_rating(sum_evaluations, length_evaluations)
         new_game.rating_site = rating
         new_game.save()
 

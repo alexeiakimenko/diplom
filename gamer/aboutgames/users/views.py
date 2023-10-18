@@ -82,5 +82,5 @@ def full_form(request):
             messages.success(request, "Профиль успешно внесён! ")
             return redirect('profile')
 
-    context = {'form': form, 'message': 'Изменение данных'}
+    context = {'form': form, 'message': 'Изменение данных', 'profile': prof}
     return render(request, 'users/full-form.html', context)

@@ -28,28 +28,18 @@ def single_game(request, pk):
     videos = VideoView.objects.filter(video_game=pk)
     comment = GameComment.objects.filter(comment_game=pk)
     try:
-        user_eval = VoteUser.objects.filter(user_evaluation=request.user.profile.id)
-        flag = 1
-        for e in user_eval:
-            if int(e.game_evaluation_id) == int(pk):
-                ev = e.evaluation
-                flag = 0
+        user_eval = VoteUser.objects.distinct().filter(game_evaluation_id=int(pk),
+                                                       user_evaluation_id=request.user.profile.id).values(
+            'evaluation')
+        ev = user_eval[0]['evaluation']
 
-        if flag == 0:
-            user_eval = request.user.profile
-        else:
-            user_eval = None
-            ev = None
     except:
-        user_eval = None
-        ev = None
-
+        ev = 'Вашей оценки нет'
     context = {
         'game': game,
         'hints': hints,
         'videos': videos,
         'comment': comment,
-        'user_eval': user_eval,
         'ev': ev
     }
     return render(request, 'help_games/single_game.html', context)
@@ -96,11 +86,14 @@ def comment_games(request, pk):
     videos = VideoView.objects.filter(video_game=pk)
     ev2 = None
     if request.method == 'POST':
-        ev = VoteUser.objects.filter(user_evaluation_id=request.user.profile.id)
-        for e in ev:
-            if e.game_evaluation_id == int(pk):
-                ev2 = e.evaluation
+        try:
+            user_eval = VoteUser.objects.distinct().filter(game_evaluation_id=int(pk),
+                                                           user_evaluation_id=request.user.profile.id).values(
+                'evaluation')
+            ev = user_eval[0]['evaluation']
 
+        except:
+            ev = 'Вашей оценки нет'
         comment = request.POST['comment']
         GameComment.objects.create(
             name=name,
@@ -113,7 +106,7 @@ def comment_games(request, pk):
         )
         return render(request, 'help_games/single_game.html',
                       {'game': game_commented, 'hints': hints, 'videos': videos,
-                       'comment': GameComment.objects.filter(comment_game=game_commented), 'ev': ev2,
+                       'comment': GameComment.objects.filter(comment_game=game_commented), 'ev': ev,
                        'user_eval': request.user.profile})
     game = Game.objects.get(id=pk)
     context = {'name': name,
@@ -171,13 +164,14 @@ def game_evaluation(request, pk):
             user_evaluation=request.user.profile,
             game_evaluation_id=game.id
         )
-        game_evaluation = VoteUser.objects.filter(game_evaluation_id=pk)
-        s = 0
-        l = 0
-        for e in game_evaluation:
-            s += e.evaluation
-            l += 1
-        rating = calculate_rating(s, l)
+        game_evaluations = VoteUser.objects.filter(game_evaluation_id=pk).values('evaluation')
+        evaluations = []
+        for i in range(len(game_evaluations)):
+            evaluations.append(game_evaluations[i]['evaluation'])
+        length_evaluations = len(evaluations)
+        sum_evaluations = sum(evaluations)
+
+        rating = calculate_rating(sum_evaluations, length_evaluations)
         game.rating_site = rating
         game.save()
         context = {
@@ -190,3 +184,46 @@ def game_evaluation(request, pk):
         }
         return render(request, 'help_games/single_game.html', context)
     return render(request, 'help_games/game_evaluation.html', {'game': game})
+
+
+def other_evaluations(request, pk):
+    prof = None
+    game_evaluations = VoteUser.objects.filter(game_evaluation_id=pk)
+    try:
+        prof = request.user.profile
+    except:
+        prof = None
+
+    context = {
+        'evaluations': game_evaluations,
+        'profile': prof
+
+    }
+    return render(request, 'help_games/other_evaluations.html', context)
+
+
+def proba(request, pk):
+    game_evaluation = VoteUser.objects.filter(game_evaluation_id=pk).values('evaluation')
+    game = len(game_evaluation)
+    eva = []
+    for i in range(game):
+        eva.append(game_evaluation[i]['evaluation'])
+    game_evaluation = VoteUser.objects.filter(game_evaluation_id=pk).values('user_evaluation')
+    game2 = len(game_evaluation)
+    user = []
+    usev = []
+    for i in range(game2):
+        user.append(game_evaluation[i]['user_evaluation'])
+    for i in user:
+        prof = Profile.objects.get(id=i)
+        usev.append(prof.name)
+
+    context = {
+        'v': game_evaluation,
+        'g': game,
+        'e': eva,
+        'u': user,
+        'g2': game2,
+        'u2': usev
+    }
+    return render(request, 'help_games/proba.html', context)
