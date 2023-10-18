@@ -14,7 +14,7 @@ def index(request):
 def register(request):
     if request.method == "POST":
         user_form = UserRegisterForm(request.POST)
-
+        nik = request.POST['username']
         if user_form.is_valid():
 
             user = user_form.save(commit=False)
@@ -33,8 +33,8 @@ def register(request):
                           {'form': FullForm(instance=request.user.profile),
                            'message': 'Регистрация прошла успешно!Вы можете добавить данные,по желанию.'})
         else:
-            messages.error(request, 'Ошибка регистрации!Внимательно читайте инструкцию для полей ввода.')
-            return redirect('index')
+            return render(request, 'users/register.html',
+                          {'form': UserRegisterForm(request.POST)})
 
     else:
         user_form = UserRegisterForm()

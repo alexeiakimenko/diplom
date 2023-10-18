@@ -16,8 +16,9 @@ def help_games(request):
     game = Game.objects.all()
     game_list = page_list(request, game, page)
     game = game_list[0].page(game_list[1])
+
     context = {
-        'games': game
+        'games': game,
     }
     return render(request, 'help_games/help_games.html', context)
 
@@ -188,42 +189,11 @@ def game_evaluation(request, pk):
 
 def other_evaluations(request, pk):
     prof = None
-    game_evaluations = VoteUser.objects.filter(game_evaluation_id=pk)
-    try:
-        prof = request.user.profile
-    except:
-        prof = None
-
+    game_evaluations = VoteUser.objects.filter(game_evaluation_id=int(pk)).order_by('-evaluation')
+    length = len(game_evaluations)
     context = {
         'evaluations': game_evaluations,
-        'profile': prof
+        'length': length
 
     }
     return render(request, 'help_games/other_evaluations.html', context)
-
-
-def proba(request, pk):
-    game_evaluation = VoteUser.objects.filter(game_evaluation_id=pk).values('evaluation')
-    game = len(game_evaluation)
-    eva = []
-    for i in range(game):
-        eva.append(game_evaluation[i]['evaluation'])
-    game_evaluation = VoteUser.objects.filter(game_evaluation_id=pk).values('user_evaluation')
-    game2 = len(game_evaluation)
-    user = []
-    usev = []
-    for i in range(game2):
-        user.append(game_evaluation[i]['user_evaluation'])
-    for i in user:
-        prof = Profile.objects.get(id=i)
-        usev.append(prof.name)
-
-    context = {
-        'v': game_evaluation,
-        'g': game,
-        'e': eva,
-        'u': user,
-        'g2': game2,
-        'u2': usev
-    }
-    return render(request, 'help_games/proba.html', context)

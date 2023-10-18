@@ -4,10 +4,15 @@
     <h1 class="color_register">Регистрация:</h1>
 
     <form action="{% url 'register' %}" method="post" class="register">
-        {% csrf_token %}
-
-        {{ form.as_p }}
-
+        {%csrf_token%}
+        {{ form.non_field_errors }}
+        {% for field in form %}
+        <p>
+            {{ field.errors }}
+            {{ field.label }}
+            {{ field }}
+        </p>
+        {%endfor%}
         <button class="change">Зарегистрироваться</button>
     </form>
 </div>

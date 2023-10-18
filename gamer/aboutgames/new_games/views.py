@@ -37,7 +37,6 @@ def single_new_game(request, pk):
     context = {
         'new_game': new_game,
         'comments': comments,
-        'user_eval': user_eval,
         'ev': ev,
     }
     return render(request, 'new_games/single_new_game.html', context)
@@ -162,3 +161,15 @@ def new_game_evaluation(request, pk):
         'new_game': new_game
     }
     return render(request, 'new_games/new_game_evaluation.html', context)
+
+
+def new_other_evaluations(request, pk):
+    game_evaluations = NewVoteUser.objects.filter(game_evaluation_id=pk).order_by('-evaluation')
+
+    length = len(game_evaluations)
+    context = {
+        'evaluations': game_evaluations,
+        'length': length
+
+    }
+    return render(request, 'new_games/new_other_evaluations.html', context)

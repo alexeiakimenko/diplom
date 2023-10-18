@@ -9,7 +9,6 @@ urlpatterns = [
     path('help_games_genre/<str:title>', views.help_games_genre, name='help_games_genre'),
     path('comment_games/<int:pk>/', views.comment_games, name='comment_games'),
     path('search_game/', views.search_game, name='search_game'),
-    path('proba/<str:pk>/', views.proba, name='proba'),
     path('game_evaluation/<str:pk>/', views.game_evaluation, name='game_evaluation'),
     path('other_evaluations/<str:pk>/', views.other_evaluations, name='other_evaluations'),
 

@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
         body {
-        background: greenyellow
+        background:greenyellow
         }
 
     </style>
 </head>
 <body>
 <h1 class="red">Оценки игроков:</h1>
-
 <div class="center">
     {% for eval in evaluations %}
     <h3 class="eval_other">{{eval.user_evaluation}} поставил - {{eval.evaluation}}</h3>
-
     {%endfor%}
     {% if length == 0 %}
-    <h2>НЕТ ОЦЕНОК,БУДЬ ПЕРВЫМ!</h2>
+     <h2>НЕТ ОЦЕНОК,БУДЬ ПЕРВЫМ!</h2>
     {%endif%}
 </div>
 
