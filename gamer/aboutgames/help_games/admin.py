@@ -9,11 +9,19 @@ class HintAdminForm(forms.ModelForm):
 
     class Meta:
         model = Hint
+        fields = '__all__'
+
+
+class GameAdminForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorUploadingWidget())
+
+    class Meta:
         model = Game
         fields = '__all__'
 
 
 class GameAdmin(admin.ModelAdmin):
+    form = GameAdminForm
     list_display = ('id', 'title', 'genre', 'release_date', 'rating_site', 'rating')
     list_display_links = ('title',)
     readonly_fields = ('rating_site',)

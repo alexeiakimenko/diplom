@@ -1,8 +1,19 @@
 from django.contrib import admin
 from .models import *
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+from django import forms
+
+
+class NewGameAdminForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorUploadingWidget())
+
+    class Meta:
+        model = NewGame
+        fields = '__all__'
 
 
 class NewGameAdmin(admin.ModelAdmin):
+    form = NewGameAdminForm
     list_display = ('create', 'title', 'genre', 'rating_site', 'rating')
     search_fields = ('title', 'genre')
     list_display_links = ('title',)
