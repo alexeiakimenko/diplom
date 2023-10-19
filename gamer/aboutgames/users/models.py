@@ -8,7 +8,7 @@ class Profile(models.Model):
     favorite_game = models.CharField(max_length=200, blank=True, null=True, verbose_name='Любимая игра')
     favorite_genre = models.CharField(max_length=200, blank=True, null=True, verbose_name='Любимый жанр игр')
     birthday = models.DateField(blank=True, null=True, verbose_name='День рождения')
-    username = models.CharField(max_length=200, blank=True, null=True, verbose_name='Ник пользователя')
+    username = models.CharField(max_length=200, blank=True, null=True, verbose_name='Ник пользователя', unique=True)
     name = models.CharField(max_length=200, blank=True, null=True, verbose_name='Имя пользователя')
     email = models.EmailField(max_length=200, blank=True, null=True, verbose_name='Email')
 

@@ -8,8 +8,10 @@
 
 <form action="{% url 'full-form' %}" method="post" class="register" enctype="multipart/form-data">
     {% csrf_token %}
+
     <div class="box">
         {% for field in form %}
+        {{field.errors}}
         <label>{{ field.label }}</label>
         {{ field }}
 
