@@ -15,11 +15,10 @@ def index(request):
 def register(request):
     if request.method == "POST":
         user_form = UserRegisterForm(request.POST)
-        if user_form.is_valid():
 
+        if user_form.is_valid():
             user = user_form.save(commit=False)
             user.username = user.username.lower()
-
             user.save()
             Profile.objects.create(
                 username=user.username,
@@ -39,8 +38,8 @@ def register(request):
     else:
         user_form = UserRegisterForm()
 
-    context = {'form': user_form}
-    return render(request, 'users/register.html', context)
+        context = {'form': user_form}
+        return render(request, 'users/register.html', context)
 
 
 def logout_user(request):
@@ -92,3 +91,4 @@ def full_form(request):
 
     context = {'form': form, 'message': 'Изменение данных', 'profile': prof}
     return render(request, 'users/full-form.html', context)
+
