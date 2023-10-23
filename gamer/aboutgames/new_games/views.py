@@ -44,14 +44,14 @@ def single_new_game(request, pk):
 
 def new_games_genre(request, pk):
     page = 1
-    genre = pk
-    new_game = NewGame.objects.filter(genre=pk)
+    sort_genre = pk
+    new_game = NewGame.objects.distinct().filter(Q(genre=pk) | Q(genre2=pk) | Q(genre3=pk))
     new_game_list = page_list(request, new_game, page)
     new_game = new_game_list[0].page(new_game_list[1])
 
     context = {
         'new_games': new_game,
-        'genre': genre
+        'sort_genre': sort_genre
     }
     return render(request, 'new_games/new_games_genre.html', context)
 

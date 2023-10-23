@@ -7,6 +7,8 @@ class NewGame(models.Model):
     title = models.CharField(max_length=250, blank=False, null=False, verbose_name='Название игры')
     description = models.TextField(verbose_name='Описание игры')
     genre = models.CharField(max_length=50, blank=True, null=True, verbose_name='Жанр игры')
+    genre2 = models.CharField(max_length=50, blank=True, null=True, verbose_name='Жанр игры 2')
+    genre3 = models.CharField(max_length=50, blank=True, null=True, verbose_name='Жанр игры 3')
     create = models.DateField(blank=True, null=True, verbose_name='Дата создания')
     image = models.ImageField(upload_to='new_game_image/%Y/%m/%d/', default='new_game_image/default.jpg',
                               verbose_name='Картинка')

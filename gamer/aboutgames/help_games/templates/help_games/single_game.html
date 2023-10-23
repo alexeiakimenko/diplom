@@ -2,7 +2,11 @@
 {% block content %}
 <div class="box_single">
     <h1>{{ game.title }}</h1>
-    <h3>Жанр:<a class="tag" href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a></h3>
+    <h3>Жанр:<a class="tag" href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a>,
+        <a class="tag" href="{% url 'help_games_genre' game.genre2 %}">{{ game.genre2 }}</a>,
+        <a class="tag" href="{% url 'help_games_genre' game.genre3 %}">{{ game.genre3 }}</a>
+
+    </h3>
     <h5>Дата выхода игры:{{game.release_date}}</h5>
     <h6>Дата написания статьи:{{game.created}}</h6>
     <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{game.rating}}</span></div>

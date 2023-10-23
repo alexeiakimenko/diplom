@@ -2,7 +2,7 @@
 
 {% block content %}
 <div><a class="search_input2" href="{%url 'search_new_game' %}">Поиск по названию игры</a></div>
-<h3>Список новинок по жанру <span class="green">{{ genre }}</span> :</h3>
+<h3>Список новинок по жанру <span class="green">{{ sort_genre }}</span> :</h3>
 <div class="container">
     {% for new_game in new_games %}
 
@@ -11,8 +11,8 @@
         <a href="{% url 'single-new-game' new_game.id %}"><img width="372px" height="210px"
                                                                src="{{ new_game.image.url }}"></a>
         <h5>Дата создания:{{ new_game.create }}</h5>
-        <h5>Жанр:{{ new_game.genre }}</h5>
-         <div class="red">Рейтинг от экспертов на Metarankings.ru: <span class="rating">{{new_game.rating}}</span></div>
+        <h5>Жанр:{{ new_game.genre }},{{new_game.genre2}},{{new_game.genre3}}</h5>
+        <div class="red">Рейтинг от экспертов на Metarankings.ru: <span class="rating">{{new_game.rating}}</span></div>
         <div class="red">Рейтинг нашего сайта: <span class="rating">{{new_game.rating_site}}</span></div>
     </div>
     {% endfor %}

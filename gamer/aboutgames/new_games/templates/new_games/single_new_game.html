@@ -3,7 +3,11 @@
 {% block content %}
 <div class="box_single">
     <h1>{{ new_game.title }}</h1>
-    <h3>Жанр:<a class="tag" href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h3>
+    <h3>Жанр:<a class="tag" href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a>,
+        <a class="tag" href="{% url 'new-games-genre' new_game.genre2 %}">{{ new_game.genre2 }}</a>,
+        <a class="tag" href="{% url 'new-games-genre' new_game.genre3 %}">{{ new_game.genre3 }}</a>
+
+    </h3>
     <h5>Дата создания:{{ new_game.create }}</h5>
     <div class="red">Рейтинг от экспертов на Metarankings.ru: <span class="rating">{{new_game.rating}}</span></div>
     <div class="red">Рейтинг нашего сайта: <span class="rating">{{new_game.rating_site}}</span></div>
@@ -54,4 +58,5 @@
         down=document.getElementById('down');
         down.scrollTop=down.scrollHeight;
     </script>
-    {%endblock%}
+</div>
+{%endblock%}

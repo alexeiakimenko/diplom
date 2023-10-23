@@ -122,13 +122,13 @@ def comment_games(request, pk):
 
 def help_games_genre(request, title):
     page = 1
-    genre = title
-    help_game = Game.objects.filter(genre=title)
+    sort_genre = title
+    help_game = Game.objects.distinct().filter(Q(genre=title) | Q(genre2=title) | Q(genre3=title))
     game_list = page_list(request, help_game, page)
     game = game_list[0].page(game_list[1])
     context = {
         'help_games': game,
-        'genre': genre
+        'sort_genre': sort_genre
     }
     return render(request, 'help_games/help_games_genre.html', context)
 

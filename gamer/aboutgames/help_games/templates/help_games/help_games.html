@@ -11,7 +11,12 @@
 
         <h5>Дата выхода игры: {{game.release_date}}</h5>
         <h5>Жанр:<a data-title="сортировка по жанру {{ game.genre }}" class="ngg"
-                    href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a></h5>
+                    href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a>,
+            <a data-title="сортировка по жанру {{ game.genre2 }}" class="ngg"
+                    href="{% url 'help_games_genre' game.genre2 %}">{{ game.genre2 }}</a>,
+            <a data-title="сортировка по жанру {{ game.genre3 }}" class="ngg"
+                    href="{% url 'help_games_genre' game.genre3 %}">{{ game.genre3 }}</a>
+        </h5>
         <h6>Дата написания статьи:{{game.created }}</h6>
         <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{game.rating}}</span></div>
         <div class="red">Рейтинг нашего сайта: <span class="rating">{{game.rating_site}}</span></div>
