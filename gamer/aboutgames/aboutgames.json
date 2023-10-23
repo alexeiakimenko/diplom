@@ -3016,543 +3016,588 @@
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 1,
+  "model": "admin.logentry",
+  "pk": 233,
   "fields": {
-    "name": "Can add log entry",
-    "content_type": 1,
-    "codename": "add_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 2,
-  "fields": {
-    "name": "Can change log entry",
-    "content_type": 1,
-    "codename": "change_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 3,
-  "fields": {
-    "name": "Can delete log entry",
-    "content_type": 1,
-    "codename": "delete_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 4,
-  "fields": {
-    "name": "Can view log entry",
-    "content_type": 1,
-    "codename": "view_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 5,
-  "fields": {
-    "name": "Can add permission",
-    "content_type": 2,
-    "codename": "add_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 6,
-  "fields": {
-    "name": "Can change permission",
-    "content_type": 2,
-    "codename": "change_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 7,
-  "fields": {
-    "name": "Can delete permission",
-    "content_type": 2,
-    "codename": "delete_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 8,
-  "fields": {
-    "name": "Can view permission",
-    "content_type": 2,
-    "codename": "view_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 9,
-  "fields": {
-    "name": "Can add group",
-    "content_type": 3,
-    "codename": "add_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 10,
-  "fields": {
-    "name": "Can change group",
-    "content_type": 3,
-    "codename": "change_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 11,
-  "fields": {
-    "name": "Can delete group",
-    "content_type": 3,
-    "codename": "delete_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 12,
-  "fields": {
-    "name": "Can view group",
-    "content_type": 3,
-    "codename": "view_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 13,
-  "fields": {
-    "name": "Can add user",
-    "content_type": 4,
-    "codename": "add_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 14,
-  "fields": {
-    "name": "Can change user",
-    "content_type": 4,
-    "codename": "change_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 15,
-  "fields": {
-    "name": "Can delete user",
-    "content_type": 4,
-    "codename": "delete_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 16,
-  "fields": {
-    "name": "Can view user",
-    "content_type": 4,
-    "codename": "view_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 17,
-  "fields": {
-    "name": "Can add content type",
-    "content_type": 5,
-    "codename": "add_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 18,
-  "fields": {
-    "name": "Can change content type",
-    "content_type": 5,
-    "codename": "change_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 19,
-  "fields": {
-    "name": "Can delete content type",
-    "content_type": 5,
-    "codename": "delete_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 20,
-  "fields": {
-    "name": "Can view content type",
-    "content_type": 5,
-    "codename": "view_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 21,
-  "fields": {
-    "name": "Can add session",
-    "content_type": 6,
-    "codename": "add_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 22,
-  "fields": {
-    "name": "Can change session",
-    "content_type": 6,
-    "codename": "change_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 23,
-  "fields": {
-    "name": "Can delete session",
-    "content_type": 6,
-    "codename": "delete_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 24,
-  "fields": {
-    "name": "Can view session",
-    "content_type": 6,
-    "codename": "view_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add profile",
-    "content_type": 7,
-    "codename": "add_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change profile",
-    "content_type": 7,
-    "codename": "change_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
-    "name": "Can delete profile",
-    "content_type": 7,
-    "codename": "delete_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can view profile",
-    "content_type": 7,
-    "codename": "view_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can add new game",
+    "action_time": "2023-10-22T17:53:48.374",
+    "user": 1,
     "content_type": 8,
-    "codename": "add_newgame"
+    "object_id": "3",
+    "object_repr": "XCOM 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 30,
+  "model": "admin.logentry",
+  "pk": 234,
   "fields": {
-    "name": "Can change new game",
+    "action_time": "2023-10-22T17:56:02.638",
+    "user": 1,
     "content_type": 8,
-    "codename": "change_newgame"
+    "object_id": "1",
+    "object_repr": "Assassin’s Creed Valhalla",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 31,
+  "model": "admin.logentry",
+  "pk": 235,
   "fields": {
-    "name": "Can delete new game",
+    "action_time": "2023-10-22T17:59:09.084",
+    "user": 1,
     "content_type": 8,
-    "codename": "delete_newgame"
+    "object_id": "2",
+    "object_repr": "Sid Meier’s Civilization VI",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 32,
+  "model": "admin.logentry",
+  "pk": 236,
   "fields": {
-    "name": "Can view new game",
+    "action_time": "2023-10-22T18:01:24.885",
+    "user": 1,
     "content_type": 8,
-    "codename": "view_newgame"
+    "object_id": "7",
+    "object_repr": "LORDS of the FALLEN",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 33,
+  "model": "admin.logentry",
+  "pk": 237,
   "fields": {
-    "name": "Can add comments",
-    "content_type": 9,
-    "codename": "add_comments"
+    "action_time": "2023-10-22T18:02:55.292",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "NBA23",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 34,
+  "model": "admin.logentry",
+  "pk": 238,
   "fields": {
-    "name": "Can change comments",
-    "content_type": 9,
-    "codename": "change_comments"
+    "action_time": "2023-10-22T18:04:29.764",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "FOR The King 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 35,
+  "model": "admin.logentry",
+  "pk": 239,
   "fields": {
-    "name": "Can delete comments",
-    "content_type": 9,
-    "codename": "delete_comments"
+    "action_time": "2023-10-22T18:05:54.454",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Baldur's gate 3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 36,
+  "model": "admin.logentry",
+  "pk": 240,
   "fields": {
-    "name": "Can view comments",
-    "content_type": 9,
-    "codename": "view_comments"
+    "action_time": "2023-10-22T18:07:02.212",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "FIFA 21",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 37,
+  "model": "admin.logentry",
+  "pk": 241,
   "fields": {
-    "name": "Can add game",
+    "action_time": "2023-10-22T18:08:56.771",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "WWF 2K23",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 242,
+  "fields": {
+    "action_time": "2023-10-22T18:10:16.980",
+    "user": 1,
     "content_type": 10,
-    "codename": "add_game"
+    "object_id": "2",
+    "object_repr": "Assassin’s Creed Valhalla",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 38,
+  "model": "admin.logentry",
+  "pk": 243,
   "fields": {
-    "name": "Can change game",
+    "action_time": "2023-10-22T18:10:53.671",
+    "user": 1,
     "content_type": 10,
-    "codename": "change_game"
+    "object_id": "3",
+    "object_repr": "FIFA 21",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 39,
+  "model": "admin.logentry",
+  "pk": 244,
   "fields": {
-    "name": "Can delete game",
+    "action_time": "2023-10-22T18:11:36.156",
+    "user": 1,
     "content_type": 10,
-    "codename": "delete_game"
+    "object_id": "4",
+    "object_repr": "NBA23",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 40,
+  "model": "admin.logentry",
+  "pk": 245,
   "fields": {
-    "name": "Can view game",
+    "action_time": "2023-10-22T18:12:14.875",
+    "user": 1,
     "content_type": 10,
-    "codename": "view_game"
+    "object_id": "10",
+    "object_repr": "HEROES 3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 41,
+  "model": "admin.logentry",
+  "pk": 246,
   "fields": {
-    "name": "Can add подсказку",
-    "content_type": 11,
-    "codename": "add_hint"
+    "action_time": "2023-10-22T18:14:28.828",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Red Dead Redemption",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 42,
+  "model": "admin.logentry",
+  "pk": 247,
   "fields": {
-    "name": "Can change подсказку",
-    "content_type": 11,
-    "codename": "change_hint"
+    "action_time": "2023-10-22T18:15:01.932",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Sid Meier’s Civilization VI",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 43,
+  "model": "admin.logentry",
+  "pk": 248,
   "fields": {
-    "name": "Can delete подсказку",
-    "content_type": 11,
-    "codename": "delete_hint"
+    "action_time": "2023-10-22T18:16:42.274",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Olimpic Games Tokyo 2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 44,
+  "model": "admin.logentry",
+  "pk": 249,
   "fields": {
-    "name": "Can view подсказку",
-    "content_type": 11,
-    "codename": "view_hint"
+    "action_time": "2023-10-22T18:18:46.332",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Front mission 3 remake",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 45,
+  "model": "admin.logentry",
+  "pk": 250,
   "fields": {
-    "name": "Can add видео обзор",
-    "content_type": 12,
-    "codename": "add_videoview"
+    "action_time": "2023-10-22T18:19:40.658",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "XCOM 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 46,
+  "model": "admin.logentry",
+  "pk": 251,
   "fields": {
-    "name": "Can change видео обзор",
-    "content_type": 12,
-    "codename": "change_videoview"
+    "action_time": "2023-10-22T18:20:44.477",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Dragon Age:Origins",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 47,
+  "model": "admin.logentry",
+  "pk": 252,
   "fields": {
-    "name": "Can delete видео обзор",
-    "content_type": 12,
-    "codename": "delete_videoview"
+    "action_time": "2023-10-22T18:21:18.050",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "King's Bounty 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 48,
+  "model": "admin.logentry",
+  "pk": 253,
   "fields": {
-    "name": "Can view видео обзор",
-    "content_type": 12,
-    "codename": "view_videoview"
+    "action_time": "2023-10-22T18:27:38.297",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "XCOM 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 49,
+  "model": "admin.logentry",
+  "pk": 254,
   "fields": {
-    "name": "Can add комментарий к игре",
-    "content_type": 13,
-    "codename": "add_gamecomment"
+    "action_time": "2023-10-22T18:27:55.169",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Assassin’s Creed Valhalla",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 50,
+  "model": "admin.logentry",
+  "pk": 255,
   "fields": {
-    "name": "Can change комментарий к игре",
-    "content_type": 13,
-    "codename": "change_gamecomment"
+    "action_time": "2023-10-22T18:28:05.377",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "XCOM 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 51,
+  "model": "admin.logentry",
+  "pk": 256,
   "fields": {
-    "name": "Can delete комментарий к игре",
-    "content_type": 13,
-    "codename": "delete_gamecomment"
+    "action_time": "2023-10-22T18:28:16.776",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Sid Meier’s Civilization VI",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 52,
+  "model": "admin.logentry",
+  "pk": 257,
   "fields": {
-    "name": "Can view комментарий к игре",
-    "content_type": 13,
-    "codename": "view_gamecomment"
+    "action_time": "2023-10-22T18:28:27.337",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "LORDS of the FALLEN",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 53,
+  "model": "admin.logentry",
+  "pk": 258,
   "fields": {
-    "name": "Can add Оценку игры",
-    "content_type": 14,
-    "codename": "add_newvoteuser"
+    "action_time": "2023-10-22T18:28:34.729",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "NBA23",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 54,
+  "model": "admin.logentry",
+  "pk": 259,
   "fields": {
-    "name": "Can change Оценку игры",
-    "content_type": 14,
-    "codename": "change_newvoteuser"
+    "action_time": "2023-10-22T18:28:42.744",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "FOR The King 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 55,
+  "model": "admin.logentry",
+  "pk": 260,
   "fields": {
-    "name": "Can delete Оценку игры",
-    "content_type": 14,
-    "codename": "delete_newvoteuser"
+    "action_time": "2023-10-22T18:28:51.193",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Baldur's gate 3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 56,
+  "model": "admin.logentry",
+  "pk": 261,
   "fields": {
-    "name": "Can view Оценку игры",
-    "content_type": 14,
-    "codename": "view_newvoteuser"
+    "action_time": "2023-10-22T18:28:59.072",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "FIFA 21",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 57,
+  "model": "admin.logentry",
+  "pk": 262,
   "fields": {
-    "name": "Can add Оценку игры",
-    "content_type": 15,
-    "codename": "add_voteuser"
+    "action_time": "2023-10-22T18:29:08.713",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "WWF 2K23",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 58,
+  "model": "admin.logentry",
+  "pk": 263,
   "fields": {
-    "name": "Can change Оценку игры",
-    "content_type": 15,
-    "codename": "change_voteuser"
+    "action_time": "2023-10-22T18:29:46.529",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Assassin’s Creed Valhalla",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 59,
+  "model": "admin.logentry",
+  "pk": 264,
   "fields": {
-    "name": "Can delete Оценку игры",
-    "content_type": 15,
-    "codename": "delete_voteuser"
+    "action_time": "2023-10-22T18:29:55.353",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "FIFA 21",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 60,
+  "model": "admin.logentry",
+  "pk": 265,
   "fields": {
-    "name": "Can view Оценку игры",
-    "content_type": 15,
-    "codename": "view_voteuser"
+    "action_time": "2023-10-22T18:31:29.064",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Assassin’s Creed Valhalla",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 266,
+  "fields": {
+    "action_time": "2023-10-22T18:31:35.334",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "FIFA 21",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 267,
+  "fields": {
+    "action_time": "2023-10-22T18:31:44.913",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "NBA23",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 268,
+  "fields": {
+    "action_time": "2023-10-22T18:31:51.702",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "HEROES 3",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 269,
+  "fields": {
+    "action_time": "2023-10-22T18:32:00.534",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Red Dead Redemption",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 270,
+  "fields": {
+    "action_time": "2023-10-22T18:32:08.529",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Sid Meier’s Civilization VI",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 271,
+  "fields": {
+    "action_time": "2023-10-22T18:33:59.624",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Olimpic Games Tokyo 2020",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 272,
+  "fields": {
+    "action_time": "2023-10-22T18:34:08.534",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Olimpic Games Tokyo 2020",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 273,
+  "fields": {
+    "action_time": "2023-10-22T18:34:15.574",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Front mission 3 remake",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 274,
+  "fields": {
+    "action_time": "2023-10-22T18:34:26.713",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "XCOM 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 275,
+  "fields": {
+    "action_time": "2023-10-22T18:34:36.760",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Dragon Age:Origins",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 276,
+  "fields": {
+    "action_time": "2023-10-22T18:34:41.975",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "King's Bounty 2",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 277,
+  "fields": {
+    "action_time": "2023-10-22T18:38:03.467",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "NBA23",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0440\\u0435\\u0439\\u043b\\u0435\\u0440\"]}}]"
   }
 },
 {
@@ -3560,7 +3605,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$VCf7xiDwaZuhnesHrXZOiF$VmzXTP2d1AB+AICwkLCEWP2BWPFNgDMPOLXy7GrhkWs=",
-    "last_login": "2023-10-19T22:36:58.908",
+    "last_login": "2023-10-23T09:16:06.361",
     "is_superuser": true,
     "username": "alex",
     "first_name": "alexei akimenko",
@@ -3830,7 +3875,7 @@
   "pk": 19,
   "fields": {
     "password": "pbkdf2_sha256$600000$m8qje3sJKu3QdTqJ8lKQ7r$etcgg+JN56vV0ZAmhilz6IkHhp3kxrVsRvwz5pro2ag=",
-    "last_login": "2023-10-19T19:12:48.842",
+    "last_login": "2023-10-22T18:46:53.256",
     "is_superuser": false,
     "username": "admin",
     "first_name": "Ivan Yeremeev",
@@ -3848,7 +3893,7 @@
   "pk": 20,
   "fields": {
     "password": "pbkdf2_sha256$600000$plaIlWDMD7OR5v9vQ9v5JJ$2C9MKG+EizZFHQvfhPbk0jASsGX4uYwGNfto7x7Ssfs=",
-    "last_login": "2023-10-18T13:49:58.652",
+    "last_login": "2023-10-22T18:55:33.050",
     "is_superuser": false,
     "username": "akimenko",
     "first_name": "Виталий Акименко",
@@ -3866,7 +3911,7 @@
   "pk": 21,
   "fields": {
     "password": "pbkdf2_sha256$600000$OOp1NlusNJ9MeamIzAeUY0$LCoRx69SAHTT/oUm8B34SF6ia3qDXymVgeZynzk6cBY=",
-    "last_login": "2023-10-18T13:50:34.111",
+    "last_login": "2023-10-22T18:55:48.031",
     "is_superuser": false,
     "username": "alak",
     "first_name": "Алексей Акуратов",
@@ -3884,7 +3929,7 @@
   "pk": 22,
   "fields": {
     "password": "pbkdf2_sha256$600000$fh1bB7eJutDKcBO8Ov8kE6$AoImqxF/90oeeDN0JCLjXrW6r2EsNI8nIARVF34/UHU=",
-    "last_login": "2023-10-18T13:52:21.990",
+    "last_login": "2023-10-22T18:56:03.286",
     "is_superuser": false,
     "username": "andron",
     "first_name": "Andron Rodrigues",
@@ -3902,7 +3947,7 @@
   "pk": 23,
   "fields": {
     "password": "pbkdf2_sha256$600000$Hk6tYkMiCDTz1Nu3xK2NyD$ekdpVh1oOKtOMmHxiAYyXIIFO/GhowdOtrwPFoVo5Ik=",
-    "last_login": "2023-10-18T14:33:11.842",
+    "last_login": "2023-10-22T18:56:21.507",
     "is_superuser": false,
     "username": "as",
     "first_name": "Андрей Соболев",
@@ -3956,7 +4001,7 @@
   "pk": 27,
   "fields": {
     "password": "pbkdf2_sha256$600000$V1cPLQ3FZDzHm3deg0LXh4$igtmv7iMrF7m0dgZlmsA9fJHoMoejkludBZw+u1790o=",
-    "last_login": "2023-10-18T20:06:48.741",
+    "last_login": "2023-10-22T18:56:57.613",
     "is_superuser": false,
     "username": "ben",
     "first_name": "Ben Miller",
@@ -4010,7 +4055,7 @@
   "pk": 30,
   "fields": {
     "password": "pbkdf2_sha256$600000$1AfU8K7MomDMngDngAu5fW$ysMWOU6MuwoGD+xl3uvfmV4P0LCpKX9wevz1depyYQc=",
-    "last_login": "2023-10-19T22:30:12.079",
+    "last_login": "2023-10-22T18:55:22.372",
     "is_superuser": false,
     "username": "admin2",
     "first_name": "Sven Gordon",
@@ -4024,123 +4069,21 @@
   }
 },
 {
-  "model": "contenttypes.contenttype",
-  "pk": 1,
+  "model": "auth.user",
+  "pk": 31,
   "fields": {
-    "app_label": "admin",
-    "model": "logentry"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 2,
-  "fields": {
-    "app_label": "auth",
-    "model": "permission"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 3,
-  "fields": {
-    "app_label": "auth",
-    "model": "group"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 4,
-  "fields": {
-    "app_label": "auth",
-    "model": "user"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 5,
-  "fields": {
-    "app_label": "contenttypes",
-    "model": "contenttype"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 6,
-  "fields": {
-    "app_label": "sessions",
-    "model": "session"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 7,
-  "fields": {
-    "app_label": "users",
-    "model": "profile"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 8,
-  "fields": {
-    "app_label": "new_games",
-    "model": "newgame"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 9,
-  "fields": {
-    "app_label": "new_games",
-    "model": "comments"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 10,
-  "fields": {
-    "app_label": "help_games",
-    "model": "game"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 11,
-  "fields": {
-    "app_label": "help_games",
-    "model": "hint"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 12,
-  "fields": {
-    "app_label": "help_games",
-    "model": "videoview"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 13,
-  "fields": {
-    "app_label": "help_games",
-    "model": "gamecomment"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 14,
-  "fields": {
-    "app_label": "new_games",
-    "model": "newvoteuser"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 15,
-  "fields": {
-    "app_label": "help_games",
-    "model": "voteuser"
+    "password": "pbkdf2_sha256$600000$Do1aJcy5Hc1GQnXWxyoWL6$BwuNSgAGw3nWpKtmEawhi3heahgFovTfVsHo2X+FLGs=",
+    "last_login": "2023-10-22T18:58:03.426",
+    "is_superuser": false,
+    "username": "alexandermost",
+    "first_name": "Alexander Mostovoi",
+    "last_name": "",
+    "email": "alexandrmost@ya.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-22T18:58:03.145",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
@@ -4229,6 +4172,14 @@
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGlms119K-pzBWv9wANlSnFSIu0OkFNC-mXkv5mlbq99GXvyc2IUBO_1ugeIjtx2kO7Vb57G3dZkD3xV-0MGnnvLzerh_B5VG_dYSQZwLOYcBAVK2CnTUumgrpAaHFoJRiKCVCWRNLA5iKugyRCOLEez9Aa2aNsQ:1qkcur:if2E-PxB36B5r8lHCmydXxbgvHKxyTNZ66QY6qx9-SI",
     "expire_date": "2023-10-09T11:09:49.754"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wup8zxwien8pfc7e5i1byks3y6oaki32",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlms119K-pzBWv9wANlSnFSIu0OkFNC-mXkv5mlbq99GXvyc2IUBO_1ugeIjtx2kO7Vb57G3dZkD3xV-0MGnnvLzerh_B5VG_dYSQZwLOYcBAVK2CnTUumgrpAaHFoJRiKCVCWRNLA5iKugyRCOLEez9Aa2aNsQ:1qukUA:x89mVSdT-J_6C7gLe6Jv8ZlDv9nvX0CzFXBvtpCDLTo",
+    "expire_date": "2023-11-06T09:16:06.380"
   }
 },
 {
@@ -4582,11 +4533,25 @@
   }
 },
 {
+  "model": "users.profile",
+  "pk": 32,
+  "fields": {
+    "user": 31,
+    "avatar": "avatars/fifa-21oboi_JUPDfd0.jpg",
+    "favorite_game": "FIFA 21",
+    "favorite_genre": "Спортивный симулятор",
+    "birthday": "1997-09-17",
+    "username": "alexandermost",
+    "name": "Alexander Mostovoi",
+    "email": "alexandrmost@ya.ru"
+  }
+},
+{
   "model": "new_games.newgame",
   "pk": 1,
   "fields": {
     "title": "Assassin’s Creed Valhalla",
-    "description": "<div>Assassin’s Creed Valhalla – это полноценное продолжение и совершенствование постулатов предыдущих частей с оттачиванием специфики ролевой игры, с полностью открытым и насыщенным миром. Небезызвестная компания Ubisoft возвратилась к некоторым истокам классической системы стелса, которая завоевала сердца закаленных геймеров и ценителей серии.</div>\r\n\r\n                                         <div class=\"center\">Достоинства и недостатки</div>\r\n    <div>Assassin’s Creed Valhalla – это полноценное продолжение и совершенствование постулатов предыдущих частей с оттачиванием специфики ролевой игры, с полностью открытым и насыщенным миром. Небезызвестная компания Ubisoft возвратилась к некоторым истокам классической системы стелса, которая завоевала сердца закаленных геймеров и ценителей серии.</div>\r\n                                     <div class='center'>Assassin s Creed Valhalla - обзор (Версия для ПК)</div>\r\n   <div> Валгалла – это совершенное воссоздание исторического периода Англии – Темные века. Удалось реализовать должный уровень детализации и симуляции игрового мира. Столь показательные графические технологии предположительно будут улучшены на консолях нового поколения – Xbox Series X и PlayStation 5. Игроку в новой части предстоит ознакомиться с новой системой развития персонажа. На выбор доступно огромное количество локаций, мелких деталей, которые привносят в игру должную степень атмосферности и живой силы.</div>\r\n    <div>В распоряжении геймера: эпические сражения и завоевания замков, кровавые сражения на топорах, состязания по выпивки. Вышеописанные активности способны продуцировать ту самую искомую атмосферу скандинавских воинов – викингов, а также их быта.</div>",
+    "description": "<div>Assassin&rsquo;s Creed Valhalla &ndash; это полноценное продолжение и совершенствование постулатов предыдущих частей с оттачиванием специфики ролевой игры, с полностью открытым и насыщенным миром. Небезызвестная компания Ubisoft возвратилась к некоторым истокам классической системы стелса, которая завоевала сердца закаленных геймеров и ценителей серии.</div>\r\n\r\n<div class=\"center\">Достоинства и недостатки</div>\r\n\r\n<div>Assassin&rsquo;s Creed Valhalla &ndash; это полноценное продолжение и совершенствование постулатов предыдущих частей с оттачиванием специфики ролевой игры, с полностью открытым и насыщенным миром. Небезызвестная компания Ubisoft возвратилась к некоторым истокам классической системы стелса, которая завоевала сердца закаленных геймеров и ценителей серии.</div>\r\n\r\n<div class=\"center\">Assassin s Creed Valhalla - обзор (Версия для ПК)</div>\r\n\r\n<div>Валгалла &ndash; это совершенное воссоздание исторического периода Англии &ndash; Темные века. Удалось реализовать должный уровень детализации и симуляции игрового мира. Столь показательные графические технологии предположительно будут улучшены на консолях нового поколения &ndash; Xbox Series X и PlayStation 5. Игроку в новой части предстоит ознакомиться с новой системой развития персонажа. На выбор доступно огромное количество локаций, мелких деталей, которые привносят в игру должную степень атмосферности и живой силы.</div>\r\n\r\n<div>В распоряжении геймера: эпические сражения и завоевания замков, кровавые сражения на топорах, состязания по выпивки. Вышеописанные активности способны продуцировать ту самую искомую атмосферу скандинавских воинов &ndash; викингов, а также их быта.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/10/22/02_ce103042ebf1a2982f0d6_1920xhval.webp\" style=\"height:501px; width:890px\" /></div>",
     "genre": "РПГ",
     "create": "2023-08-01",
     "image": "new_game_image/2023/09/25/valobo12.jpg",
@@ -4600,7 +4565,7 @@
   "pk": 2,
   "fields": {
     "title": "Sid Meier’s Civilization VI",
-    "description": "<div>Civilization VI является пошаговой стратегией, в которой одному или нескольким игрокам предстоит соревноваться с ИИ-противниками в деле построения и развития собственной цивилизации, начав с маленького племени, постепенно расширяя свою империю с целью добиться господства над всей планетой. Эта цель может быть достигнута различными способами, в зависимости от условий победы. Игроки основывают города, расширяют их, различным образом улучшают, а также создают военных юнитов, предназначенных для разведки и атаки вражеских сил, постоянно следя за развитием технологий своей цивилизации и дипломатическими отношениями с другими.</div>\r\n   <div>Шестиугольная карта из Civilization V сохранилась и перешла в Civilization VI, однако новшество заключается в том, что некоторые из городских улучшений теперь располагаются непосредственно на клетках внутри городских границ. Игрок отводит определённые клетки (с учётом некоторых ограничений) под различные городские «районы», которые предоставляют значительные преимущества для размещаемых в них зданий.</div>",
+    "description": "<div><span style=\"color:#2980b9\"><em>Civilization VI</em> </span>является пошаговой стратегией, в которой одному или нескольким игрокам предстоит соревноваться с ИИ-противниками в деле построения и развития собственной цивилизации, начав с маленького племени, постепенно расширяя свою империю с целью добиться господства над всей планетой. Эта цель может быть достигнута различными способами, в зависимости от условий победы. Игроки основывают города, расширяют их, различным образом улучшают, а также создают военных юнитов, предназначенных для разведки и атаки вражеских сил, постоянно следя за развитием технологий своей цивилизации и дипломатическими отношениями с другими.</div>\r\n\r\n<div>Шестиугольная карта из Civilization V сохранилась и перешла в Civilization VI, однако новшество заключается в том, что некоторые из городских улучшений теперь располагаются непосредственно на клетках внутри городских границ. Игрок отводит определённые клетки (с учётом некоторых ограничений) под различные городские &laquo;районы&raquo;, которые предоставляют значительные преимущества для размещаемых в них зданий.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/10/22/1477374873_003civ.jpg\" style=\"height:501px; width:890px\" /></div>",
     "genre": "Пошаговая стратегия",
     "create": "2023-08-11",
     "image": "new_game_image/2023/09/25/civoboi.jpg",
@@ -4614,7 +4579,7 @@
   "pk": 3,
   "fields": {
     "title": "XCOM 2",
-    "description": "<div>XCOM 2 — пошаговая тактическая компьютерная игра, разработанная Firaxis Games и выпущенная 2K Games для Microsoft Windows, macOS и Linux в 2016 году. XCOM 2 является продолжением XCOM: Enemy Unknown (2012) — ремейка X-COM: UFO Defense 1994 года. </div>\r\n    <div>Если XCOM: Enemy Unknown предлагала игроку оборонять планету Земля от только начавшегося вторжения пришельцев, XCOM 2 показывает мир, в котором пришельцы выиграли войну, и после их победы прошло уже двадцать лет; на Земле установлен тоталитарный режим, и возрождённая организация XCOM действует уже как подпольное повстанческое движение. Как и в предыдущей игре, в XCOM 2 сочетаются два режима — тактический, где игрок управляет в пошаговом сражении отрядом из 4-6 бойцов, и стратегический, где игрок должен один за другим отвоёвывать регионы Земли у пришельцев, используя «Мститель» — инопланетный корабль, захваченный XCOM и служащий организации мобильной базой. Игра получила высокие оценки критики и была номинирована на ряд наград. В 2017 году к игре было выпущено дополнение XCOM 2: War of the Chosen.</div>",
+    "description": "<div>XCOM 2 &mdash; пошаговая тактическая компьютерная игра, разработанная Firaxis Games и выпущенная 2K Games для Microsoft Windows, macOS и Linux в 2016 году. XCOM 2 является продолжением XCOM: Enemy Unknown (2012) &mdash; ремейка X-COM: UFO Defense 1994 года.</div>\r\n\r\n<div>Если XCOM: Enemy Unknown предлагала игроку оборонять планету Земля от только начавшегося вторжения пришельцев, XCOM 2 показывает мир, в котором пришельцы выиграли войну, и после их победы прошло уже двадцать лет; на Земле установлен тоталитарный режим, и возрождённая организация XCOM действует уже как подпольное повстанческое движение. Как и в предыдущей игре, в XCOM 2 сочетаются два режима &mdash; тактический, где игрок управляет в пошаговом сражении отрядом из 4-6 бойцов, и стратегический, где игрок должен один за другим отвоёвывать регионы Земли у пришельцев, используя &laquo;Мститель&raquo; &mdash; инопланетный корабль, захваченный XCOM и служащий организации мобильной базой. Игра получила высокие оценки критики и была номинирована на ряд наград. В 2017 году к игре было выпущено дополнение XCOM 2: War of the Chosen.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/10/22/xcom_24995.webp\" style=\"height:474px; width:843px\" /></div>",
     "genre": "Пошаговая стратегия",
     "create": "2023-08-13",
     "image": "new_game_image/2023/09/25/xcomoboi.jpeg",
@@ -4628,7 +4593,7 @@
   "pk": 4,
   "fields": {
     "title": "FIFA 21",
-    "description": "<div>FIFA 21 — 28-ая по счёту компьютерная игра из серии FIFA в жанре футбольного симулятора, разработанная компаниями EA Vancouver и EA Romania под издательством Electronic Arts. На ПК, PlayStation 4, Xbox One и Nintendo Switch игра вышла 9 октября 2020 года, а на платформы нового поколения (PlayStation 5 и Xbox Series X/S) — 3 декабря 2020 года.</div>\r\n    <div>В режиме Ultimate Team цель игрока — собрать лучшую команду, покупая игроков на трансферном рынке, а также получая их из наборов и заданий. В режиме есть шесть видов игр: Squad Battles, представляющий собой игру против ИИ, но при этом с командами, которые создали другие игроки; Division Rivals — онлайн игра в специальной лиге, «Испытания подбора команды» — единственный режим, в котором нужно не играть, а собирать состав для получения наборов и игроков; товарищеские матчи с компьютером, по сети или с друзьями, «Драфт», где игрок собирает команду из игроков на выбор и играет с компьютером до четырёх побед, после этого получая награды; и «Драфт онлайн», представляющий собой онлайн версию режима «Драфт».</div>\r\n    <div>Volta Football, появившийся в предыдущей игре, будет и здесь. В него добавят такие режимы, как «Дебют», продолжение прошлогоднего сюжетного режима, при участии Зинедина Зидана, Тьерри Анри, Кака, Фрэнка Лэмпарда; Volta Squads, онлайн-режим, в котором люди могут играть с друзьями, и Feature Battles.</div>",
+    "description": "<div><span style=\"color:#2ecc71\"><em>FIFA 21</em></span> &mdash; 28-ая по счёту компьютерная игра из серии FIFA в жанре футбольного симулятора, разработанная компаниями EA Vancouver и EA Romania под издательством Electronic Arts. На ПК, PlayStation 4, Xbox One и Nintendo Switch игра вышла 9 октября 2020 года, а на платформы нового поколения (PlayStation 5 и Xbox Series X/S) &mdash; 3 декабря 2020 года.</div>\r\n\r\n<div>В режиме Ultimate Team цель игрока &mdash; собрать лучшую команду, покупая игроков на трансферном рынке, а также получая их из наборов и заданий. В режиме есть шесть видов игр: Squad Battles, представляющий собой игру против ИИ, но при этом с командами, которые создали другие игроки; Division Rivals &mdash; онлайн игра в специальной лиге, &laquo;Испытания подбора команды&raquo; &mdash; единственный режим, в котором нужно не играть, а собирать состав для получения наборов и игроков; товарищеские матчи с компьютером, по сети или с друзьями, &laquo;Драфт&raquo;, где игрок собирает команду из игроков на выбор и играет с компьютером до четырёх побед, после этого получая награды; и &laquo;Драфт онлайн&raquo;, представляющий собой онлайн версию режима &laquo;Драфт&raquo;.</div>\r\n\r\n<div>Volta Football, появившийся в предыдущей игре, будет и здесь. В него добавят такие режимы, как &laquo;Дебют&raquo;, продолжение прошлогоднего сюжетного режима, при участии Зинедина Зидана, Тьерри Анри, Кака, Фрэнка Лэмпарда; Volta Squads, онлайн-режим, в котором люди могут играть с друзьями, и Feature Battles.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/09/23/fifa1.jpg\" style=\"height:431px; width:890px\" /></div>",
     "genre": "Спортивный симулятор",
     "create": "2023-08-08",
     "image": "new_game_image/2023/09/25/fifa-21oboi.jpg",
@@ -4642,11 +4607,11 @@
   "pk": 5,
   "fields": {
     "title": "NBA23",
-    "description": "<div class=\"text\"><div>NBA 2K22 — это баскетбольный спортивный симулятор, разработанный Visual Concepts и изданный 2K Sports, основанный на Национальной баскетбольной ассоциации (НБА).</div><div> Это 23-я игра в серии NBA 2K.</div><div>Игра была выпущена 10 сентября 2021 года для Microsoft Windows, Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S и Apple Arcade.</div></div>",
+    "description": "<div class=\"text\">\r\n<div><span style=\"color:#e67e22\"><strong>NBA 2K22</strong></span> &mdash; это баскетбольный спортивный симулятор, разработанный Visual Concepts и изданный 2K Sports, основанный на Национальной баскетбольной ассоциации (НБА).</div>\r\n\r\n<div>Это 23-я игра в серии NBA 2K.</div>\r\n\r\n<div>Игра была выпущена 10 сентября 2021 года для Microsoft Windows, Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S и Apple Arcade.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/10/22/1661541165_6533nba.jpeg\" style=\"height:501px; width:890px\" /></div>\r\n</div>",
     "genre": "Спортивный симулятор",
     "create": "2023-08-09",
     "image": "new_game_image/2023/09/25/nba23obo12.jpg",
-    "video": "preview/2023/08/13/NBA_2K22_MyTEAM_Trailer.mp4",
+    "video": "preview/2023/10/22/NBA_2K23__First_Look_Trailer__2K.mp4",
     "rating": 8.6,
     "rating_site": 4.8
   }
@@ -4656,7 +4621,7 @@
   "pk": 6,
   "fields": {
     "title": "Baldur's gate 3",
-    "description": "<div class=\"text\"><div>Baldur’s Gate 3 (в переводе с англ. — «Врата Балдура 3») — компьютерная ролевая игра, разработанная бельгийской компанией Larian Studios для Windows, macOS, PlayStation 5 и Xbox Series X/S. Baldur’s Gate 3 стала продолжением серии Baldur’s Gate, основанной на настольной ролевой игре Dungeons & Dragons; её действие происходит в той же вымышленной вселенной Forgotten Realms.</div><div> Игра вышла 3 августа 2023 года для Windows, а 6 сентября того же года планируется релиз для PlayStation 5 и macOS[3].</div><div> В разработке также находится версия игры для Xbox Series X/S[4]. </div><div>Ранее планировавшийся выпуск игры для облачного игрового сервиса Stadia был отменён ввиду закрытия сервиса</div>.</div>",
+    "description": "<div class=\"text\">\r\n<div><span style=\"color:#1abc9c\"><u>Baldur&rsquo;s Gate 3</u></span> (в переводе с англ.&thinsp;&mdash;&thinsp;&laquo;Врата Балдура 3&raquo;) &mdash; компьютерная ролевая игра, разработанная бельгийской компанией Larian Studios для Windows, macOS, PlayStation 5 и Xbox Series X/S. Baldur&rsquo;s Gate 3 стала продолжением серии Baldur&rsquo;s Gate, основанной на настольной ролевой игре Dungeons &amp; Dragons; её действие происходит в той же вымышленной вселенной Forgotten Realms.</div>\r\n\r\n<div>Игра вышла 3 августа 2023 года для Windows, а 6 сентября того же года планируется релиз для PlayStation 5 и macOS[3].</div>\r\n\r\n<div>В разработке также находится версия игры для Xbox Series X/S[4].</div>\r\n\r\n<div>Ранее планировавшийся выпуск игры для облачного игрового сервиса Stadia был отменён ввиду закрытия сервиса</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n.<img alt=\"\" src=\"/media/uploads/2023/10/22/baldurs-gate-2-game-00.jpg\" style=\"height:501px; width:890px\" /></div>",
     "genre": "РПГ",
     "create": "2023-08-03",
     "image": "new_game_image/2023/08/13/baldurs_gate_3.jpg",
@@ -4670,7 +4635,7 @@
   "pk": 7,
   "fields": {
     "title": "LORDS of the FALLEN",
-    "description": "Lords of the Fallen представляет собой ролевую игру в жанре экшн с видом от третьего лица. Как и в предшественнице, в ней можно использовать оружие ближнего боя, а также магию, а игровой процесс и боевая система вдохновлены проектами серии Souls. Помимо многопользовательского режима «игрок против игрока», предусмотрен полноценный кооператив для прохождения сюжетной компании.\r\n\r\nОдной из особенностей Lords of the Fallen является масштабный игровой мир (вдвое больше чем у предшественницы) представленный в двух ипостасях: Аксиом — царство живых, и Умбрал — царство мёртвых (несмотря на использование одних и тех же игровых областей, в некоторые места можно попасть только из определённого мира), переключение между которыми происходит при помощи волшебного фонаря, а также после смерти игрока (затем он должен вернуться в Аксиом чтобы вернуть потерянные очки опыта). Если смерть происходит в царстве Теней, то игрок возрождается в последней точке сохранения и теряет весь накопленный опыт. Несмотря на небольшое количество точек сохранения игрок может создавать свои собственные, используя материалы, собранные из убитых в Умбрале монстров. В Lords of the Fallen предусмотрен редактор персонажа с функциями кастомизации, а также тринадцать игровых классов на выбор, обладающие уникальными особенностями.",
+    "description": "<p><span style=\"color:#c0392b\"><strong>Lords of the Fallen</strong></span> представляет собой ролевую игру в жанре экшн с видом от третьего лица. Как и в предшественнице, в ней можно использовать оружие ближнего боя, а также магию, а игровой процесс и боевая система вдохновлены проектами серии Souls. Помимо многопользовательского режима &laquo;игрок против игрока&raquo;, предусмотрен полноценный кооператив для прохождения сюжетной компании. Одной из особенностей Lords of the Fallen является масштабный игровой мир (вдвое больше чем у предшественницы) представленный в двух ипостасях: Аксиом &mdash; царство живых, и Умбрал &mdash; царство мёртвых (несмотря на использование одних и тех же игровых областей, в некоторые места можно попасть только из определённого мира), переключение между которыми происходит при помощи волшебного фонаря, а также после смерти игрока (затем он должен вернуться в Аксиом чтобы вернуть потерянные очки опыта). Если смерть происходит в царстве Теней, то игрок возрождается в последней точке сохранения и теряет весь накопленный опыт. Несмотря на небольшое количество точек сохранения игрок может создавать свои собственные, используя материалы, собранные из убитых в Умбрале монстров. В Lords of the Fallen предусмотрен редактор персонажа с функциями кастомизации, а также тринадцать игровых классов на выбор, обладающие уникальными особенностями.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/22/lordsofthefallen_2.jpg\" style=\"height:501px; width:890px\" /></p>",
     "genre": "РПГ",
     "create": "2023-10-16",
     "image": "new_game_image/2023/10/16/lordsofthefallen_2.jpg",
@@ -4684,7 +4649,7 @@
   "pk": 8,
   "fields": {
     "title": "WWF 2K23",
-    "description": "Как и предыдущая игра, WWE 2K23 представляет собой гибрид аркады и симулятора. Матч WarGames впервые появился в серии игры. Игровые режимы, такие как MyFACTION, MyGM, Showcase, Universe, режим карьеры MyRISE и полный набор для творчества, возвращаются с новыми возможностями. Showcase включает в себя звезду с обложки Джона Сину, позволяя игрокам воссоздать самые заметные поражения в его карьере, с рассказом самого Сины, который заканчивается вымышленными матчами, где игрок использует любую из одиннадцати суперзвёзд, победивших Сину за его карьеру (включая две версии Гробовщика, Эджа и Брока Леснара), надеясь победить Сину в последний раз.",
+    "description": "<p>Как и предыдущая игра, <span style=\"color:#3498db\"><strong>WWE 2K23</strong></span> представляет собой гибрид аркады и симулятора. Матч WarGames впервые появился в серии игры. Игровые режимы, такие как MyFACTION, MyGM, Showcase, Universe, режим карьеры MyRISE и полный набор для творчества, возвращаются с новыми возможностями. Showcase включает в себя звезду с обложки Джона Сину, позволяя игрокам воссоздать самые заметные поражения в его карьере, с рассказом самого Сины, который заканчивается вымышленными матчами, где игрок использует любую из одиннадцати суперзвёзд, победивших Сину за его карьеру (включая две версии Гробовщика, Эджа и Брока Леснара), надеясь победить Сину в последний раз.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/22/z2fa9a3jjf9bsqjhuvu2bc-650-80wwe.jpg\" style=\"height:366px; width:650px\" /></p>",
     "genre": "Спортивный симулятор",
     "create": "2023-10-17",
     "image": "new_game_image/2023/10/16/wwe2023.jpeg",
@@ -4698,13 +4663,13 @@
   "pk": 9,
   "fields": {
     "title": "FOR The King 2",
-    "description": "For The King II - это продолжение (вторая часть) известной пошаговой RPG с элементами настолки и рогалика. Во второй части вам предстоит сразиться с грозной королевой Фарулой. Только вам решать, пойдете ли вы против королевы в одиночку или плечом к плечу с друзьями! Конечно же в одиночном режиме все трофеи достанутся только вам! Внешне вторая часть стала гораздо лучше, но вас также ждут небольшие арены поделенные на клетки, где будут проходить пошаговые сражения. Соберите самых различных героев с уникальными способностями, чтобы противостоять самым сильным врагам. Также не забывайте приобретать лучшую экипировку для своих героев, ведь мага делает мантия, а воина - доспехи!",
+    "description": "<p><span style=\"color:#f39c12\"><strong>For The King II</strong></span> - это продолжение (вторая часть) известной пошаговой RPG с элементами настолки и рогалика. Во второй части вам предстоит сразиться с грозной королевой Фарулой. Только вам решать, пойдете ли вы против королевы в одиночку или плечом к плечу с друзьями! Конечно же в одиночном режиме все трофеи достанутся только вам! Внешне вторая часть стала гораздо лучше, но вас также ждут небольшие арены поделенные на клетки, где будут проходить пошаговые сражения. Соберите самых различных героев с уникальными способностями, чтобы противостоять самым сильным врагам. Также не забывайте приобретать лучшую экипировку для своих героев, ведь мага делает мантия, а воина - доспехи!</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/22/80180fortheking.jpg\" style=\"height:145px; width:310px\" /></p>",
     "genre": "Пошаговая стратегия",
     "create": "2023-10-15",
     "image": "new_game_image/2023/10/16/king2.png",
     "video": "preview/2023/10/16/For_The_King_2_-_Official_Trailer__IGN_Fan_Fest_2023.mp4",
     "rating": 10.0,
-    "rating_site": 4.5
+    "rating_site": 4.6
   }
 },
 {
@@ -5202,6 +5167,19 @@
   }
 },
 {
+  "model": "new_games.comments",
+  "pk": 44,
+  "fields": {
+    "name": "Alexander Mostovoi",
+    "avatar": "avatars/fifa-21oboi_JUPDfd0.jpg",
+    "comment": "Нет слов,всё на высшем уровне!",
+    "comment_created": "2023-10-22T18:59:41.070",
+    "game_commented": 9,
+    "favourite_game": "FIFA 21",
+    "favourite_genre": "Спортивный симулятор"
+  }
+},
+{
   "model": "new_games.newvoteuser",
   "pk": 27,
   "fields": {
@@ -5373,13 +5351,22 @@
   }
 },
 {
+  "model": "new_games.newvoteuser",
+  "pk": 47,
+  "fields": {
+    "evaluation": 5,
+    "game_evaluation": 9,
+    "user_evaluation": 32
+  }
+},
+{
   "model": "help_games.game",
   "pk": 1,
   "fields": {
     "title": "Red Dead Redemption",
     "genre": "РПГ",
     "release_date": "2010-05-18",
-    "description": "<p>Red Dead Redemption — компьютерная игра, шутер от третьего лица с открытым миром и элементами RPG в жанре приключенческий боевик-вестерн. Разработана компанией Rockstar San Diego при поддержке Rockstar North, Rockstar NYC, Rockstar Leeds, Rockstar New England и Rockstar Lincoln.<p>\r\n<p>Действие игры происходит в Америке в 1911 году[6]. Протагонист, Джон Марстон (англ. John Marston), в прошлом бандит и грабитель, оставивший кровавый промысел, вынужден работать на государственных агентов, планирующих выследить и взять живыми или мёртвыми его бывших сообщников, включая самого закадычного друга Билла Уильямсона (англ. Bill Williamson). Если Марстон этого не сделает, пострадает его семья. Герою суждено преодолеть огромное расстояние от западных границ США, где царит хаос и властвуют беспринципные коррумпированные чиновники, а простые поселенцы ведут бесконечную борьбу за выживание до цивилизованных городов американского севера, и попутно посетить Мексику, пребывающую на грани гражданской войны.</p>\r\n\r\n<p>В Мексике Марстон первоначально вступает в регулярную армию, которой командуют полковник Агустин Альенде и его помощник Висенте де Санта, и участвует в попытке подавления восстания в обмен на помощь в нахождении своего старого сообщника Хавьера Эскуэлы. Затем армия предаёт Марстона, и он переходит на сторону повстанцев под командованием Авраама Рейеса. В конечном итоге Марстону удаётся поймать Эскуэлу и выдать его агентам бюро Эдгару Россу и Арчеру Фордхэму.</p>\r\n\r\n<p>После поимки Эскуэлы Марстон намеревается вернуться к семье, но агенты бюро дают ему новую задачу — теперь ему предстоит разобраться с другим своим старым приятелем — Датчем ван дер Линде (англ. Dutch van der Linde). Марстону удаётся разузнать, что Датч создаёт новую банду из молодых и жаждущих крови «белых людей» индейцев. Марстону с помощью агентов удаётся прорваться и захватить форт в горах Кочинай. Датч, поняв, что у него нет выбора, совершает суицид, спрыгнув с горы. Перед смертью он предупреждает Джона, что власти не оставят его в покое.</p>\r\n\r\n<p>Наконец, Марстон освобождён от сделки с правительством и возвращается к своей семье на его ферме. Спустя некоторое время правительственные агенты бюро по непонятным причинам внезапно нападают на ферму. Марстон помогает убежать жене и сыну, а сам героически пытается противостоять агентам, но они берут численностью, и он погибает.</p>\r\n\r\n<p>В финале действие перемещается на три года вперёд, в 1914, где сын Марстона, Джек, стоит над могилами своих родителей, Джона и Эбигейл. Джек выслеживает Эдгара Росса в Нью-Остине и убивает его в поединке, мстя за своего отца, после чего оказывается вне закона, также, как когда-то и Джон.</p>",
+    "description": "<p><span style=\"color:#27ae60\"><em>Red Dead Redemption</em></span> &mdash; компьютерная игра, шутер от третьего лица с открытым миром и элементами RPG в жанре приключенческий боевик-вестерн. Разработана компанией Rockstar San Diego при поддержке Rockstar North, Rockstar NYC, Rockstar Leeds, Rockstar New England и Rockstar Lincoln.</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/22/reddedd.jpg\" style=\"height:501px; width:890px\" /></p>\r\n\r\n<p>Действие игры происходит в Америке в 1911 году[6]. Протагонист, Джон Марстон (англ. John Marston), в прошлом бандит и грабитель, оставивший кровавый промысел, вынужден работать на государственных агентов, планирующих выследить и взять живыми или мёртвыми его бывших сообщников, включая самого закадычного друга Билла Уильямсона (англ. Bill Williamson). Если Марстон этого не сделает, пострадает его семья. Герою суждено преодолеть огромное расстояние от западных границ США, где царит хаос и властвуют беспринципные коррумпированные чиновники, а простые поселенцы ведут бесконечную борьбу за выживание до цивилизованных городов американского севера, и попутно посетить Мексику, пребывающую на грани гражданской войны.</p>\r\n\r\n<p>В Мексике Марстон первоначально вступает в регулярную армию, которой командуют полковник Агустин Альенде и его помощник Висенте де Санта, и участвует в попытке подавления восстания в обмен на помощь в нахождении своего старого сообщника Хавьера Эскуэлы. Затем армия предаёт Марстона, и он переходит на сторону повстанцев под командованием Авраама Рейеса. В конечном итоге Марстону удаётся поймать Эскуэлу и выдать его агентам бюро Эдгару Россу и Арчеру Фордхэму.</p>\r\n\r\n<p>После поимки Эскуэлы Марстон намеревается вернуться к семье, но агенты бюро дают ему новую задачу &mdash; теперь ему предстоит разобраться с другим своим старым приятелем &mdash; Датчем ван дер Линде (англ. Dutch van der Linde). Марстону удаётся разузнать, что Датч создаёт новую банду из молодых и жаждущих крови &laquo;белых людей&raquo; индейцев. Марстону с помощью агентов удаётся прорваться и захватить форт в горах Кочинай. Датч, поняв, что у него нет выбора, совершает суицид, спрыгнув с горы. Перед смертью он предупреждает Джона, что власти не оставят его в покое.</p>\r\n\r\n<p>Наконец, Марстон освобождён от сделки с правительством и возвращается к своей семье на его ферме. Спустя некоторое время правительственные агенты бюро по непонятным причинам внезапно нападают на ферму. Марстон помогает убежать жене и сыну, а сам героически пытается противостоять агентам, но они берут численностью, и он погибает.</p>\r\n\r\n<p>В финале действие перемещается на три года вперёд, в 1914, где сын Марстона, Джек, стоит над могилами своих родителей, Джона и Эбигейл. Джек выслеживает Эдгара Росса в Нью-Остине и убивает его в поединке, мстя за своего отца, после чего оказывается вне закона, также, как когда-то и Джон.</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/22/1690627247210958216656986251298935reddeadredemption2_7ng8uzj.png\" style=\"height:501px; width:890px\" /></p>",
     "game_image": "game_image/2023/08/14/RDR2.png",
     "created": "2023-08-14",
     "rating": 7.4,
@@ -5393,7 +5380,7 @@
     "title": "Assassin’s Creed Valhalla",
     "genre": "РПГ",
     "release_date": "2020-11-10",
-    "description": "<div>Assassin’s Creed Valhalla – это полноценное продолжение и совершенствование постулатов предыдущих частей с оттачиванием специфики ролевой игры, с полностью открытым и насыщенным миром. Небезызвестная компания Ubisoft возвратилась к некоторым истокам классической системы стелса, которая завоевала сердца закаленных геймеров и ценителей серии.</div>\r\n\r\n                                         <div class=\"center\">Достоинства и недостатки</div>\r\n    <div>Assassin’s Creed Valhalla – это полноценное продолжение и совершенствование постулатов предыдущих частей с оттачиванием специфики ролевой игры, с полностью открытым и насыщенным миром. Небезызвестная компания Ubisoft возвратилась к некоторым истокам классической системы стелса, которая завоевала сердца закаленных геймеров и ценителей серии.</div>\r\n                                     <div class='center'>Assassin s Creed Valhalla - обзор (Версия для ПК)</div>\r\n   <div> Валгалла – это совершенное воссоздание исторического периода Англии – Темные века. Удалось реализовать должный уровень детализации и симуляции игрового мира. Столь показательные графические технологии предположительно будут улучшены на консолях нового поколения – Xbox Series X и PlayStation 5. Игроку в новой части предстоит ознакомиться с новой системой развития персонажа. На выбор доступно огромное количество локаций, мелких деталей, которые привносят в игру должную степень атмосферности и живой силы.</div>\r\n    <div>В распоряжении геймера: эпические сражения и завоевания замков, кровавые сражения на топорах, состязания по выпивки. Вышеописанные активности способны продуцировать ту самую искомую атмосферу скандинавских воинов – викингов, а также их быта.</div>",
+    "description": "<div><span style=\"color:#9b59b6\"><em>Assassin&rsquo;s Creed Valhalla</em></span> &ndash; это полноценное продолжение и совершенствование постулатов предыдущих частей с оттачиванием специфики ролевой игры, с полностью открытым и насыщенным миром. Небезызвестная компания Ubisoft возвратилась к некоторым истокам классической системы стелса, которая завоевала сердца закаленных геймеров и ценителей серии.</div>\r\n\r\n<div class=\"center\">Достоинства и недостатки</div>\r\n\r\n<div>Assassin&rsquo;s Creed Valhalla &ndash; это полноценное продолжение и совершенствование постулатов предыдущих частей с оттачиванием специфики ролевой игры, с полностью открытым и насыщенным миром. Небезызвестная компания Ubisoft возвратилась к некоторым истокам классической системы стелса, которая завоевала сердца закаленных геймеров и ценителей серии.</div>\r\n\r\n<div class=\"center\">Assassin s Creed Valhalla - обзор (Версия для ПК)</div>\r\n\r\n<div>Валгалла &ndash; это совершенное воссоздание исторического периода Англии &ndash; Темные века. Удалось реализовать должный уровень детализации и симуляции игрового мира. Столь показательные графические технологии предположительно будут улучшены на консолях нового поколения &ndash; Xbox Series X и PlayStation 5. Игроку в новой части предстоит ознакомиться с новой системой развития персонажа. На выбор доступно огромное количество локаций, мелких деталей, которые привносят в игру должную степень атмосферности и живой силы.</div>\r\n\r\n<div>В распоряжении геймера: эпические сражения и завоевания замков, кровавые сражения на топорах, состязания по выпивки. Вышеописанные активности способны продуцировать ту самую искомую атмосферу скандинавских воинов &ndash; викингов, а также их быта.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/09/23/val3_1.webp\" style=\"height:518px; width:1140px\" /></div>",
     "game_image": "game_image/2023/09/25/valobo12.jpg",
     "created": "2023-09-23",
     "rating": 6.1,
@@ -5407,7 +5394,7 @@
     "title": "FIFA 21",
     "genre": "Спортивный симулятор",
     "release_date": "2020-12-03",
-    "description": "<div>FIFA 21 — 28-ая по счёту компьютерная игра из серии FIFA в жанре футбольного симулятора, разработанная компаниями EA Vancouver и EA Romania под издательством Electronic Arts. На ПК, PlayStation 4, Xbox One и Nintendo Switch игра вышла 9 октября 2020 года, а на платформы нового поколения (PlayStation 5 и Xbox Series X/S) — 3 декабря 2020 года.</div>\r\n    <div>В режиме Ultimate Team цель игрока — собрать лучшую команду, покупая игроков на трансферном рынке, а также получая их из наборов и заданий. В режиме есть шесть видов игр: Squad Battles, представляющий собой игру против ИИ, но при этом с командами, которые создали другие игроки; Division Rivals — онлайн игра в специальной лиге, «Испытания подбора команды» — единственный режим, в котором нужно не играть, а собирать состав для получения наборов и игроков; товарищеские матчи с компьютером, по сети или с друзьями, «Драфт», где игрок собирает команду из игроков на выбор и играет с компьютером до четырёх побед, после этого получая награды; и «Драфт онлайн», представляющий собой онлайн версию режима «Драфт».</div>\r\n    <div>Volta Football, появившийся в предыдущей игре, будет и здесь. В него добавят такие режимы, как «Дебют», продолжение прошлогоднего сюжетного режима, при участии Зинедина Зидана, Тьерри Анри, Кака, Фрэнка Лэмпарда; Volta Squads, онлайн-режим, в котором люди могут играть с друзьями, и Feature Battles.</div>",
+    "description": "<div><span style=\"color:#4e5f70\"><strong>FIFA 21</strong></span> &mdash; 28-ая по счёту компьютерная игра из серии FIFA в жанре футбольного симулятора, разработанная компаниями EA Vancouver и EA Romania под издательством Electronic Arts. На ПК, PlayStation 4, Xbox One и Nintendo Switch игра вышла 9 октября 2020 года, а на платформы нового поколения (PlayStation 5 и Xbox Series X/S) &mdash; 3 декабря 2020 года.</div>\r\n\r\n<div>В режиме Ultimate Team цель игрока &mdash; собрать лучшую команду, покупая игроков на трансферном рынке, а также получая их из наборов и заданий. В режиме есть шесть видов игр: Squad Battles, представляющий собой игру против ИИ, но при этом с командами, которые создали другие игроки; Division Rivals &mdash; онлайн игра в специальной лиге, &laquo;Испытания подбора команды&raquo; &mdash; единственный режим, в котором нужно не играть, а собирать состав для получения наборов и игроков; товарищеские матчи с компьютером, по сети или с друзьями, &laquo;Драфт&raquo;, где игрок собирает команду из игроков на выбор и играет с компьютером до четырёх побед, после этого получая награды; и &laquo;Драфт онлайн&raquo;, представляющий собой онлайн версию режима &laquo;Драфт&raquo;.</div>\r\n\r\n<div>Volta Football, появившийся в предыдущей игре, будет и здесь. В него добавят такие режимы, как &laquo;Дебют&raquo;, продолжение прошлогоднего сюжетного режима, при участии Зинедина Зидана, Тьерри Анри, Кака, Фрэнка Лэмпарда; Volta Squads, онлайн-режим, в котором люди могут играть с друзьями, и Feature Battles.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/09/23/fifa4.jpg\" style=\"height:501px; width:890px\" /></div>",
     "game_image": "game_image/2023/09/25/fifa-21oboi.jpg",
     "created": "2023-09-08",
     "rating": 2.3,
@@ -5421,11 +5408,11 @@
     "title": "NBA23",
     "genre": "Спортивный симулятор",
     "release_date": "2022-10-18",
-    "description": "<div class=\"text\"><div>NBA 2K22 — это баскетбольный спортивный симулятор, разработанный Visual Concepts и изданный 2K Sports, основанный на Национальной баскетбольной ассоциации (НБА).</div><div> Это 23-я игра в серии NBA 2K.</div><div>Игра была выпущена 10 сентября 2021 года для Microsoft Windows, Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S и Apple Arcade.</div></div>",
+    "description": "<div class=\"text\">\r\n<div><span style=\"color:#f1c40f\"><u>NBA 2K23 </u></span>&mdash; это баскетбольный спортивный симулятор, разработанный Visual Concepts и изданный 2K Sports, основанный на Национальной баскетбольной ассоциации (НБА).</div>\r\n\r\n<div>Это 23-я игра в серии NBA 2K.</div>\r\n\r\n<div>Игра была выпущена 10 сентября 2021 года для Microsoft Windows, Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S и Apple Arcade.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/09/23/nba2.avif\" style=\"height:445px; width:890px\" /></div>\r\n</div>",
     "game_image": "game_image/2023/09/25/nba23obo12.jpg",
     "created": "2023-09-14",
     "rating": 8.8,
-    "rating_site": 4.33
+    "rating_site": 4.25
   }
 },
 {
@@ -5435,7 +5422,7 @@
     "title": "Sid Meier’s Civilization VI",
     "genre": "Пошаговая стратегия",
     "release_date": "2016-10-21",
-    "description": "<div>Civilization VI является пошаговой стратегией, в которой одному или нескольким игрокам предстоит соревноваться с ИИ-противниками в деле построения и развития собственной цивилизации, начав с маленького племени, постепенно расширяя свою империю с целью добиться господства над всей планетой. Эта цель может быть достигнута различными способами, в зависимости от условий победы. Игроки основывают города, расширяют их, различным образом улучшают, а также создают военных юнитов, предназначенных для разведки и атаки вражеских сил, постоянно следя за развитием технологий своей цивилизации и дипломатическими отношениями с другими.</div>\r\n   <div>Шестиугольная карта из Civilization V сохранилась и перешла в Civilization VI, однако новшество заключается в том, что некоторые из городских улучшений теперь располагаются непосредственно на клетках внутри городских границ. Игрок отводит определённые клетки (с учётом некоторых ограничений) под различные городские «районы», которые предоставляют значительные преимущества для размещаемых в них зданий.</div>",
+    "description": "<div><span style=\"color:#27ae60\"><em>Civilization V</em></span>I является пошаговой стратегией, в которой одному или нескольким игрокам предстоит соревноваться с ИИ-противниками в деле построения и развития собственной цивилизации, начав с маленького племени, постепенно расширяя свою империю с целью добиться господства над всей планетой. Эта цель может быть достигнута различными способами, в зависимости от условий победы. Игроки основывают города, расширяют их, различным образом улучшают, а также создают военных юнитов, предназначенных для разведки и атаки вражеских сил, постоянно следя за развитием технологий своей цивилизации и дипломатическими отношениями с другими.</div>\r\n\r\n<div>Шестиугольная карта из Civilization V сохранилась и перешла в Civilization VI, однако новшество заключается в том, что некоторые из городских улучшений теперь располагаются непосредственно на клетках внутри городских границ. Игрок отводит определённые клетки (с учётом некоторых ограничений) под различные городские &laquo;районы&raquo;, которые предоставляют значительные преимущества для размещаемых в них зданий.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/09/23/civ2.jpeg\" style=\"height:332px; width:590px\" /></div>",
     "game_image": "game_image/2023/09/25/civoboi.jpg",
     "created": "2023-09-20",
     "rating": 7.2,
@@ -5449,7 +5436,7 @@
     "title": "XCOM 2",
     "genre": "Пошаговая стратегия",
     "release_date": "2017-08-29",
-    "description": "<div>XCOM 2 — пошаговая тактическая компьютерная игра, разработанная Firaxis Games и выпущенная 2K Games для Microsoft Windows, macOS и Linux в 2016 году. XCOM 2 является продолжением XCOM: Enemy Unknown (2012) — ремейка X-COM: UFO Defense 1994 года. </div>\r\n    <div>Если XCOM: Enemy Unknown предлагала игроку оборонять планету Земля от только начавшегося вторжения пришельцев, XCOM 2 показывает мир, в котором пришельцы выиграли войну, и после их победы прошло уже двадцать лет; на Земле установлен тоталитарный режим, и возрождённая организация XCOM действует уже как подпольное повстанческое движение. Как и в предыдущей игре, в XCOM 2 сочетаются два режима — тактический, где игрок управляет в пошаговом сражении отрядом из 4-6 бойцов, и стратегический, где игрок должен один за другим отвоёвывать регионы Земли у пришельцев, используя «Мститель» — инопланетный корабль, захваченный XCOM и служащий организации мобильной базой. Игра получила высокие оценки критики и была номинирована на ряд наград. В 2017 году к игре было выпущено дополнение XCOM 2: War of the Chosen.</div>",
+    "description": "<div><span style=\"color:#f39c12\"><em><u>XCOM 2</u></em></span> &mdash; пошаговая тактическая компьютерная игра, разработанная Firaxis Games и выпущенная 2K Games для Microsoft Windows, macOS и Linux в 2016 году. XCOM 2 является продолжением XCOM: Enemy Unknown (2012) &mdash; ремейка X-COM: UFO Defense 1994 года.</div>\r\n\r\n<div>Если XCOM: Enemy Unknown предлагала игроку оборонять планету Земля от только начавшегося вторжения пришельцев, XCOM 2 показывает мир, в котором пришельцы выиграли войну, и после их победы прошло уже двадцать лет; на Земле установлен тоталитарный режим, и возрождённая организация XCOM действует уже как подпольное повстанческое движение. Как и в предыдущей игре, в XCOM 2 сочетаются два режима &mdash; тактический, где игрок управляет в пошаговом сражении отрядом из 4-6 бойцов, и стратегический, где игрок должен один за другим отвоёвывать регионы Земли у пришельцев, используя &laquo;Мститель&raquo; &mdash; инопланетный корабль, захваченный XCOM и служащий организации мобильной базой. Игра получила высокие оценки критики и была номинирована на ряд наград. В 2017 году к игре было выпущено дополнение XCOM 2: War of the Chosen.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><img alt=\"\" src=\"/media/uploads/2023/09/23/xcom1.jpg\" style=\"height:501px; width:890px\" /></div>",
     "game_image": "game_image/2023/09/25/xcomoboi.jpeg",
     "created": "2023-09-23",
     "rating": 7.1,
@@ -5463,7 +5450,7 @@
     "title": "Front mission 3 remake",
     "genre": "РПГ",
     "release_date": "2022-11-30",
-    "description": "Front Mission 3 — это пошаговая стратегия, разбавленная сюжетными кинематографическими вставками. Игрок контролирует нескольких персонажей, сидящих внутри ванзеров (больших шагающих роботов). Ванзеры можно настраивать по своему усмотрению: менять им запчасти, давать разнообразное оружие, снаряжать предметами и т. д. Сражения между ванзерами происходят на импровизированной миниатюрной карте, условно разделённой на игровые поля (клетки). Игрок может выставить на бой максимум четырёх персонажей из своей команды, также он имеет право совершить первый ход. Юниты команды игрока и команды, управляемой искусственным интеллектом, совершают ходы по очереди, движутся навстречу друг к другу и вступают в сражение. На некоторых картах в стане игрока могут находиться союзные персонажи, которых, как правило, требуется защитить. К противнику, в свою очередь, могут подходить подкрепления, войска, которых изначально нет на карте. Цель каждой миссии — ликвидировать все вражеские единицы, для этого достаточно убить или заставить сдаться всех их пилотов. В некоторых миссиях победу можно одержать, также выполнив специальное задание (дойти до определённого игрового поля, убить босса и т. п.).\r\n\r\nВ перерывах между миссиями игрок попадает в так называемый «виртуальный гараж», где может сохраниться и подготовиться к следующему сражению. Виртуальный потому, что в некоторых сюжетных вставках доступ к настоящим гаражам попросту невозможен, а все функции при этом продолжают действовать. Сохраниться игрок может практически в любой момент игры. Все персонажи имеют личные адреса электронной почты, могут получать сообщения от других персонажей и отправлять свои собственные. Эта система может быть использована игроком для выполнения различных побочных квестов и для более полного понимания сюжета. Для тех же целей в игру встроен ещё и импровизированный интернет, содержащий множество информационных страниц, собранных со всего игрового мира.\r\nСобытия игры разворачиваются в 2112 году на планете Земля. Молодой японец Кадзуки Такэмура[1] работает пилотом-испытателем ванзеров в машиностроительной корпорации Кирисима Индастриз. Его, вместе с лучшим другом Рёго Кусамой, начальство отправляет в качестве курьера на военную базу города Йокосука, где по неизвестным причинам происходит страшной силы взрыв. На этом месте история дробится на две сюжетных линии.\r\n\r\nПервая сюжетная линия (когда в начале игры Кадзуки отправляется на строительную площадку вместе с Рёго), предполагает большинство миссий на стороне USN (Соединённых Штатов Нации). Кадзуки знакомится с учёным USN Эммой Кламски и почти на протяжении всей игры пытается найти и спасти свою пропавшую приёмную сестру Алису.\r\n\r\nВ другой сюжетной ветви (когда Кадзуки отказывается идти с Рёго на стройплощадку) большинство миссий проходит на стороне Народной Республики Да Хань Чжун (Китай, соединённый с Тайванем). Кадзуки встречает китайского секретного агента Рю Хэй Фона, который просит его помочь найти оружие массового поражения под названием «МИДАС». Алиса при этом на протяжении всей игры путешествует вместе с братом.\r\n\r\nОба сценария достаточно ощутимо отличаются друг от друга, позволяют взглянуть на одни и те же политические события с разных сторон, по-разному раскрывают личности некоторых героев. Встречаются одинаковые карты, которые отправляют игрока за разные стороны баррикад. Например, в одной из историй совместно с партизанами требуется захватить передвижную крепость Тяньлэй, тогда как в другой её необходимо от этих самых партизан защитить.",
+    "description": "<p><span style=\"color:#8e44ad\"><strong>Front Mission 3</strong></span> &mdash; это пошаговая стратегия, разбавленная сюжетными кинематографическими вставками. Игрок контролирует нескольких персонажей, сидящих внутри ванзеров (больших шагающих роботов). Ванзеры можно настраивать по своему усмотрению: менять им запчасти, давать разнообразное оружие, снаряжать предметами и т. д. Сражения между ванзерами происходят на импровизированной миниатюрной карте, условно разделённой на игровые поля (клетки). Игрок может выставить на бой максимум четырёх персонажей из своей команды, также он имеет право совершить первый ход. Юниты команды игрока и команды, управляемой искусственным интеллектом, совершают ходы по очереди, движутся навстречу друг к другу и вступают в сражение. На некоторых картах в стане игрока могут находиться союзные персонажи, которых, как правило, требуется защитить. К противнику, в свою очередь, могут подходить подкрепления, войска, которых изначально нет на карте. Цель каждой миссии &mdash; ликвидировать все вражеские единицы, для этого достаточно убить или заставить сдаться всех их пилотов. В некоторых миссиях победу можно одержать, также выполнив специальное задание (дойти до определённого игрового поля, убить босса и т. п.). В перерывах между миссиями игрок попадает в так называемый &laquo;виртуальный гараж&raquo;, где может сохраниться и подготовиться к следующему сражению. Виртуальный потому, что в некоторых сюжетных вставках доступ к настоящим гаражам попросту невозможен, а все функции при этом продолжают действовать. Сохраниться игрок может практически в любой момент игры. Все персонажи имеют личные адреса электронной почты, могут получать сообщения от других персонажей и отправлять свои собственные. Эта система может быть использована игроком для выполнения различных побочных квестов и для более полного понимания сюжета. Для тех же целей в игру встроен ещё и импровизированный интернет, содержащий множество информационных страниц, собранных со всего игрового мира. События игры разворачиваются в 2112 году на планете Земля. Молодой японец Кадзуки Такэмура[1] работает пилотом-испытателем ванзеров в машиностроительной корпорации Кирисима Индастриз. Его, вместе с лучшим другом Рёго Кусамой, начальство отправляет в качестве курьера на военную базу города Йокосука, где по неизвестным причинам происходит страшной силы взрыв. На этом месте история дробится на две сюжетных линии. Первая сюжетная линия (когда в начале игры Кадзуки отправляется на строительную площадку вместе с Рёго), предполагает большинство миссий на стороне USN (Соединённых Штатов Нации). Кадзуки знакомится с учёным USN Эммой Кламски и почти на протяжении всей игры пытается найти и спасти свою пропавшую приёмную сестру Алису. В другой сюжетной ветви (когда Кадзуки отказывается идти с Рёго на стройплощадку) большинство миссий проходит на стороне Народной Республики Да Хань Чжун (Китай, соединённый с Тайванем). Кадзуки встречает китайского секретного агента Рю Хэй Фона, который просит его помочь найти оружие массового поражения под названием &laquo;МИДАС&raquo;. Алиса при этом на протяжении всей игры путешествует вместе с братом. Оба сценария достаточно ощутимо отличаются друг от друга, позволяют взглянуть на одни и те же политические события с разных сторон, по-разному раскрывают личности некоторых героев. Встречаются одинаковые карты, которые отправляют игрока за разные стороны баррикад. Например, в одной из историй совместно с партизанами требуется захватить передвижную крепость Тяньлэй, тогда как в другой её необходимо от этих самых партизан защитить.</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/22/9971efd1e62d4ab9975cacab65c2d809fm3.webp\" style=\"height:527px; width:872px\" /></p>",
     "game_image": "game_image/2023/10/16/fm3.jpg",
     "created": "2023-10-19",
     "rating": 5.0,
@@ -5477,7 +5464,7 @@
     "title": "Dragon Age:Origins",
     "genre": "РПГ",
     "release_date": "2009-10-14",
-    "description": "Dragon Age: Origins представляет собой компьютерную ролевую игру с видом от третьего лица. В начале игрок должен создать собственного героя, выбрав для него пол, расу (человек, эльф или гном) и класс (воин, маг или разбойник); игрок может настроить внешность героя по своему усмотрению. Сочетание расы и класса определяет, какая из шести возможных предысторий будет использована в качестве начала игры. Герои с разными предысториями начинают игру в разных локациях, и в дальнейшем неигровые персонажи реагируют на героев с разными предысториями по-разному. По мере приобретения очков опыта уровень героя повышается, и его характеристики растут; на седьмом, а также на четырнадцатом уровнях даётся возможность выбрать одну специализацию из четырёх на выбор — с помощью неё можно получить дополнительные способности. В течение игры к герою присоединяются спутники — его может сопровождать до трёх спутников одновременно; для этих спутников раса и класс жестко заданы.\r\nСражения проходят в реальном времени, где игрок управляет одним активным персонажем — при этом можно переключаться между главным героем и его спутниками; другими участниками боя, как союзниками, так и врагами, управляет компьютер. Игрок в любой момент боя может приостановить игру и назначить определённые команды — они будут выполнены после возобновления игры. Система «тактик» позволяет заранее настроить поведение управляемых компьютером спутников, запрограммировав для них определённые условия и соответствующие им действия: например, игрок может поручить персонажу-магу накладывать заклинание защиты на персонажа-воина, если тот подвергается атаке, или, например, запрограммировать персонажей-стрелков обстреливать в первую очередь врагов с низкими показателями брони, а если здоровье союзников-бойцов ближнего боя снизится меньше 50% — самим достать оружие ближнего боя и сражаться с врагами на малой дистанции. Игрок может наблюдать за сражением вблизи, когда камера находится за плечами активного персонажа, так и отдалить камеру, глядя на сражение с высоты.\r\nИгрок начинает игру с создания персонажа и выбора одной из шести предысторий. Выбор пола не изменяет предыстории[7][8], за исключением нюансов. Имя героя игрок может выбрать сам, фамилию изменить нельзя:\r\n\r\nЧеловек-дворянин — Кусланд, младший сын или дочь тейрна Хайевера. Игра начинается с того, что наступил день отправления старшего сына и брата персонажа игрока Фергюса на войну против Порождений тьмы. Как только брат уходит в поход, ночью на замок нападает бывший друг Кусландов и герой войны с Орлесианской империей эрл Хоу, гостивший в замке, и убивает всех в замке (слуг, гостей, а также жену и сына Фергюса). Отчаявшись, герой находит своего отца смертельно раненым возле тайного выхода, куда его принёс Серый страж Дункан, тоже гостивший у Кусландов в поместье. Мать главного героя откажется бежать, а героя забирает в Серые стражи Дункан. Из особенностей сюжетной линии по ходу сюжета можно узнать, что король Кайлан отправил отряд Фергюса на разведку, после чего они бесследно пропали. Также можно отметить то, что за человека-дворянина можно свести счёт по особому с эрлом Хоу, а также в ходе завершения ветки квестов стать королём (или королевой). Если за данного персонажа не играть, то вся семья Кусландов, кроме Фергюса, которого нашли и вылечили от ран местные жители, считается погибшей.\r\nМаг (человек или эльф) — Амелл или Сурана, маг Ферелденского круга. Игра за него начинается с ритуала под названием «Истязания», в котором персонаж отправляется в Тень — местный мир духов. Цель прохождения Истязаний — убийство демона. Однако главная цель — не поддаться на искушения демонов и вернуться, не став одержимым зловредным духом. После успешного прохождения испытаний вашей помощи попросит молодой маг Йован, которого хотят сделать усмирённым из-за подозрений в использовании магии крови (магия крови запрещена церковью Андрасте везде, кроме Тевинтера). Он решит бежать и герой соглашается помочь ему, по доброте душевной или по просьбе Первого Чародея. Но в конце и Йована, и главного героя ловят храмовники. Йовану удаётся сбежать при помощи магии крови, а героя хотят посадить под арест, но за него вступается Дункан и предлагает вступить в Серые стражи. Если не играть за мага, то Йован все равно сбегает, но самостоятельно, и встречается с героем в замке эрла Эамона. Также во второй части игры упоминается маг из круга по фамилии Амелл, который оказывается родственником семейства Хоук.\r\nДолийский эльф — Махариэль, эльф одного из долийских кланов, который наткнулся на людей-мародеров, ищущих сокровища в пещере. Герой и его спутник Тамлен заходят внутрь и обнаруживают волшебное зеркало — Элювиан. За века, что артефакт провёл в руинах, он испортился, и молодые охотники стали жертвами его магии. Главного героя спасает Дункан, но его спутник — Тамлен — исчезает бесследно. Ученица Хранительницы клана Мерриль и персонаж игрока отправятся на поиски Тамлена, но найдут лишь Дункана, который объяснит: волшебное зеркало поражено тёмной магией — скверной — и заражает ей всех, кто имел несчастье подобраться к нему близко. Он объявляет Тамлена мёртвым, и главному герою не остаётся ничего кроме как поверить ему и присоединиться к Серым Стражам, которые якобы знают лекарство от скверны. Однако в дальнейшем с Тамленом можно встретиться во время одной из «случайных встреч» на карте. Долиец умирает от скверны и главному герою придётся оборвать страдания друга. Прохождение за долийца облегчает общение с долийскими эльфами на протяжении сюжета, а также спутница Хоука Мерриль во второй части не раз будет упоминать Махариэль и Тамлена. И зеркало, с которым связаны её квесты — то самое разбитое зеркало из руин.\r\nГородской эльф — Табрис, эльф из Денеримского эльфинажа, который женится/выходит замуж вместе со своим братом Сорисом по договорному браку. Также у героя есть сестра Шианни и отец. В этот день в Эльфинаж приходит Серый страж Дункан и отправляется поговорить к старейшине деревни. К несчастью, в самом начале свадьбы приходит сын эрла Денерима по имени Воган вместе с отрядом и, оглушив главного героя, забирает обеих невест и Шианни к себе в поместье. В случае игры за женского персонажа забирают также и её. Очнувшись, главный герой и его брат Сорис идут спасать девушек, убивая Вогана. В случае игры за женского персонажа Сорис идёт в компании жениха, который гибнет от рук солдат Вогана. После возвращения в эльфинаж с девушками, за главным героем и его братом придёт стража, но Дункан заступается за героя и отводит его к Серым стражам. В процессе игры можно вернуться в Эльфинаж, где Сорис сидит дома, отца героя забирают работорговцы, а Шианни возглавляет оборону Эльфинажа от Порождений тьмы. Если не играть за городского эльфа, он погибает до событий его посвящения, а Воган живой сидит в тюрьме Денерима, откуда просит его выпустить.\r\nГном-простолюдин — Броска, гном-неприкасаемый из Орзаммара, работает на Хартию, а точнее на её главу Берата. У главного героя, который выполняет грязнейшие задания (от рэкета и вымогательств до контрабанды и убийств), есть мать, страдающая алкоголизмом и сестра, которую хотят устроить на заработки проституцией. Берат даст главному герою несколько заданий, последнее из которых станет для героя роковым: его заставят сражаться вместо воина Эверда, и во время боя станет понятно, что на самом деле сражается не гном из касты воинов, а гном-неприкасаемый, что запрещено законом гномов. Героя бросают в тюрьму, из которой он вынужден бежать, узнав, что его сестра в опасности. Впоследствии герой убивает Берата и попадается страже. Все это помог ему сделать его друг, разделявший с ним беды, и клятвенно обещавший следить за его сестрой в то время, как Дункан забирает героя в Серые стражи. Впоследствии по сюжетной линии герой может вернуться в Орзаммар и положить конец Хартии, на которую работал, убив её нового предводителя — Джарвию (изначально она была «правой рукой» Берата). Если не играть за неприкасаемого гнома, Джарвия сама убивает Берата, и её нужно все равно убить, без лишних разговоров.\r\nГном-аристократ — Эдукан, средний сын или дочь короля Орзаммара, имеющий двоих братьев Белена и Триана. Отец героя уже стар и завещает титул одному из трёх сыновей, и сыновья решают уничтожить друг друга, первым делом занявшись средним братом. К герою приходит его друг Горим, самый верный из всех друзей. Вместе с Горимом герою удаётся избежать собственной гибели и одновременно доказать своё право на трон. В самом конце героя подставляет его брат Белен, назначивший встречу герою, но когда тот пришёл, то на месте встречи обнаружил тело Триана. В эту минуту приходит Белен, который подставил его, и отец, заставший героя с телом брата. Почти все предали героя, кроме Горима, и на совете им был вынесен приговор. Против приговора были лорд Харроумонт и Серый страж Дункан, которые не верили в виновность героя. В итоге Горима изгнали из Орзаммара на поверхность, а героя забирают в Серые стражи. По возвращении в Орзаммар герой узнаёт, что Белен ускорил смерть отца и решил сесть на трон. Харроумонт не позволяет ему этого, сражаясь за трон. Изначально Белен, узнав о возвращении брата, хочет убить его, а затем переманить на свою сторону, но от этого можно отказаться (и тогда на героя несколько раз нападут люди Белена в попытке убить его) и принять сторону Харроумонта, который даст вам нелёгкие задания и, в конце концов, после нескольких неудачных покушений, Белен сам придёт в зал и попытается убить и Харроумонта, и героя, и всех, кто был в зале, но впоследствии герой убивает брата, а Харроумонт даёт свои силы для борьбы с Мором. Если принять сторону Белена, тот так же даст силы (меньше, чем Харроумонт), и, вручив молот брата, мягко изгоняет героя из Орзаммара навсегда. Если не играть за гнома-аристократа, то по словам его, короля и Триана убивает обходными путями сам Белен, стремясь стать королём.\r\nСледуя сюжету каждой из предысторий, игрок сталкивается с Серым стражем Дунканом, набирающим новобранцев в ряды ордена, так как приближается Мор — нашествие монстров, известных как «Порождения Тьмы», которых ведёт Архидемон — осквернённый Древний Бог в облике дракона. Вместе с Дунканом игрок отправляется в древнюю крепость Остагар, где ему предстоит пройти обряд посвящения в Серые Стражи и помочь королю Ферелдена Кайлану сразиться с наступающими Порождениями Тьмы. Для обряда посвящения нужна кровь Порождений Тьмы, и игрок вместе с другими новобранцами и Серым Стражем Алистером отправляется добывать её в Дикие Земли Коркари, где заодно, с помощью колдуньи Морриган и её матери — легендарной ведьмы Диких Земель Флемет — находит древние Договоры Серых Стражей. При посвящении каждому новобранцу дают выпить кровь порождений тьмы с добавлением одной капли крови Архидемона, только персонажу игрока суждено выжить.\r\n\r\nНачинается битва. По плану короля Кайлана персонаж игрока и Алистер должны зажечь сигнальный огонь на одной из башен, тем самым дав сигнал тэйрну Логэйну (тестю Кайлана) к введению войска в бой. Выясняется, что Порождения Тьмы уже заполонили башню, игроку приходится прорываться с боем, чтобы зажечь огонь, но Логэйн, увидев сигнал, решает отозвать свои войска, тем самым обрекая короля и его армию на гибель. Героя и Алистера спасает обратившаяся в дракона Флемет. Она отправляет вместе с персонажем игрока и Алистером свою дочь Морриган, чтобы та помогла Стражам в борьбе с Мором. Алистер предлагает воспользоваться Договорами и собрать армию из долийских эльфов, магов Круга и орзаммарских гномов, а также обратиться за помощью к его приёмному отцу эрлу Эамону.\r\n\r\nТем временем, предатель Логэйн провозглашает себя регентом, и королевство оказывается на пороге гражданской войны. Герой, Алистер и Морриган прибывают в деревушку Лотеринг, в которой живут беженцы. В таверне на них нападают люди Логэйна, но герой и его спутники отбиваются от них при помощи послушницы Лелианы, которую можно взять в отряд. А проходя по деревне, герои обнаруживают кунари Стэна, которого герой может освободить тем или иным способом и также принять в отряд. При выходе из Лотеринга герой и его отряд видят купца Бодана и его сына Сэндала, атакованных Порождениями Тьмы, и спасают их. Благодарные гномы отправляются в поход вместе с героем и его спутниками.\r\n\r\nДальше герою предстоит выбрать один из четырёх путей — путь в Рэдклиф, где они хотят попросить помощи у эрла Эамона, а также в лагерь долийских эльфов в лесу Бресилиан, гномий город — Орзаммар, и в Башню Круга возле пристани у озера Каленхад. Путешествуя по Ферелдену, игрок посещает эти места и сталкивается с местными проблемами, которые ему приходится решать, каждый раз становясь перед выбором. После решения проблем к вам присоединяются долийские эльфы (или оборотни), маги Круга (или храмовники), армия Рэдклифа, гномы Орзаммара и големы (если была сохранена Наковальня Пустоты). В ходе прохождения основного сюжета у Стража есть возможность принять в отряд ещё двоих спутников: эльфийского наёмного убийцу Зеврана и страдающего алкоголизмом воина-гнома Огрена. Также главного героя могут сопровождать дополнительные сопартийцы: пес-мабари (изначательно член отряда, если Серый Страж человек-дворянин) и голем по имени Шейла (если установлено DLC «Каменная пленница»).\r\n\r\nДалее герой отправляется в Денерим на Собрание Земель, созванное эрлом Эамоном. Там он ведёт тайную борьбу против тэйрна Логэйна, собирая информацию о его преступлениях. На Собрании Земель он предъявляет эти доказательства, тем самым разоблачая Логэйна.\r\n\r\nПосле Собрания Земель и избрания нового правителя Ферелдена игрок отправляется в Рэдклиф, чтобы сразиться с ордой Порождений Тьмы во главе с явившим себя Архидемоном. Но оказывается, что основные силы Орды движутся на слабо защищённый Денерим. Герой собирает армию и выступает туда. Армия героя добирается до города, когда в нём уже находятся Порождения Тьмы. Он пробивается сквозь Орду, сражаясь с многочисленными врагами и наконец добирается до Архидемона. В конце следует бой на вершине Форта Драккон, где герой побеждает Архидемона и спасает Ферелден от Мора. Игроку присваивают звание Героя/Героини Ферелдена.",
+    "description": "<p><span style=\"color:#e67e22\"><strong>Dragon Age: Origins</strong></span> представляет собой компьютерную ролевую игру с видом от третьего лица. В начале игрок должен создать собственного героя, выбрав для него пол, расу (человек, эльф или гном) и класс (воин, маг или разбойник); игрок может настроить внешность героя по своему усмотрению. Сочетание расы и класса определяет, какая из шести возможных предысторий будет использована в качестве начала игры. Герои с разными предысториями начинают игру в разных локациях, и в дальнейшем неигровые персонажи реагируют на героев с разными предысториями по-разному. По мере приобретения очков опыта уровень героя повышается, и его характеристики растут; на седьмом, а также на четырнадцатом уровнях даётся возможность выбрать одну специализацию из четырёх на выбор &mdash; с помощью неё можно получить дополнительные способности. В течение игры к герою присоединяются спутники &mdash; его может сопровождать до трёх спутников одновременно; для этих спутников раса и класс жестко заданы. Сражения проходят в реальном времени, где игрок управляет одним активным персонажем &mdash; при этом можно переключаться между главным героем и его спутниками; другими участниками боя, как союзниками, так и врагами, управляет компьютер. Игрок в любой момент боя может приостановить игру и назначить определённые команды &mdash; они будут выполнены после возобновления игры. Система &laquo;тактик&raquo; позволяет заранее настроить поведение управляемых компьютером спутников, запрограммировав для них определённые условия и соответствующие им действия: например, игрок может поручить персонажу-магу накладывать заклинание защиты на персонажа-воина, если тот подвергается атаке, или, например, запрограммировать персонажей-стрелков обстреливать в первую очередь врагов с низкими показателями брони, а если здоровье союзников-бойцов ближнего боя снизится меньше 50% &mdash; самим достать оружие ближнего боя и сражаться с врагами на малой дистанции. Игрок может наблюдать за сражением вблизи, когда камера находится за плечами активного персонажа, так и отдалить камеру, глядя на сражение с высоты. Игрок начинает игру с создания персонажа и выбора одной из шести предысторий. Выбор пола не изменяет предыстории[7][8], за исключением нюансов. Имя героя игрок может выбрать сам, фамилию изменить нельзя: Человек-дворянин &mdash; Кусланд, младший сын или дочь тейрна Хайевера. Игра начинается с того, что наступил день отправления старшего сына и брата персонажа игрока Фергюса на войну против Порождений тьмы. Как только брат уходит в поход, ночью на замок нападает бывший друг Кусландов и герой войны с Орлесианской империей эрл Хоу, гостивший в замке, и убивает всех в замке (слуг, гостей, а также жену и сына Фергюса). Отчаявшись, герой находит своего отца смертельно раненым возле тайного выхода, куда его принёс Серый страж Дункан, тоже гостивший у Кусландов в поместье. Мать главного героя откажется бежать, а героя забирает в Серые стражи Дункан. Из особенностей сюжетной линии по ходу сюжета можно узнать, что король Кайлан отправил отряд Фергюса на разведку, после чего они бесследно пропали. Также можно отметить то, что за человека-дворянина можно свести счёт по особому с эрлом Хоу, а также в ходе завершения ветки квестов стать королём (или королевой). Если за данного персонажа не играть, то вся семья Кусландов, кроме Фергюса, которого нашли и вылечили от ран местные жители, считается погибшей. Маг (человек или эльф) &mdash; Амелл или Сурана, маг Ферелденского круга. Игра за него начинается с ритуала под названием &laquo;Истязания&raquo;, в котором персонаж отправляется в Тень &mdash; местный мир духов. Цель прохождения Истязаний &mdash; убийство демона. Однако главная цель &mdash; не поддаться на искушения демонов и вернуться, не став одержимым зловредным духом. После успешного прохождения испытаний вашей помощи попросит молодой маг Йован, которого хотят сделать усмирённым из-за подозрений в использовании магии крови (магия крови запрещена церковью Андрасте везде, кроме Тевинтера). Он решит бежать и герой соглашается помочь ему, по доброте душевной или по просьбе Первого Чародея. Но в конце и Йована, и главного героя ловят храмовники. Йовану удаётся сбежать при помощи магии крови, а героя хотят посадить под арест, но за него вступается Дункан и предлагает вступить в Серые стражи. Если не играть за мага, то Йован все равно сбегает, но самостоятельно, и встречается с героем в замке эрла Эамона. Также во второй части игры упоминается маг из круга по фамилии Амелл, который оказывается родственником семейства Хоук. Долийский эльф &mdash; Махариэль, эльф одного из долийских кланов, который наткнулся на людей-мародеров, ищущих сокровища в пещере. Герой и его спутник Тамлен заходят внутрь и обнаруживают волшебное зеркало &mdash; Элювиан. За века, что артефакт провёл в руинах, он испортился, и молодые охотники стали жертвами его магии. Главного героя спасает Дункан, но его спутник &mdash; Тамлен &mdash; исчезает бесследно. Ученица Хранительницы клана Мерриль и персонаж игрока отправятся на поиски Тамлена, но найдут лишь Дункана, который объяснит: волшебное зеркало поражено тёмной магией &mdash; скверной &mdash; и заражает ей всех, кто имел несчастье подобраться к нему близко. Он объявляет Тамлена мёртвым, и главному герою не остаётся ничего кроме как поверить ему и присоединиться к Серым Стражам, которые якобы знают лекарство от скверны. Однако в дальнейшем с Тамленом можно встретиться во время одной из &laquo;случайных встреч&raquo; на карте. Долиец умирает от скверны и главному герою придётся оборвать страдания друга. Прохождение за долийца облегчает общение с долийскими эльфами на протяжении сюжета, а также спутница Хоука Мерриль во второй части не раз будет упоминать Махариэль и Тамлена. И зеркало, с которым связаны её квесты &mdash; то самое разбитое зеркало из руин. Городской эльф &mdash; Табрис, эльф из Денеримского эльфинажа, который женится/выходит замуж вместе со своим братом Сорисом по договорному браку. Также у героя есть сестра Шианни и отец. В этот день в Эльфинаж приходит Серый страж Дункан и отправляется поговорить к старейшине деревни. К несчастью, в самом начале свадьбы приходит сын эрла Денерима по имени Воган вместе с отрядом и, оглушив главного героя, забирает обеих невест и Шианни к себе в поместье. В случае игры за женского персонажа забирают также и её. Очнувшись, главный герой и его брат Сорис идут спасать девушек, убивая Вогана. В случае игры за женского персонажа Сорис идёт в компании жениха, который гибнет от рук солдат Вогана. После возвращения в эльфинаж с девушками, за главным героем и его братом придёт стража, но Дункан заступается за героя и отводит его к Серым стражам. В процессе игры можно вернуться в Эльфинаж, где Сорис сидит дома, отца героя забирают работорговцы, а Шианни возглавляет оборону Эльфинажа от Порождений тьмы. Если не играть за городского эльфа, он погибает до событий его посвящения, а Воган живой сидит в тюрьме Денерима, откуда просит его выпустить. Гном-простолюдин &mdash; Броска, гном-неприкасаемый из Орзаммара, работает на Хартию, а точнее на её главу Берата. У главного героя, который выполняет грязнейшие задания (от рэкета и вымогательств до контрабанды и убийств), есть мать, страдающая алкоголизмом и сестра, которую хотят устроить на заработки проституцией. Берат даст главному герою несколько заданий, последнее из которых станет для героя роковым: его заставят сражаться вместо воина Эверда, и во время боя станет понятно, что на самом деле сражается не гном из касты воинов, а гном-неприкасаемый, что запрещено законом гномов. Героя бросают в тюрьму, из которой он вынужден бежать, узнав, что его сестра в опасности. Впоследствии герой убивает Берата и попадается страже. Все это помог ему сделать его друг, разделявший с ним беды, и клятвенно обещавший следить за его сестрой в то время, как Дункан забирает героя в Серые стражи. Впоследствии по сюжетной линии герой может вернуться в Орзаммар и положить конец Хартии, на которую работал, убив её нового предводителя &mdash; Джарвию (изначально она была &laquo;правой рукой&raquo; Берата). Если не играть за неприкасаемого гнома, Джарвия сама убивает Берата, и её нужно все равно убить, без лишних разговоров. Гном-аристократ &mdash; Эдукан, средний сын или дочь короля Орзаммара, имеющий двоих братьев Белена и Триана. Отец героя уже стар и завещает титул одному из трёх сыновей, и сыновья решают уничтожить друг друга, первым делом занявшись средним братом. К герою приходит его друг Горим, самый верный из всех друзей. Вместе с Горимом герою удаётся избежать собственной гибели и одновременно доказать своё право на трон. В самом конце героя подставляет его брат Белен, назначивший встречу герою, но когда тот пришёл, то на месте встречи обнаружил тело Триана. В эту минуту приходит Белен, который подставил его, и отец, заставший героя с телом брата. Почти все предали героя, кроме Горима, и на совете им был вынесен приговор. Против приговора были лорд Харроумонт и Серый страж Дункан, которые не верили в виновность героя. В итоге Горима изгнали из Орзаммара на поверхность, а героя забирают в Серые стражи. По возвращении в Орзаммар герой узнаёт, что Белен ускорил смерть отца и решил сесть на трон. Харроумонт не позволяет ему этого, сражаясь за трон. Изначально Белен, узнав о возвращении брата, хочет убить его, а затем переманить на свою сторону, но от этого можно отказаться (и тогда на героя несколько раз нападут люди Белена в попытке убить его) и принять сторону Харроумонта, который даст вам нелёгкие задания и, в конце концов, после нескольких неудачных покушений, Белен сам придёт в зал и попытается убить и Харроумонта, и героя, и всех, кто был в зале, но впоследствии герой убивает брата, а Харроумонт даёт свои силы для борьбы с Мором. Если принять сторону Белена, тот так же даст силы (меньше, чем Харроумонт), и, вручив молот брата, мягко изгоняет героя из Орзаммара навсегда. Если не играть за гнома-аристократа, то по словам его, короля и Триана убивает обходными путями сам Белен, стремясь стать королём. Следуя сюжету каждой из предысторий, игрок сталкивается с Серым стражем Дунканом, набирающим новобранцев в ряды ордена, так как приближается Мор &mdash; нашествие монстров, известных как &laquo;Порождения Тьмы&raquo;, которых ведёт Архидемон &mdash; осквернённый Древний Бог в облике дракона. Вместе с Дунканом игрок отправляется в древнюю крепость Остагар, где ему предстоит пройти обряд посвящения в Серые Стражи и помочь королю Ферелдена Кайлану сразиться с наступающими Порождениями Тьмы. Для обряда посвящения нужна кровь Порождений Тьмы, и игрок вместе с другими новобранцами и Серым Стражем Алистером отправляется добывать её в Дикие Земли Коркари, где заодно, с помощью колдуньи Морриган и её матери &mdash; легендарной ведьмы Диких Земель Флемет &mdash; находит древние Договоры Серых Стражей. При посвящении каждому новобранцу дают выпить кровь порождений тьмы с добавлением одной капли крови Архидемона, только персонажу игрока суждено выжить. Начинается битва. По плану короля Кайлана персонаж игрока и Алистер должны зажечь сигнальный огонь на одной из башен, тем самым дав сигнал тэйрну Логэйну (тестю Кайлана) к введению войска в бой. Выясняется, что Порождения Тьмы уже заполонили башню, игроку приходится прорываться с боем, чтобы зажечь огонь, но Логэйн, увидев сигнал, решает отозвать свои войска, тем самым обрекая короля и его армию на гибель. Героя и Алистера спасает обратившаяся в дракона Флемет. Она отправляет вместе с персонажем игрока и Алистером свою дочь Морриган, чтобы та помогла Стражам в борьбе с Мором. Алистер предлагает воспользоваться Договорами и собрать армию из долийских эльфов, магов Круга и орзаммарских гномов, а также обратиться за помощью к его приёмному отцу эрлу Эамону. Тем временем, предатель Логэйн провозглашает себя регентом, и королевство оказывается на пороге гражданской войны. Герой, Алистер и Морриган прибывают в деревушку Лотеринг, в которой живут беженцы. В таверне на них нападают люди Логэйна, но герой и его спутники отбиваются от них при помощи послушницы Лелианы, которую можно взять в отряд. А проходя по деревне, герои обнаруживают кунари Стэна, которого герой может освободить тем или иным способом и также принять в отряд. При выходе из Лотеринга герой и его отряд видят купца Бодана и его сына Сэндала, атакованных Порождениями Тьмы, и спасают их. Благодарные гномы отправляются в поход вместе с героем и его спутниками. Дальше герою предстоит выбрать один из четырёх путей &mdash; путь в Рэдклиф, где они хотят попросить помощи у эрла Эамона, а также в лагерь долийских эльфов в лесу Бресилиан, гномий город &mdash; Орзаммар, и в Башню Круга возле пристани у озера Каленхад. Путешествуя по Ферелдену, игрок посещает эти места и сталкивается с местными проблемами, которые ему приходится решать, каждый раз становясь перед выбором. После решения проблем к вам присоединяются долийские эльфы (или оборотни), маги Круга (или храмовники), армия Рэдклифа, гномы Орзаммара и големы (если была сохранена Наковальня Пустоты). В ходе прохождения основного сюжета у Стража есть возможность принять в отряд ещё двоих спутников: эльфийского наёмного убийцу Зеврана и страдающего алкоголизмом воина-гнома Огрена. Также главного героя могут сопровождать дополнительные сопартийцы: пес-мабари (изначательно член отряда, если Серый Страж человек-дворянин) и голем по имени Шейла (если установлено DLC &laquo;Каменная пленница&raquo;). Далее герой отправляется в Денерим на Собрание Земель, созванное эрлом Эамоном. Там он ведёт тайную борьбу против тэйрна Логэйна, собирая информацию о его преступлениях. На Собрании Земель он предъявляет эти доказательства, тем самым разоблачая Логэйна. После Собрания Земель и избрания нового правителя Ферелдена игрок отправляется в Рэдклиф, чтобы сразиться с ордой Порождений Тьмы во главе с явившим себя Архидемоном. Но оказывается, что основные силы Орды движутся на слабо защищённый Денерим. Герой собирает армию и выступает туда. Армия героя добирается до города, когда в нём уже находятся Порождения Тьмы. Он пробивается сквозь Орду, сражаясь с многочисленными врагами и наконец добирается до Архидемона. В конце следует бой на вершине Форта Драккон, где герой побеждает Архидемона и спасает Ферелден от Мора. Игроку присваивают звание Героя/Героини Ферелдена.</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/16/dragonhint2.jpg\" style=\"height:501px; width:890px\" /></p>",
     "game_image": "game_image/2023/10/16/dragon.jpg",
     "created": "2023-10-03",
     "rating": 6.6,
@@ -5491,7 +5478,7 @@
     "title": "Olimpic Games Tokyo 2020",
     "genre": "Спортивный симулятор",
     "release_date": "2019-09-24",
-    "description": "Олимпийские игры Токио 2020 - Официальная видеоигра - это олимпийская видеоигра, разработанная и изданная Sega. Первоначально игра была выпущена в Японии для Nintendo Switch и PlayStation 4 24 июля 2019 года. Однако из-за пандемии COVID-19, задержавшей начало летних Олимпийских игр 2020 года в Токио, игра была выпущена за пределами Японии только в июне 2021 года, когда она также была выпущена для Windows, Stadia и Xbox One. В игре участвуют 80 национальных команд и 18 соревнований.",
+    "description": "<p><span style=\"color:#2980b9\"><u>Олимпийские игры Токио 202</u></span>0 - Официальная видеоигра - это олимпийская видеоигра, разработанная и изданная Sega. Первоначально игра была выпущена в Японии для Nintendo Switch и PlayStation 4 24 июля 2019 года. Однако из-за пандемии COVID-19, задержавшей начало летних Олимпийских игр 2020 года в Токио, игра была выпущена за пределами Японии только в июне 2021 года, когда она также была выпущена для Windows, Stadia и Xbox One. В игре участвуют 80 национальных команд и 18 соревнований.</p>\r\n\r\n<p><img alt=\"\" class=\"image\" src=\"/media/uploads/2023/10/22/4fcy-3buzm9tu12ai6mwvwolimp.jpeg\" style=\"height:428px; width:760px\" /></p>",
     "game_image": "game_image/2023/10/16/og.jpg",
     "created": "2023-10-15",
     "rating": 1.2,
@@ -5505,7 +5492,7 @@
     "title": "HEROES 3",
     "genre": "Пошаговая стратегия",
     "release_date": "1999-02-28",
-    "description": "Heroes of Might and Magic III развивает идеи, заложенные в первой и второй частях серии. Суть игры осталась неизменной: игрок управляет героями, ведущими в бой армии существ. Основное действие игры происходит на стратегической карте приключений, по которой перемещаются герои, захватывая при этом города и посещая всевозможные строения на карте. Города являются важной составляющей игры: игрок может развивать их, возводя в них различные строения, которые дают доступ к более мощным существам, магическим заклинаниям и другим боевым преимуществам; города также являются источниками дохода. Строить новые города в Heroes III нельзя, можно лишь захватывать те, что уже есть на карте. Игра является пошаговой стратегией, что означает, что время в ней дискретно: основной его единицей является ход, именуемый также днём. За один игровой день игрок может совершить любые доступные действия, ограниченные лишь его нуждами и запасом хода у его героев (или ограничением по времени, если таковое было выставлено до начала игры). В день можно возводить по одному строению в каждом из принадлежащих игроку городов. Когда герой вступает в битву, игра переключается на экран боя, отдалённо напоминающий шахматы: две армии расположены по разные стороны экрана, и группы существ, поочерёдно делая ход, должны уничтожить вражеские войска.\r\n\r\nОдним из основных аспектов серии Heroes of Might and Magic является развитие героя. В основном, это делается путём получения опыта и поднятия героя на новый уровень, с новыми навыками и параметрами. Основным источником опыта является победа в сражении. После сражения победивший герой получает столько опыта, сколько здоровья было в сумме у всех погибших существ проигравшей армии. В случае проигрыша битвы герой не получает ничего. Шкала опыта прогрессирующая, то есть, для перехода на каждый следующий уровень необходимо набирать всё больше опыта. Помимо героев противника, на карте в большом количестве представлены нейтральные существа — создания, не принадлежащие никому из игроков и участвующие в игре «сами за себя». Обычно нейтральные существа охраняют шахты ресурсов, артефакты и тому подобные ценные объекты на карте, но также могут сторожить нейтральные города или гарнизоны. Нейтральные существа всегда неподвижны и не могут атаковать героя; сражение с ними возможно, только если на них напасть. На начальных стадиях игры битвы с нейтральными существами позволяют развить героя, подготовив его к сражениям с противниками-игроками.",
+    "description": "<p><span style=\"color:#16a085\"><strong>Heroes of Might and Magic III</strong></span> развивает идеи, заложенные в первой и второй частях серии. Суть игры осталась неизменной: игрок управляет героями, ведущими в бой армии существ. Основное действие игры происходит на стратегической карте приключений, по которой перемещаются герои, захватывая при этом города и посещая всевозможные строения на карте. Города являются важной составляющей игры: игрок может развивать их, возводя в них различные строения, которые дают доступ к более мощным существам, магическим заклинаниям и другим боевым преимуществам; города также являются источниками дохода. Строить новые города в Heroes III нельзя, можно лишь захватывать те, что уже есть на карте. Игра является пошаговой стратегией, что означает, что время в ней дискретно: основной его единицей является ход, именуемый также днём. За один игровой день игрок может совершить любые доступные действия, ограниченные лишь его нуждами и запасом хода у его героев (или ограничением по времени, если таковое было выставлено до начала игры). В день можно возводить по одному строению в каждом из принадлежащих игроку городов. Когда герой вступает в битву, игра переключается на экран боя, отдалённо напоминающий шахматы: две армии расположены по разные стороны экрана, и группы существ, поочерёдно делая ход, должны уничтожить вражеские войска. Одним из основных аспектов серии Heroes of Might and Magic является развитие героя. В основном, это делается путём получения опыта и поднятия героя на новый уровень, с новыми навыками и параметрами. Основным источником опыта является победа в сражении. После сражения победивший герой получает столько опыта, сколько здоровья было в сумме у всех погибших существ проигравшей армии. В случае проигрыша битвы герой не получает ничего. Шкала опыта прогрессирующая, то есть, для перехода на каждый следующий уровень необходимо набирать всё больше опыта. Помимо героев противника, на карте в большом количестве представлены нейтральные существа &mdash; создания, не принадлежащие никому из игроков и участвующие в игре &laquo;сами за себя&raquo;. Обычно нейтральные существа охраняют шахты ресурсов, артефакты и тому подобные ценные объекты на карте, но также могут сторожить нейтральные города или гарнизоны. Нейтральные существа всегда неподвижны и не могут атаковать героя; сражение с ними возможно, только если на них напасть. На начальных стадиях игры битвы с нейтральными существами позволяют развить героя, подготовив его к сражениям с противниками-игроками.</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/16/heroes_hint.webp\" style=\"height:494px; width:778px\" /></p>",
     "game_image": "game_image/2023/10/16/heroes_3_mapmaking.jpg",
     "created": "2023-10-19",
     "rating": 7.4,
@@ -5519,7 +5506,7 @@
     "title": "King's Bounty 2",
     "genre": "Пошаговая стратегия",
     "release_date": "2019-08-14",
-    "description": "King’s Bounty II — RPG с видом от третьего лица. Игроку предстоит выбрать одного из трёх героев, которых в дальнейшим можно будет развивать по четырём направлениям системы идеалов: Сила, Мастерство, Порядок и Анархия. Системы идеалов являются ветками талантов, которые развиваются не только за счёт очков прокачки, но и благодаря действиям игрока: так, агрессивный метод прохождения игры положительно скажется на ветке Анархии. Для увеличения размера армии, как и в предыдущих игр серии, требуется развивать лидерство. Сюжетная кампания рассчитывается на 25—30 часов игрового процесса, а с дополнительными квестами прохождение будет занимать 45—50 часов.\r\n\r\nБоевая система практически не изменилась относительно оригинала, оставшись пошаговой стратегией на гексагональном поле. Одним из изменений боевой системы стало влияние ландшафта на игру: леса, горы и низины будут давать определённые бонусы отрядам. Кроме того, была введена система прокачки юнитов: после боёв отряды будут получать опыт, что повлияет на их характеристики, способности и внешний вид. В визуальной части были исправлены игровые условности: например, если в оригинальной игре число юнитов в отряде отображалось цифрой, то в King’s Bounty II каждое существо отряда будет отображаться на поле боя отдельной 3D-моделью. Книга заклинаний практически не изменилась по сравнению с играми от Katauri, в ней по-прежнему будут заклинания, которые можно изучать и прокачивать, и магические свитки, применяемые по желанию.\r\n\r\nРолевая система в Kings Bounty II получила название «Идеалы». Все навыки и способности тех или иных героев привязаны к одной из четырех основных систем мировоззрения: Анархия, Порядок, Мастерство и Сила. В зависимости от склонности игрового персонажа к тому или иному мировоззрению будет меняться и вариант решения сюжетных проблем. Благодаря системе «Идеалов» можно будет создать уникального героя, действия которого будут влиять не только на характер, но и на сюжет. В игре будет три класса — воин, паладин и маг; ещё одного героя планируется добавить в DLC. Герои будут начинать кампанию с определёнными очками того или иного идеала.\r\n\r\nВ игре будут полностью озвученные диалоги и катсцены на движке игры. В отличие от большинства современных RPG, в King’s Bounty 2 не будет выбора реплик в диалогах. Продюсер игры Денис Мальцев считает выбор реплик «костыльной» системой, поскольку пользователь, которому интересно исследовать мир игры, попробует все варианты ответа, и выбор ответа превращается в иллюзию. Однако в игре по-прежнему будет присутствовать принятие решений, которые будут реализованы с помощью совершения действий в игровом мире. Действия игрока будут влиять на сюжет. В игре также отсутствует понятие «провал квеста»: вне зависимости от действий игрока, квест будет завершён и игрок получит награду, зависящую, однако, от способа прохождения квеста.",
+    "description": "<p><span style=\"color:#c0392b\"><strong>King&rsquo;s Bounty II </strong></span>&mdash; RPG с видом от третьего лица. Игроку предстоит выбрать одного из трёх героев, которых в дальнейшим можно будет развивать по четырём направлениям системы идеалов: Сила, Мастерство, Порядок и Анархия. Системы идеалов являются ветками талантов, которые развиваются не только за счёт очков прокачки, но и благодаря действиям игрока: так, агрессивный метод прохождения игры положительно скажется на ветке Анархии. Для увеличения размера армии, как и в предыдущих игр серии, требуется развивать лидерство. Сюжетная кампания рассчитывается на 25&mdash;30 часов игрового процесса, а с дополнительными квестами прохождение будет занимать 45&mdash;50 часов. Боевая система практически не изменилась относительно оригинала, оставшись пошаговой стратегией на гексагональном поле. Одним из изменений боевой системы стало влияние ландшафта на игру: леса, горы и низины будут давать определённые бонусы отрядам. Кроме того, была введена система прокачки юнитов: после боёв отряды будут получать опыт, что повлияет на их характеристики, способности и внешний вид. В визуальной части были исправлены игровые условности: например, если в оригинальной игре число юнитов в отряде отображалось цифрой, то в King&rsquo;s Bounty II каждое существо отряда будет отображаться на поле боя отдельной 3D-моделью. Книга заклинаний практически не изменилась по сравнению с играми от Katauri, в ней по-прежнему будут заклинания, которые можно изучать и прокачивать, и магические свитки, применяемые по желанию. Ролевая система в Kings Bounty II получила название &laquo;Идеалы&raquo;. Все навыки и способности тех или иных героев привязаны к одной из четырех основных систем мировоззрения: Анархия, Порядок, Мастерство и Сила. В зависимости от склонности игрового персонажа к тому или иному мировоззрению будет меняться и вариант решения сюжетных проблем. Благодаря системе &laquo;Идеалов&raquo; можно будет создать уникального героя, действия которого будут влиять не только на характер, но и на сюжет. В игре будет три класса &mdash; воин, паладин и маг; ещё одного героя планируется добавить в DLC. Герои будут начинать кампанию с определёнными очками того или иного идеала. В игре будут полностью озвученные диалоги и катсцены на движке игры. В отличие от большинства современных RPG, в King&rsquo;s Bounty 2 не будет выбора реплик в диалогах. Продюсер игры Денис Мальцев считает выбор реплик &laquo;костыльной&raquo; системой, поскольку пользователь, которому интересно исследовать мир игры, попробует все варианты ответа, и выбор ответа превращается в иллюзию. Однако в игре по-прежнему будет присутствовать принятие решений, которые будут реализованы с помощью совершения действий в игровом мире. Действия игрока будут влиять на сюжет. В игре также отсутствует понятие &laquo;провал квеста&raquo;: вне зависимости от действий игрока, квест будет завершён и игрок получит награду, зависящую, однако, от способа прохождения квеста.</p>\r\n\r\n<p><img alt=\"\" src=\"/media/uploads/2023/10/16/kingshint.jpg\" style=\"height:501px; width:890px\" /></p>",
     "game_image": "game_image/2023/10/16/kings.jpeg",
     "created": "2023-10-25",
     "rating": 6.3,
@@ -6322,6 +6309,19 @@
   }
 },
 {
+  "model": "help_games.gamecomment",
+  "pk": 31,
+  "fields": {
+    "name": "Alexander Mostovoi",
+    "avatar": "avatars/fifa-21oboi_JUPDfd0.jpg",
+    "comment": "Футбол больше по душе,но время провёл не плохо.",
+    "comment_created": "2023-10-22T19:01:11.503",
+    "comment_game": 4,
+    "favourite_game": "FIFA 21",
+    "favourite_genre": "Спортивный симулятор"
+  }
+},
+{
   "model": "help_games.voteuser",
   "pk": 9,
   "fields": {
@@ -6463,6 +6463,15 @@
     "evaluation": 4,
     "game_evaluation": 5,
     "user_evaluation": 1
+  }
+},
+{
+  "model": "help_games.voteuser",
+  "pk": 29,
+  "fields": {
+    "evaluation": 4,
+    "game_evaluation": 4,
+    "user_evaluation": 32
   }
 }
 ]
