@@ -93,7 +93,6 @@ def comment_new_games(request, pk):
                       {'new_game': game_commented,
                        'comments': Comments.objects.filter(game_commented=game_commented), 'ev': ev,
                        'user_eval': request.user.profile})
-    game_id = pk
     game = NewGame.objects.get(id=pk)
     context = {'name': name,
                'avatar': avatar,

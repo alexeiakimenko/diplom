@@ -85,7 +85,6 @@ def comment_games(request, pk):
     game_commented = Game.objects.get(id=pk)
     hints = Hint.objects.filter(hint_game=pk)
     videos = VideoView.objects.filter(video_game=pk)
-    ev2 = None
     if request.method == 'POST':
         try:
             user_eval = VoteUser.objects.distinct().filter(game_evaluation_id=int(pk),
