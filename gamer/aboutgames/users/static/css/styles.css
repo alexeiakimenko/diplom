@@ -96,20 +96,10 @@ button{
 .message{
     text-align: center;
     margin:0 auto;
-    color:green;
+    color:blue;
     
     border-radius: 6px;
-    box-shadow:inset 0 0 6px 2px green;
-    width: 450px;
-    background: white;
-}
-.message_error{
-    text-align: center;
-    margin:0 auto;
-    color:red;
-    
-    border-radius: 6px;
-    box-shadow:inset 0 0 6px 2px red;
+    box-shadow:inset 0 0 6px 2px skyblue;
     width: 450px;
     background: white;
 }
