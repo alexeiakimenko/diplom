@@ -121,6 +121,7 @@ button{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 5px;
     margin-bottom: 60px;
 }
 .box_single{
@@ -201,13 +202,14 @@ button{
 .name a:hover::after{
     content: attr(data-title);
     box-sizing: border-box;
-    position: relative;
     display: flex;
+    position: relative;
     max-width: fit-content;
     margin: -10 auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 15px;
+    border: 2px solid #7c4123;
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px 1px #7c4123;
+    font-size: 16px;
     z-index: 99999;
     background: #c1d2e3;
     color:#7c4123;
@@ -264,9 +266,6 @@ button{
     padding: 10px;
     color:#271be3;
     width: 800px;
-
-    
-
 }
 .search_input::placeholder{
     color: #271be3;

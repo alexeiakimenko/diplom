@@ -5,9 +5,9 @@
 <a href="{% url 'new-games' %}">
     <button class="btm_search">Назад</button>
 </a>
-{% if new_games %}
+{% if search %}
 
-<h1 class="search">Результаты поиска:</h1>
+<h3 class="search">Результаты поиска:</h3>
 {%endif%}
 <div class="container">
 
@@ -19,9 +19,15 @@
                                                                src="{{ new_game.image.url }}"></a>
 
         <h5>Жанр:<a class="ngg" data-title="сортировка по жанру {{ new_game.genre }}"
-                    href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a></h5>
+                    href="{% url 'new-games-genre' new_game.genre %}">{{ new_game.genre }}</a>,
+            <a class="ngg" data-title="сортировка по жанру {{ new_game.genre2 }}"
+               href="{% url 'new-games-genre' new_game.genre2 %}">{{ new_game.genre2 }}</a>,
+            <a class="ngg" data-title="сортировка по жанру {{ new_game.genre3 }}"
+               href="{% url 'new-games-genre' new_game.genre3 %}">{{ new_game.genre3 }}</a>
+
+        </h5>
         <h6>Дата написания статьи:{{ new_game.create }}</h6>
-         <div class="red">Рейтинг от экспертов на Metarankings.ru: <span class="rating">{{new_game.rating}}</span></div>
+        <div class="red">Рейтинг от экспертов на Metarankings.ru: <span class="rating">{{new_game.rating}}</span></div>
         <div class="red">Рейтинг нашего сайта: <span class="rating">{{new_game.rating_site}}</span></div>
     </div>
     {% endfor %}

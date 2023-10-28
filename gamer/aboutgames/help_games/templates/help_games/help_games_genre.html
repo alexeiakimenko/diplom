@@ -11,7 +11,13 @@
         <a href="{% url 'single_game' help_game.id %}"><img width="372px" height="210px"
                                                             src="{{ help_game.game_image.url }}"></a>
         <h5>Дата выхода:{{ help_game.release_date }}</h5>
-        <h5>Жанр:{{ help_game.genre }},{{help_game.genre2}},{{help_game.genre3}}</h5>
+         <h5>Жанр:<a class="ngg" data-title="сортировка по жанру {{ help_game.genre }}"
+                    href="{% url 'help_games_genre' help_game.genre %}">{{ help_game.genre }}</a>,
+            <a class="ngg" data-title="сортировка по жанру {{ help_game.genre2 }}"
+               href="{% url 'help_games_genre' help_game.genre2 %}">{{ help_game.genre2 }}</a>,
+            <a class="ngg" data-title="сортировка по жанру {{ help_game.genre3 }}"
+               href="{% url 'help_games_genre' help_game.genre3 %}">{{ help_game.genre3 }}</a>
+        </h5>
          <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{help_game.rating}}</span></div>
          <div class="red">Рейтинг нашего сайта: <span class="rating">{{help_game.rating_site}}</span></div>
     </div>

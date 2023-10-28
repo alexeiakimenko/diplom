@@ -147,7 +147,8 @@ def search_game(request):
     game_list = page_list(request, game, page)
     game = game_list[0].page(game_list[1])
     context = {
-        'games': game
+        'games': game,
+        'search':search
     }
 
     return render(request, 'help_games/search_game.html', context)

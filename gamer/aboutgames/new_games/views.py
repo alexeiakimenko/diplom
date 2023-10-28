@@ -111,6 +111,7 @@ def profile_view(request, name):
 def search_new_game(request):
     global search
     page = 1
+    new_game = []
     if 'search' in request.GET:
         search = request.GET.get('search')
 
@@ -123,7 +124,8 @@ def search_new_game(request):
     new_game_list = page_list(request, new_game, page)
     new_game = new_game_list[0].page(new_game_list[1])
     context = {
-        'new_games': new_game
+        'new_games': new_game,
+        'search': search
     }
 
     return render(request, 'new_games/search_new_game.html', context)

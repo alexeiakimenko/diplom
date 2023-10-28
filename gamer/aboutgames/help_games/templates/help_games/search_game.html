@@ -8,7 +8,7 @@
 </a>
 
 
-{% if games %}
+{% if search %}
 
 <h3 class="search">Результаты поиска:</h3>
 {%endif%}
@@ -19,13 +19,18 @@
     <div class="box_game">
         <a href="{% url 'single_game' game.id %}"><h2 class="red">{{ game.title }}</h2></a>
         <a href="{% url 'single_game' game.id %}"><img width="372px" height="210px"
-                                                               src="{{ game.game_image.url }}"></a>
+                                                       src="{{ game.game_image.url }}"></a>
         <h5>Дата выхода игры: {{game.release_date}}</h5>
         <h5>Жанр:<a class="ngg" data-title="сортировка по жанру {{ game.genre }}"
-                    href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a></h5>
+                    href="{% url 'help_games_genre' game.genre %}">{{ game.genre }}</a>,
+            <a class="ngg" data-title="сортировка по жанру {{ game.genre2 }}"
+               href="{% url 'help_games_genre' game.genre2 %}">{{ game.genre2 }}</a>,
+            <a class="ngg" data-title="сортировка по жанру {{ game.genre3 }}"
+               href="{% url 'help_games_genre' game.genre3 %}">{{ game.genre3 }}</a>
+        </h5>
         <h6>Дата написания статьи:{{ game.created }}</h6>
-         <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{game.rating}}</span></div>
-         <div class="red">Рейтинг нашего сайта: <span class="rating">{{game.rating_site}}</span></div>
+        <div class="red">Рейтинг от игроков на Metarankings.ru: <span class="rating">{{game.rating}}</span></div>
+        <div class="red">Рейтинг нашего сайта: <span class="rating">{{game.rating_site}}</span></div>
     </div>
     {% endfor %}
 </div>
